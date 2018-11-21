@@ -1,8 +1,8 @@
 # Study-V004-Statistical-Model-Collection
 
 
-### 1> LinearRegression
-LinearRegression is perhaps the simplest way to relate a continuous response variable to multiple explanatory variables. This may arise from observing several variables together and investigating which variables correlate with the response variable. Or it could arise from conducting an experiment, where we carefully assign values of explanatory variables to randomly selected subjects and try to establish a cause and effect relationship. 
+### 1> Basic Regression
+__A. LinearRegression__ is perhaps the simplest way to relate a continuous response variable to multiple explanatory variables. This may arise from observing several variables together and investigating which variables correlate with the response variable. Or it could arise from conducting an experiment, where we carefully assign values of explanatory variables to randomly selected subjects and try to establish a cause and effect relationship. 
 <img src="https://user-images.githubusercontent.com/31917400/48806376-042c3380-ed12-11e8-8f37-67ef2e4e9ce7.jpg" />
 
  - The common choice for prior on the σ2 would be an `InverseGamma`
@@ -18,10 +18,18 @@ LinearRegression is perhaps the simplest way to relate a continuous response var
    - If they are not met, Hierachical model can address it. 
 
 
+__B. LogisticRegression__ is 
 
 
 
-### 2> ANOVA
+
+
+__C. PoissonRegression__ is 
+
+
+
+
+### 2> ANOVA with LinearRegression
 ANOVA is used when we have **categorical explanatory variables** so that the observations`Y` belong to groups. In ANOVA, we compare the variability of responses(Y) `within groups` to the variability of responses(Y) `between groups`. If the variability **between groups** is large, relative to the variability within the groups, we conclude that there is a `grouping effect`. Factors can have `2 categories` or `many levels`. For example, low and high or true and false. Or they can have many levels. 
  - Let's say we are going to conduct an online marketing experiment.
    - we might experiment with two factors of website design - sound / font_size
