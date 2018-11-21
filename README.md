@@ -21,6 +21,20 @@ LinearRegression is perhaps the simplest way to relate a continuous response var
 
 
 
+### 2> ANOVA
+ANOVA is used when we have **categorical explanatory variables** so that the observations`Y` belong to groups. In ANOVA, we compare the variability of responses(Y) `within groups` to the variability of responses(Y) `between groups`. If the variability **between groups** is large, relative to the variability within the groups, we conclude that there is a `grouping effect`. Factors can have `2 categories` or `many levels`. For example, low and high or true and false. Or they can have many levels. 
+ - Let's say we are going to conduct an online marketing experiment.
+   - we might experiment with two factors of website design - sound / font_size
+     - __sound__
+       - music
+       - No music
+     - __font_size__
+       - small
+       - medium
+       - large
+ - This 2 by 3 design would result in a total of 6 treatment combinations.        
+
+
 
 
 
