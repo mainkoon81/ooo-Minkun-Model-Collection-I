@@ -33,8 +33,13 @@ ANOVA is used when we have **categorical explanatory variables** so that the obs
        - medium
        - large
    - This 2 by 3 design would result in a total of 6 treatment combinations.        
+ - > One factor Model: How ANOVA is related to LinearRegression ? 
+ <img src="https://user-images.githubusercontent.com/31917400/48838897-a7686180-ed81-11e8-8927-df3f0f0ce8d4.jpg" />
+ 
+ - > Two factor Model: cell_means_model where we have different mean for each stream and combination ?  
+ <img src="https://user-images.githubusercontent.com/31917400/48842101-46458b80-ed8b-11e8-933f-ac288ebb2aee.jpg" />
 
-
+   - If the effect of factor A on the response changes between levels of factor B. Then we would need more parameters to describe how that mean changes. This phenomenon is called **interaction** between the factors.
 
 
 
