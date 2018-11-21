@@ -32,7 +32,7 @@ ANOVA is used when we have **categorical explanatory variables** so that the obs
        - small
        - medium
        - large
- - This 2 by 3 design would result in a total of 6 treatment combinations.        
+   - This 2 by 3 design would result in a total of 6 treatment combinations.        
 
 
 
