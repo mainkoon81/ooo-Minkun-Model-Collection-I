@@ -39,7 +39,7 @@ ANOVA is used when we have **categorical explanatory variables** so that the obs
  - > Two factor Model: cell_means_model where we have different mean for each stream and combination ?  
  <img src="https://user-images.githubusercontent.com/31917400/48842101-46458b80-ed8b-11e8-933f-ac288ebb2aee.jpg" />
 
-   - If the effect of factor A on the response changes between levels of factor B. Then we would need more parameters to describe how that mean changes. This phenomenon is called **interaction** between the factors.
+   - If the effect of factor A on the response changes between levels of factor B, then we would need more parameters to describe how that mean changes. This phenomenon is called **interaction** between the factors.
 
 
 
