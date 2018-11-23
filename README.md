@@ -29,7 +29,7 @@ __C. PoissonRegression__ is
 
 
 
-__D. ANOVA with LinearRegression__ is used when we have **categorical explanatory variables** so that the observations`Y` belong to groups. In ANOVA, we compare the variability of responses(Y) `within groups` to the variability of responses(Y) `between groups`. If the variability **between groups** is large, relative to the variability within the groups, we conclude that there is a `grouping effect`. Factors can have `2 categories` or `many levels`. For example, low and high or true and false. Or they can have many levels. 
+__D. ANOVA with LinearRegression__ is used when we have **categorical explanatory variables** so that the observations`Y` belong to groups. In ANOVA, we compare the variability of responses(Y) `within groups` to the variability of responses(Y) `between groups`. If the variability **between groups** is large, relative to the variability within the groups, we conclude that there is a `grouping effect`. One Factor can have `2 levels` and the other can have `many levels`. For example, low and high or true and false. Or they can have many levels. 
  - Let's say we are going to conduct an online marketing experiment.
    - we might experiment with two factors of website design - sound / font_size
      - factor01:__sound__
