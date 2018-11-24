@@ -71,6 +71,7 @@ How we might use hierarchical modeling to extend a linear model?
 
 
 
+### 3> Latent Variable Models
 
 
 
