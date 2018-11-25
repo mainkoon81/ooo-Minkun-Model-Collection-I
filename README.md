@@ -73,7 +73,7 @@ How we might use hierarchical modeling to extend a linear model?
 
 ### 3> Latent Variable Models
 Latent variable is just a random variable which is unobservable to you nor in training nor in test phase. This is the variable you can't just measure with some quantitative scale. 
-<img src="https://user-images.githubusercontent.com/31917400/48973956-bc741780-f043-11e8-963a-16743679b3db.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/48974117-ebd85380-f046-11e8-913b-f788ec6bf63f.jpg" />
 
 > __[Note]:__  
  - Latent variable can be meaningful(making things easily interpretable) as we, for example, can estimate his intelligence on the scale from one to 100 although you don't know what the "scale" means. However, you can compare each data point according to this scale. Training latent variable model relies on a lot math.
