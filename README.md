@@ -10,15 +10,23 @@ __A. LinearRegression__ is perhaps the simplest way to relate a continuous respo
  - Another common choice for prior on the β would be a `Double Exponential`(Laplace Distribution):`P(β) = 1/2*exp(-|β|)`. It has a sharp peak at `β=0`, which can be useful for **variable selection** among our X's because it'll favor values in your 0 for these βssss. This is related to the popular regression technique known as the `LASSO` ShrinkRegression(for more interpretable model with less variables). 
  - > **Interpretation** of the β coefficients: 
    - While holding all other X variables constant, if `x1` increases by one, then the `mean of y` is expected to increase by **β1**. That is, **β1** describes how the `mean of y` changes with changes in `x1`, while **accounting for all the other X variables**. 
+ - > slope and intercept  
+   - slope: `Sxy/Sxx` where `Sxy:(n-1)var(x)` and `Sxx:(n-1)cov(x,y)`
+   - intercept: `E[y] - slope*E[x]`
+   - SE(slope) = `sqrt((1/Sxx)*MSE)`
+   - SE(intercept) = `sqrt((1/n + E[x]^2/Sxx)*MSE)`
  - > **Assumptions:** 
    - Given each X:`x1, x2,..` and independent Y:`y1, y2,..`: Multiple LM(many samples or columns)
      - `y1, y2,..` share the same variance `σ2`...and... `var(Y)`=`var(Xβ)+var(ϵ)`=`var(ϵ)`=`σ2` because fitted value..`var(Xβ)=0` ?
-       - We know `var(Y)`is`MST`, `var(Xβ)`is`MSR`, and `var(ϵ)`is`MSE`. 
+       - We know `var(Y)`is`MST`, `var(Xβ)`is`MSR`, and `var(ϵ)`is`MSE`.
+         - `MST` is about `Y vs E[Y]`
+         - `MSR` is about `fitted value vs E[Y]`
+         - `MSE` is about `Y vs fitted value`..so Residuals.
+         - `df for var(ϵ)`= n-(k+1), `df for var(Y)`= n-1, `df for var(Xβ)`= k
+           - **k** is No.of predictors(`X`). `MSR` is interested in this. 
+           - **k+1** is No.of coefficients(`β`). `MSE` is interested in this.        
        - We know `R^2` = `SSR/SST` = `1 - SSE/SST` : the model explains the ? % of variance in observations.
-         - which differs from `1 - var(ϵ)/var(Y)` coz..`df for var(ϵ)`= n-(k+1), `df for var(Y)`= n-1, `df for var(Xβ)`= k
-           - **k** is No.of predictors(`X`)(if think of parameters`β` then exclude the intercept so MSR = k-1 and MSE = n-k). `MSR` is interested in this. 
-           - **k+1** is No.of coefficients(`β`). `MSE` is interested in this. 
-         - The  `adjusted R^2` is `1 - var(ϵ)/var(Y)` which is the penalized by dividing them by `df`.
+         - The `adjusted R^2` is `1 - var(ϵ)/var(Y)` which is the penalized by dividing them by `df`.
        - `R^2` cannot determine whether the coefficient estimates and predictions are biased, which is why we must assess the residual plots.          
          - In the plot of residual, `var(ϵ)` should be a constant: homoscedasticity..otherwise, you might want a weighted_LS solution...
          - The chart of `fitted value VS residual` should shows a flat line...
