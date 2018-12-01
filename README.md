@@ -13,7 +13,7 @@ __A. LinearRegression__ is perhaps the simplest way to relate a continuous respo
  - > **Assumptions:** 
    - Given each X:`x1, x2,..` and independent Y:`y1, y2,..`: Multiple LM(many samples or columns)
      - `y1, y2,..` share the same variance `σ2`...and... `var(Y)`=`var(Xβ)+var(ϵ)`=`var(ϵ)`=`σ2` because fitted value..`var(Xβ)=0` ?
-       - We know `R^2` = `1 - SSE/SST` : the model explains the ? % of variance in observations.
+       - We know `R^2` = `SSR/SST` = `1 - SSE/SST` : the model explains the ? % of variance in observations.
          - which is not `1 - var(ϵ)/var(Y)` coz..`df for var(ϵ)`= n-k-1, `df for var(Y)`= n-1, `df for var(Xβ)`= k, where k is No.of predictors`X`(if think of parameters`β` then exclude the intercept so MSR = k-1 and MSE = n-k). 
        - `R^2` cannot determine whether the coefficient estimates and predictions are biased, which is why we must assess the residual plots.          
          - In the plot of residual, `var(ϵ)` should be a constant: homoscedasticity..otherwise, you might want a weighted_LS solution...
