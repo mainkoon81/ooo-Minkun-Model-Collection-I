@@ -12,8 +12,8 @@ __A. LinearRegression__ is perhaps the simplest way to relate a continuous respo
  - > **Assumptions:** 
    - Given each X:`x1, x2,..` and independent Y:`y1, y2,..`.
      - `y1, y2,..` share the same variance `σ2`...and... `var(Y)`=`var(Xβ)+var(ϵ)`=`var(ϵ)`=`σ2` because fitted value..`var(Xβ)=0`
-       - We know `R^2` = `1 - SSE/SST` = `1 - var(ϵ)/var(Y)`.
-       - When P-value is large, then β would be zero so `var(Y)` = `var(ϵ)` then the model explains the 0% of variance in observations Y..so model does not fit the data well. 
+       - We know `R^2` = `1 - SSE/SST` : the model explains the ? % of variance in observations.
+         - which is not `1 - var(ϵ)/var(Y)` coz..`df for var(ϵ)`= n-k-1, `df for var(Y)`= n-1
        - `R^2` cannot determine whether the coefficient estimates and predictions are biased, which is why we must assess the residual plots.          
          - In the plot of residual, `var(ϵ)` should be a constant: homoscedasticity..otherwise, you might want a weighted_LS solution...
          - The chart of `fitted value VS residual` should shows a flat line...
