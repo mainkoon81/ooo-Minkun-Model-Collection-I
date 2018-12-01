@@ -11,7 +11,7 @@ __A. LinearRegression__ is perhaps the simplest way to relate a continuous respo
  - The interpretation of the β coefficients: While holding all other X variables constant, if `x1` increases by one, then the `mean of y` is expected to increase by **β1**. That is, **β1** describes how the `mean of y` changes with changes in `x1`, while **accounting for all the other X variables**. 
  - > **Assumptions:** 
    - Given each X:`x1, x2,..` and independent Y:`y1, y2,..`.
-     - `y1, y2,..` share the same variance `σ2`...and... `var(Y)` = `var(Xβ)+var(ϵ)`.
+     - `y1, y2,..` share the same variance `σ2`...and... `var(Y)`=`var(Xβ)+var(ϵ)`=`var(ϵ)`=`σ2` because fitted value..`var(Xβ)=0`
        - We know `R^2` = `1 - SSE/SST` = `1 - var(ϵ)/var(Y)`.
        - When P-value is large, then β would be zero so `var(Y)` = `var(ϵ)` then the model explains the 0% of variance in observations Y..so model does not fit the data well. 
        - `R^2` cannot determine whether the coefficient estimates and predictions are biased, which is why we must assess the residual plots.          
