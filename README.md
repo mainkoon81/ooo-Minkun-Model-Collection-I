@@ -14,7 +14,8 @@ __A. LinearRegression__ is perhaps the simplest way to relate a continuous respo
    - Given each X:`x1, x2,..` and independent Y:`y1, y2,..`: Multiple LM(many samples or columns)
      - `y1, y2,..` share the same variance `σ2`...and... `var(Y)`=`var(Xβ)+var(ϵ)`=`var(ϵ)`=`σ2` because fitted value..`var(Xβ)=0` ?
        - We know `R^2` = `SSR/SST` = `1 - SSE/SST` : the model explains the ? % of variance in observations.
-         - which is not `1 - var(ϵ)/var(Y)` coz..`df for var(ϵ)`= n-k-1, `df for var(Y)`= n-1, `df for var(Xβ)`= k, where k is No.of predictors`X`(if think of parameters`β` then exclude the intercept so MSR = k-1 and MSE = n-k). 
+         - which is not `1 - var(ϵ)/var(Y)` coz..`df for var(ϵ)`= n-(k+1), `df for var(Y)`= n-1, `df for var(Xβ)`= k, where k is No.of predictors`X`(if think of parameters`β` then exclude the intercept so MSR = k-1 and MSE = n-k), and k+1 is No.of coefficients. 
+         - The  `adjusted R^2` is `1 - var(ϵ)/var(Y)` which is the penalized by dividing them by `df`.
        - `R^2` cannot determine whether the coefficient estimates and predictions are biased, which is why we must assess the residual plots.          
          - In the plot of residual, `var(ϵ)` should be a constant: homoscedasticity..otherwise, you might want a weighted_LS solution...
          - The chart of `fitted value VS residual` should shows a flat line...
@@ -24,8 +25,7 @@ __A. LinearRegression__ is perhaps the simplest way to relate a continuous respo
        - Are you sure? MSE = MST = `σ2`?? Yes, we hope `MSR = 0`. We wish our model(fitted_value) is the perfect E[Y]. 
      - cov(**ε**, fitted_value) = 0
      - In summary... `Y=Xβ+ϵ`; where `Y∼N(Xβ, σ2)` and `ϵ∼N(0, σ2)`.. E[Y] wish to be the model(wish MSE=MST), and E[error] wish to be zero.. 
-   - If they are not met, **Hierachical model** can address it. 
- -   
+   - If they are not met, **Hierachical model** can address it.    
 
 
 __B. LogisticRegression__ is 
