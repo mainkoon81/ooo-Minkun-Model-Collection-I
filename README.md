@@ -20,9 +20,9 @@ __A. LinearRegression__ is perhaps the simplest way to relate a continuous respo
          - The chart of `fitted value VS residual` should shows a flat line...
          - Our residuals should be Normally distributed..
      - E[**ε**] = 0
-     - var(**ε**) = `σ2`
+     - var(**ε**) = `σ2` .. Are you sure? MSE = MST = `σ2`?? WHY? MSR = 0 ?? We wish to be..We want our model is the perfect E[Y]. 
      - cov(**ε**, fitted_value) = 0
-     - In summary... `Y=Xβ+ϵ`; where `Y∼N(Xβ, σ2)` and `ϵ∼N(0, σ2)`
+     - In summary... `Y=Xβ+ϵ`; where `Y∼N(Xβ, σ2)` and `ϵ∼N(0, σ2)`.. E[Y] wish to be the model(wish MSE=MST), and E[error] wish to be zero.. 
    - If they are not met, **Hierachical model** can address it. 
  -   
 
