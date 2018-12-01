@@ -11,7 +11,7 @@ __A. LinearRegression__ is perhaps the simplest way to relate a continuous respo
  - > **Interpretation** of the β coefficients: 
    - While holding all other X variables constant, if `x1` increases by one, then the `mean of y` is expected to increase by **β1**. That is, **β1** describes how the `mean of y` changes with changes in `x1`, while **accounting for all the other X variables**. 
  - > slope and intercept  
-   - slope: `Sxy/Sxx` where `Sxy:(n-1)var(x)` and `Sxx:(n-1)cov(x,y)`
+   - slope: `Sxy/Sxx` where `Sxx:(n-1)var(x)` and `Sxy:(n-1)cov(x,y)`
    - intercept: `E[y] - slope*E[x]`
    - SE(slope) = `sqrt((1/Sxx)*MSE)`
    - SE(intercept) = `sqrt((1/n + E[x]^2/Sxx)*MSE)`
