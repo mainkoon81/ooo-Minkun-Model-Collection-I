@@ -2,18 +2,19 @@
 
 
 ### 1> Basic Regression
-__A. LinearRegression__ is perhaps the simplest way to relate a continuous response variable to multiple explanatory variables. This may arise from observing several variables together and investigating which variables correlate with the response variable. Or it could arise from conducting an experiment, where we carefully assign values of explanatory variables to randomly selected subjects and try to establish a cause and effect relationship. 
+__A. LinearRegression__ is perhaps the simplest way to relate a continuous response variable to multiple explanatory variables.  Regression is sometimes called a many-sample technique. This may arise from observing several variables together and investigating which variables correlate with the response variable. Or it could arise from conducting an experiment, where we carefully assign values of explanatory variables to randomly selected subjects and try to establish a cause and effect relationship. 
 <img src="https://user-images.githubusercontent.com/31917400/48806376-042c3380-ed12-11e8-8f37-67ef2e4e9ce7.jpg" />
 
  - The common choice for prior on the σ2 would be an `InverseGamma`
  - The common choice for prior on the β would be a `Normal`. Or we can do a multivariate normal for all of the β at once. This is conditionally conjugate and allows us to do **Gibbs-Sampling**.
  - Another common choice for prior on the β would be a `Double Exponential`(Laplace Distribution):`P(β) = 1/2*exp(-|β|)`. It has a sharp peak at `β=0`, which can be useful for **variable selection** among our X's because it'll favor values in your 0 for these βssss. This is related to the popular regression technique known as the `LASSO` ShrinkRegression(for more interpretable model with less variables). 
- - The interpretation of the β coefficients: While holding all other X variables constant, if `x1` increases by one, then the `mean of y` is expected to increase by **β1**. That is, **β1** describes how the `mean of y` changes with changes in `x1`, while **accounting for all the other X variables**. 
+ - > **Interpretation** of the β coefficients: 
+   - While holding all other X variables constant, if `x1` increases by one, then the `mean of y` is expected to increase by **β1**. That is, **β1** describes how the `mean of y` changes with changes in `x1`, while **accounting for all the other X variables**. 
  - > **Assumptions:** 
-   - Given each X:`x1, x2,..` and independent Y:`y1, y2,..`.
-     - `y1, y2,..` share the same variance `σ2`...and... `var(Y)`=`var(Xβ)+var(ϵ)`=`var(ϵ)`=`σ2` because fitted value..`var(Xβ)=0`
+   - Given each X:`x1, x2,..` and independent Y:`y1, y2,..`: Multiple LM(many samples or columns)
+     - `y1, y2,..` share the same variance `σ2`...and... `var(Y)`=`var(Xβ)+var(ϵ)`=`var(ϵ)`=`σ2` because fitted value..`var(Xβ)=0` ?
        - We know `R^2` = `1 - SSE/SST` : the model explains the ? % of variance in observations.
-         - which is not `1 - var(ϵ)/var(Y)` coz..`df for var(ϵ)`= n-k-1, `df for var(Y)`= n-1
+         - which is not `1 - var(ϵ)/var(Y)` coz..`df for var(ϵ)`= n-k-1, `df for var(Y)`= n-1, `df for var(Xβ)`= k, where k is No.of predictors`X`(if think of parameters`β` then exclude the intercept so MSR = k-1 and MSE = n-k). 
        - `R^2` cannot determine whether the coefficient estimates and predictions are biased, which is why we must assess the residual plots.          
          - In the plot of residual, `var(ϵ)` should be a constant: homoscedasticity..otherwise, you might want a weighted_LS solution...
          - The chart of `fitted value VS residual` should shows a flat line...
