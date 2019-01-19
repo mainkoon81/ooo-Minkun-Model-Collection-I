@@ -97,8 +97,8 @@ Latent variable is just a random variable which is unobservable to you nor in tr
 <img src="https://user-images.githubusercontent.com/31917400/48974117-ebd85380-f046-11e8-913b-f788ec6bf63f.jpg" />
 
 > __[Note]:__  
- - Latent variable can be meaningful(making things easily interpretable) as we, for example, can estimate his intelligence on the scale from one to 100 although you don't know what the "scale" means. However, you can compare each data point according to this scale. Training latent variable model relies on a lot math.
- - Sometimes adding **latent variables** restrict your model too much. If, for example, a student is doing 2 tests in the same day, it doesn’t make sense to assume that these two grades are caused only by his intelligence and doesn’t influence each other directly. Even if we know that he is very smart, if he failed the first test he is more likely to fail the second one because he may have a headache or maybe he didn’t have time to prepare the day before.
+ - Latent variable can make things **easily interpretable** as we, for example, can estimate his intelligence on the scale from one to 100 although you don't know what the "scale" means. However, you can compare each data point according to this scale. Training latent variable model relies on a lot math.
+ - Sometimes adding latent variables **restrict(overly simplify) your model** too much. If, for example, a student is doing 2 tests in the same day, it doesn’t make sense to assume that these two grades are caused only by his intelligence and doesn’t influence each other directly. Even if we know that he is very smart, if he failed the first test he is more likely to fail the second one because he may have a headache or maybe he didn’t have time to prepare the day before.
 
 ### Probabilistic Clustering with latent variable
 
