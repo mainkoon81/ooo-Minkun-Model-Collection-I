@@ -104,7 +104,7 @@ Latent variable is just a random variable which is unobservable to you nor in tr
 __Hard/Soft Clustering:__ Usually clustering is done in a hard way, so for each data point we assign its **membership**. But sometimes, people do soft clustering. So instead of assigning each data point a particular membership, we will assign each data point from **probability** distributions over clusters(for example, 40% probability to belong to the A_cluster, and 60% probability to belong to the B_cluster, and 0% to the C_cluster). That is, instead of just assigning each data point a particular cluster, we assume that each data point belongs to every cluster, but with some **different probabilities**: `P(cluster_idx|x)` instead of `cluster_idx = f(x)`. Whyyyyy?  
  - 1. For handling **missing data**
  - 2. For tunning **hyperparameters**(meta-parameters...it can be the No.of clusters of course)
- <img src="https://user-images.githubusercontent.com/31917400/51439222-f1e95a00-1cae-11e9-9af5-bfba71e93d28.jpg" /> 
+ <img src="https://user-images.githubusercontent.com/31917400/51439273-b69b5b00-1caf-11e9-99ee-a39f00c652bc.jpg" /> 
  
  - 3. For building a **generative model** of our data.. treating everything probabilistically, we may sample new data points from our model of the data.
 
