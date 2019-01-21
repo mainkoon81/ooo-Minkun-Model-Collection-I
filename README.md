@@ -108,6 +108,11 @@ __Hard/Soft Clustering:__ Usually clustering is done in a hard way, so for each 
  
  - 3. For building a **generative model** of our data.. treating everything probabilistically, we may sample new data points from our model of the data.
 
+### So let's do Soft Clustering!
+> __GMM__ Gaussian Mixture Model: **How to fit it? How to find the model parameters?** 
+The simplest way to fit a probability distribution is to use **maximum likelihood**. Find the parameters maximizing the likelihood(density)! 
+<img src="https://user-images.githubusercontent.com/31917400/51492177-c3e84080-1da8-11e9-8386-e1ce3e4eb595.jpg" /> 
+
 
 
 
