@@ -113,6 +113,9 @@ __Hard/Soft Clustering:__ Usually clustering is done in a hard way, so for each 
 The simplest way to fit a probability distribution is to use **maximum likelihood**. Find the parameters maximizing the likelihood(density)! 
 <img src="https://user-images.githubusercontent.com/31917400/51492177-c3e84080-1da8-11e9-8386-e1ce3e4eb595.jpg" /> 
 
+We introduce a latent variable.
+<img src="https://user-images.githubusercontent.com/31917400/51530292-862ffa00-1e32-11e9-8d0c-9915614e7b10.jpg" /> 
+
 
 
 
