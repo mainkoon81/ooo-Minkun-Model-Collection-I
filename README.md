@@ -116,8 +116,9 @@ The simplest way to fit a probability distribution is to use **maximum likelihoo
 We introduce a latent variable.
 <img src="https://user-images.githubusercontent.com/31917400/51533344-71576480-1e3a-11e9-8570-c0128a7cc197.jpg" /> 
 
-[Note]: This algorithm can suffer from **local maxima**. and its solution would be **NP-Hard**. 
+[Note]: When choosing the best run (highest training log-likelihood) among several training attempts with different random initializations, we can suffer from **local maxima**. and its solution would be **NP-Hard**. 
 
+### General form of EM-Algorithm
 
 
 
