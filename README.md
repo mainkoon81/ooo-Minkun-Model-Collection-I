@@ -116,7 +116,11 @@ The simplest way to fit a probability distribution is to use **maximum likelihoo
 We introduce a latent variable.
 <img src="https://user-images.githubusercontent.com/31917400/51533344-71576480-1e3a-11e9-8570-c0128a7cc197.jpg" /> 
 
-[Note]: When choosing the best run (highest training log-likelihood) among several training attempts with different random initializations, we can suffer from **local maxima**. and its solution would be **NP-Hard**. 
+[Note]: 
+ - When choosing the best run (highest training log-likelihood) among several training attempts with different random initializations, we can suffer from **local maxima**. and its solution would be **NP-Hard**. 
+ - We use EM-Algorithm to fit the distribution(such as Gaussian) to the **multi-dimensional** data(estimating the mean vector `μ_` and the covariance matrix `σ_`), not to the one-dimensional data. 
+ - We can treat `missing values` as **latent variables** and still estimate the Gaussian parameters. But with one-dimensional data, if a data point has missing values, it means that we don’t know anything about it (its only dimension is missing), so the only thing that is left is to throw away points with missing data.
+ - Note that we also don’t need EM to estimate the mean vector (e.i. we need it only for the covariance matrix) in the multi-dimensional case: since each coordinate of the mean vector can be treated independently, we can treat each coordinate as one-dimensional case and just throw away missing values. 
 
 ### General form of EM-Algorithm
 
