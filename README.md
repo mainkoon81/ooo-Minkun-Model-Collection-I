@@ -2,7 +2,7 @@
 
 
 ### 1> Basic Regression
-__A. LinearRegression__ is perhaps the simplest way to relate a continuous response variable to multiple explanatory variables.  Regression is sometimes called a many-sample technique. This may arise from observing several variables together and investigating which variables correlate with the response variable. Or it could arise from conducting an experiment, where we carefully assign values of explanatory variables to randomly selected subjects and try to establish a cause and effect relationship. 
+__A. Linear Regression__ is perhaps the simplest way to relate a continuous response variable to multiple explanatory variables.  Regression is sometimes called a many-sample technique. This may arise from observing several variables together and investigating which variables correlate with the response variable. Or it could arise from conducting an experiment, where we carefully assign values of explanatory variables to randomly selected subjects and try to establish a cause and effect relationship. 
 <img src="https://user-images.githubusercontent.com/31917400/48806376-042c3380-ed12-11e8-8f37-67ef2e4e9ce7.jpg" />
 
  - The common choice for prior on the σ2 would be an `InverseGamma`
@@ -36,7 +36,15 @@ __A. LinearRegression__ is perhaps the simplest way to relate a continuous respo
        - Are you sure? MSE = MST = `σ2`?? Yes, we hope `MSR = 0`. We wish our model(fitted_value) is the perfect E[Y]. 
      - cov(**ε**, fitted_value) = 0
      - In summary... `Y=Xβ+ϵ`; where `Y∼N(Xβ, σ2)` and `ϵ∼N(0, σ2)`.. E[Y] wish to be the model(wish MSE=MST), and E[error] wish to be zero.. 
-   - If they are not met, **Hierachical model** can address it.    
+   - If they are not met, **`Hierachical model`** can address it.    
+
+## WHY GLM ?
+ - Transformations in LM are often hard to interpret.
+ - Particularly interpetable transformations, natural logarithms in specific, aren't applicable for negative or zero values.
+ - GLM involves three components:
+   - An **exponential family model** for the response variable
+   - A systematic component via a **linear predictor**
+   - A **link function** that connects the `means of the response` to the **linear predictor**
 
 
 __B. LogisticRegression__ is 
