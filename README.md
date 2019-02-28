@@ -39,13 +39,17 @@ __A. Linear Regression__ is perhaps the simplest way to relate a continuous resp
    - If they are not met, **`Hierachical model`** can address it.    
 
 ## WHY GLM ?
- - Transformations in LM are often hard to interpret.
- - Particularly interpetable transformations, natural logarithms in specific, aren't applicable for negative or zero values.
- - GLM involves three components:
-   - An **exponential family model** for the response variable
-   - A systematic component via a **linear predictor**
-   - A **link function** that connects the `means of the response` to the **linear predictor**
+> Transformations in LM are often **hard to interpret**( our model codefficient). Although there are some interpretable transformations, natural logarithms in specific, but they aren't applicable for negative or zero values(`ln(x) is defined only for x > 0`). Plus what if we encounter some moment where we are required to respect the original data without transformation? 
 
+> What if, in the LM, the normal distribution is putting a lot positive probability on **negative values** even though you know your response has to be **positive** then that would be problematic. 
+ - GLM involves three components:
+   - A Random Component(**distribution**): `exp()` 
+     - The random component copes with the errors.
+     - In **exponential family model** for the response variable, for example, the distribution that describes the **randomness** has to come from a particular family of distributions called an exponential family. 
+   - A systematic component(**linear predictor**)
+     - This is what we want to model. The systematic component is the Linear Component with the coefficients. covariance?   
+   - A **link function** 
+     - This connects the `meaning of the response` from the **exponential family distribution** to the **linear predictor**.
 
 __B. LogisticRegression__ is 
 
