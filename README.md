@@ -2,6 +2,21 @@
 
 
 ### 1> Basic Regression
+## WHY GLM ?
+> Transformations in LM are often **hard to interpret**( our model codefficient). Although there are some interpretable transformations, natural logarithms in specific, but they aren't applicable for negative or zero values(`ln(x) is defined only for x > 0`). Plus what if we encounter some moment where we are required to respect the original data without transformation? 
+
+> What if, in the LM, the normal distribution is putting a lot positive probability on **negative values** even though you know your response has to be **positive** ? 
+
+GLM involves three components:
+ - 1> Random Component(**distribution**): `exp()` 
+   - The random component copes with the errors.
+   - For the response variable, for example, the distribution that describes the **randomness** has to come from a particular family of distributions called an exponential family. Normal is a member of the exponential family of course.
+ - 2> systematic component(**linear predictor**)
+   - This is what we want to model. The systematic component is the Linear Component with the coefficients. covariance?   
+ - 3> **link function** 
+   - This connects the `meaning of the response`(from the **exponential family distribution**) to the **linear predictor**.
+
+## Ok, start with basics. 
 __A. Linear Regression__ is perhaps the simplest way to relate a continuous response variable to multiple explanatory variables.  Regression is sometimes called a many-sample technique. This may arise from observing several variables together and investigating which variables correlate with the response variable. Or it could arise from conducting an experiment, where we carefully assign values of explanatory variables to randomly selected subjects and try to establish a cause and effect relationship. 
 <img src="https://user-images.githubusercontent.com/31917400/48806376-042c3380-ed12-11e8-8f37-67ef2e4e9ce7.jpg" />
 
@@ -37,19 +52,6 @@ __A. Linear Regression__ is perhaps the simplest way to relate a continuous resp
      - cov(**ε**, fitted_value) = 0
      - In summary... `Y=Xβ+ϵ`; where `Y∼N(Xβ, σ2)` and `ϵ∼N(0, σ2)`.. E[Y] wish to be the model(wish MSE=MST), and E[error] wish to be zero.. 
    - If they are not met, **`Hierachical model`** can address it.    
-
-## WHY GLM ?
-> Transformations in LM are often **hard to interpret**( our model codefficient). Although there are some interpretable transformations, natural logarithms in specific, but they aren't applicable for negative or zero values(`ln(x) is defined only for x > 0`). Plus what if we encounter some moment where we are required to respect the original data without transformation? 
-
-> What if, in the LM, the normal distribution is putting a lot positive probability on **negative values** even though you know your response has to be **positive** then that would be problematic. 
- - GLM involves three components:
-   - A Random Component(**distribution**): `exp()` 
-     - The random component copes with the errors.
-     - In **exponential family model** for the response variable, for example, the distribution that describes the **randomness** has to come from a particular family of distributions called an exponential family. 
-   - A systematic component(**linear predictor**)
-     - This is what we want to model. The systematic component is the Linear Component with the coefficients. covariance?   
-   - A **link function** 
-     - This connects the `meaning of the response` from the **exponential family distribution** to the **linear predictor**.
 
 __B. LogisticRegression__ is 
 
