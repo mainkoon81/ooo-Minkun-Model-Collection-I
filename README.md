@@ -55,7 +55,7 @@ __A. Linear Regression:__ In this setting, we have data that comes from **Gaussi
    - If they are not met, **`Hierachical model`** can address it.    
 
 __B. LogisticRegression:__ In this setting, we have data that are `0/1` so binary, so it comes from **Bernoulli** distribution.  
-<img src="https://user-images.githubusercontent.com/31917400/53629266-0cdfb000-3c05-11e9-9847-74599e0b5f50.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/53629931-b4a9ad80-3c06-11e9-905d-d18db4a570ad.jpg" />
 
 
 
