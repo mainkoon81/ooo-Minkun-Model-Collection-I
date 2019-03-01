@@ -12,7 +12,7 @@ GLM involves three components:
    - The random component copes with the errors.
    - For the response variable, for example, the distribution that describes the **randomness** has to come from a particular family of distributions called an exponential family. Normal is a member of the exponential family of course.
  - 2> systematic component(**linear predictor**)
-   - This is what we want to model. The systematic component is the Linear Component with the coefficients. covariance?   
+   - This is what we want to model. The systematic component is the Linear Component with the coefficients and predictors.    
  - 3> **link function** 
    - This connects the `meaning of the response`(from the **exponential family distribution**) to the **linear predictor**.
 
@@ -55,7 +55,7 @@ __A. Linear Regression:__ In this setting, we have data that comes from **Gaussi
    - If they are not met, **`Hierachical model`** can address it.    
 
 __B. LogisticRegression:__ In this setting, we have data that are `0/1` so binary, so it comes from **Bernoulli** distribution.  
-<img src="https://user-images.githubusercontent.com/31917400/53629931-b4a9ad80-3c06-11e9-905d-d18db4a570ad.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/53630339-c0e23a80-3c07-11e9-8751-6be4531bfd9a.jpg" />
 
 
 
