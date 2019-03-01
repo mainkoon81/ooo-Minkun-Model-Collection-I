@@ -17,7 +17,8 @@ GLM involves three components:
    - This connects the `meaning of the response`(from the **exponential family distribution**) to the **linear predictor**.
 
 ## Ok, start with basics. 
-__A. Linear Regression:__ is perhaps the simplest way to relate a continuous response variable to multiple explanatory variables.  Regression is sometimes called a **many-sample technique**. This may arise from observing several variables together and investigating which variables correlate with the response variable. Or it could arise from conducting an experiment, where we carefully assign values of explanatory variables to randomly selected subjects and try to establish a cause and effect relationship. 
+__A. Linear Regression:__ In this setting, we have data that comes from **Gaussian** distribution. 
+ - Regression is sometimes called a **many-sample technique**. This may arise from observing several variables together and investigating which variables correlate with the response variable. Or it could arise from conducting an experiment, where we carefully assign values of explanatory variables to randomly selected subjects and try to establish a cause and effect relationship. 
 <img src="https://user-images.githubusercontent.com/31917400/48806376-042c3380-ed12-11e8-8f37-67ef2e4e9ce7.jpg" />
 
  - The common choice for prior on the σ2 would be an `InverseGamma`
@@ -54,7 +55,7 @@ __A. Linear Regression:__ is perhaps the simplest way to relate a continuous res
    - If they are not met, **`Hierachical model`** can address it.    
 
 __B. LogisticRegression:__ In this setting, we have data that are `0/1` so binary, so it comes from **Bernoulli** distribution.  
-
+<img src="https://user-images.githubusercontent.com/31917400/53629266-0cdfb000-3c05-11e9-9847-74599e0b5f50.jpg" />
 
 
 
