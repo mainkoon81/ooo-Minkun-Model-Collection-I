@@ -17,7 +17,7 @@ GLM involves three components:
    - This connects the `meaning of the response`(from the **exponential family distribution**) to the **linear predictor**.
 
 ## Ok, start with basics. 
-__A. Linear Regression:__ In this setting, we have data that comes from **Gaussian** distribution. 
+__A. Linear Regression:__ In this setting, we have data(Response variable) that comes from **Gaussian** distribution. 
  - Regression is sometimes called a **many-sample technique**. This may arise from observing several variables together and investigating which variables correlate with the response variable. Or it could arise from conducting an experiment, where we carefully assign values of explanatory variables to randomly selected subjects and try to establish a cause and effect relationship. 
 <img src="https://user-images.githubusercontent.com/31917400/48806376-042c3380-ed12-11e8-8f37-67ef2e4e9ce7.jpg" />
 
@@ -54,9 +54,8 @@ __A. Linear Regression:__ In this setting, we have data that comes from **Gaussi
      - In summary... `Y=Xβ+ϵ`; where `Y∼N(Xβ, σ2)` and `ϵ∼N(0, σ2)`.. E[Y] wish to be the model(wish MSE=MST), and E[error] wish to be zero.. 
    - If they are not met, **`Hierachical model`** can address it.    
 
-__B. LogisticRegression:__ In this setting, we have data that are `0/1` so binary, so it comes from **Bernoulli** distribution.  
-<img src="https://user-images.githubusercontent.com/31917400/53630440-fe46c800-3c07-11e9-9009-b4ad1f1218f8.jpg" />
-so here, we're transforming the `mean of the distribution`. We're not transforming the predictor variables themselves. That's a big distinction and that's the neat part of generalization in our models. 
+__B. LogisticRegression:__ In this setting, we have data(Response variable) that are `0/1` so binary, so it comes from **Bernoulli** distribution.  
+<img src="https://user-images.githubusercontent.com/31917400/53630440-fe46c800-3c07-11e9-9009-b4ad1f1218f8.jpg" /> So here, we're transforming the `mean of the distribution`. We're not transforming the Response variables themselves. That's a big distinction and that's the neat part of generalization in our models. 
 
 
 
