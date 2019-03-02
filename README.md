@@ -60,7 +60,12 @@ __B. LogisticRegression:__ In this setting, we have data(Response variable) that
 [note]
 > Do you know likelihood? 
 <img src="https://user-images.githubusercontent.com/31917400/53683671-7a6e0800-3cfb-11e9-9f46-18fd61095789.jpg" />
+ - There are 3 ways to determine if the `log(odd_ratio)` is statistically significant. 
+   - Fisher's **Exact Test**
+   - Chi-Sqr Test(to find P-value) 
+   - Wald Test(to find P-value and Confidence Interval)
 
+__Fisher's Exact test:__ 
 
 
 > Background I. Model_Coefficients
