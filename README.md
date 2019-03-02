@@ -58,7 +58,7 @@ __B. LogisticRegression:__ In this setting, we have data(Response variable) that
 <img src="https://user-images.githubusercontent.com/31917400/53630440-fe46c800-3c07-11e9-9009-b4ad1f1218f8.jpg" /> So here, we're transforming the `mean of the distribution`. We're not transforming the Response variables themselves. That's a big distinction and that's the neat part of generalization in our models.
 
 [note]
-> Do you know likelihood? And log-ratio ?
+> Do you know **likelihood**? **log odd-ratio** ?
 <img src="https://user-images.githubusercontent.com/31917400/53687100-3513ff80-3d28-11e9-9037-34eff1b98552.jpg" />
 
 > What can we do with `log(odd_ratio)` ?
