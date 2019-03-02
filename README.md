@@ -58,8 +58,11 @@ __B. LogisticRegression:__ In this setting, we have data(Response variable) that
 <img src="https://user-images.githubusercontent.com/31917400/53630440-fe46c800-3c07-11e9-9009-b4ad1f1218f8.jpg" /> So here, we're transforming the `mean of the distribution`. We're not transforming the Response variables themselves. That's a big distinction and that's the neat part of generalization in our models.
 
 [note]
-> Do you know likelihood? 
-<img src="https://user-images.githubusercontent.com/31917400/53683671-7a6e0800-3cfb-11e9-9f46-18fd61095789.jpg" />
+> Do you know likelihood? And log-ratio ?
+<img src="https://user-images.githubusercontent.com/31917400/53687100-3513ff80-3d28-11e9-9037-34eff1b98552.jpg" />
+
+> What can we do with `log(odd_ratio)` ?
+<img src="https://user-images.githubusercontent.com/31917400/53687104-3cd3a400-3d28-11e9-95ae-a59e075e5b31.jpg" />
 
 `log(odd_ratio)` tells us if there is a strong/weak relationship between two things.  
  - There are 3 ways to determine if the `log(odd_ratio)` is statistically significant..i.e determine the `p-value` for the significance of that relationship.    
