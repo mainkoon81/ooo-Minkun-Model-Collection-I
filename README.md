@@ -64,7 +64,7 @@ __B. LogisticRegression:__ In this setting, we have data(Response variable) that
 > What can we do with `log(odd_ratio)` ?
 <img src="https://user-images.githubusercontent.com/31917400/53687104-3cd3a400-3d28-11e9-95ae-a59e075e5b31.jpg" />
 
-`log(odd_ratio)` tells us if there is a strong/weak relationship between two things.  
+`log(odd_ratio)` tells us if there is a strong/weak relationship between two binary variables.  
  - There are 3 ways to determine if the `log(odd_ratio)` is statistically significant..i.e determine the `p-value` for the significance of that relationship.    
    - Fisher's **Exact Test**
    - Chi-Sqr Test(to find P-value) 
