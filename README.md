@@ -59,13 +59,15 @@ __B. LogisticRegression:__ In this setting, we have data(Response variable) that
 
 [note]
 > Do you know likelihood? 
-<img src="https://user-images.githubusercontent.com/31917400/53633707-29351a00-3c10-11e9-874c-a66f28fdd3b3.jpg" />
-
-> background
-<img src="https://user-images.githubusercontent.com/31917400/53630440-fe46c800-3c07-11e9-9009-b4ad1f1218f8.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/53683671-7a6e0800-3cfb-11e9-9f46-18fd61095789.jpg" />
 
 
-Now, to obtain parameter estimates (**p**), we maximize this likelihood function.
+
+> Background I. Model_Coefficients
+<img src="https://user-images.githubusercontent.com/31917400/53681511-84374180-3ce2-11e9-80c1-0c8c4c4eb767.jpg" />
+
+> Background II. Maximum Likelihood
+ - Now, to obtain parameter estimates (**p**), we maximize this likelihood function.
 <img src="https://user-images.githubusercontent.com/31917400/53630440-fe46c800-3c07-11e9-9009-b4ad1f1218f8.jpg" />
 
 
