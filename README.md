@@ -57,12 +57,18 @@ __A. Linear Regression:__ In this setting, we have data(Response variable) that 
 __B. LogisticRegression:__ In this setting, we have data(Response variable) that are `0/1` so binary, so it comes from **Bernoulli** distribution.  
 <img src="https://user-images.githubusercontent.com/31917400/53630440-fe46c800-3c07-11e9-9009-b4ad1f1218f8.jpg" /> So here, we're transforming the `mean of the distribution`. We're not transforming the Response variables themselves. That's a big distinction and that's the neat part of generalization in our models.
 
+[note]
+> Do you know likelihood? 
+<img src="https://user-images.githubusercontent.com/31917400/53633707-29351a00-3c10-11e9-874c-a66f28fdd3b3.jpg" />
+
+> background
+<img src="https://user-images.githubusercontent.com/31917400/53630440-fe46c800-3c07-11e9-9009-b4ad1f1218f8.jpg" />
+
+
 Now, to obtain parameter estimates (**p**), we maximize this likelihood function.
 <img src="https://user-images.githubusercontent.com/31917400/53630440-fe46c800-3c07-11e9-9009-b4ad1f1218f8.jpg" />
 
-[note]
-> likelihood? 
-<img src="https://user-images.githubusercontent.com/31917400/53633707-29351a00-3c10-11e9-874c-a66f28fdd3b3.jpg" />
+
 
 
 
