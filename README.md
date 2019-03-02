@@ -70,13 +70,9 @@ __B. LogisticRegression:__ In this setting, we have data(Response variable) that
    - Chi-Sqr Test(to find P-value) 
    - Wald Test(to find P-value and Confidence Interval)
 
-__Wald test:__ 
-It takes advantage of the fact that `log(odd_ratio)`, just like `log(odd)`, follows Gaussian.   
-<img src="https://user-images.githubusercontent.com/31917400/53686939-ccc41e80-3d25-11e9-9598-e646b891cabe.jpg" />
-
-
-
-
+> Wald test: 
+ - It takes advantage of the fact that `log(odd_ratio)`, just like `log(odd)`, follows Gaussian.   
+<img src="https://user-images.githubusercontent.com/31917400/53688530-5206fd80-3d3d-11e9-8ce0-336fca1e8746.jpg" />
 
 > Background I. Model_Coefficients
 <img src="https://user-images.githubusercontent.com/31917400/53681511-84374180-3ce2-11e9-80c1-0c8c4c4eb767.jpg" />
