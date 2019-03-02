@@ -60,12 +60,19 @@ __B. LogisticRegression:__ In this setting, we have data(Response variable) that
 [note]
 > Do you know likelihood? 
 <img src="https://user-images.githubusercontent.com/31917400/53683671-7a6e0800-3cfb-11e9-9f46-18fd61095789.jpg" />
- - There are 3 ways to determine if the `log(odd_ratio)` is statistically significant. 
+
+`log(odd_ratio)` tells us if there is a strong/weak relationship between two things.  
+ - There are 3 ways to determine if the `log(odd_ratio)` is statistically significant..i.e determine the `p-value` for the significance of that relationship.    
    - Fisher's **Exact Test**
    - Chi-Sqr Test(to find P-value) 
    - Wald Test(to find P-value and Confidence Interval)
 
-__Fisher's Exact test:__ 
+__Wald test:__ 
+It takes advantage of the fact that `log(odd_ratio)`, just like `log(odd)`, follows Gaussian.   
+<img src="https://user-images.githubusercontent.com/31917400/53686939-ccc41e80-3d25-11e9-9598-e646b891cabe.jpg" />
+
+
+
 
 
 > Background I. Model_Coefficients
