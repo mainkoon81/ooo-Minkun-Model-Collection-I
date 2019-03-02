@@ -59,7 +59,7 @@ __B. LogisticRegression:__ In this setting, we have data(Response variable) that
 
 [note]
 > Do you know **likelihood**? **log odd-ratio** ?
-<img src="https://user-images.githubusercontent.com/31917400/53687259-83c29900-3d2a-11e9-8350-48c9f13345ab.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/53687390-0566f680-3d2c-11e9-81c2-a76eb822c462.jpg" />
 
 > What can we do with `log(odd_ratio)` ?
 <img src="https://user-images.githubusercontent.com/31917400/53687104-3cd3a400-3d28-11e9-95ae-a59e075e5b31.jpg" />
