@@ -1,7 +1,7 @@
 # Study-V004-Statistical-Model-Collection
 
 
-### 1> Basic Regression
+# 1> Basic Regression
 ## WHY GLM ?
 > Transformations in LM are often **hard to interpret**( our model codefficient). Although there are some interpretable transformations, natural logarithms in specific, but they aren't applicable for negative or zero values(`ln(x) is defined only for x > 0`). Plus what if we encounter some moment where we are required to respect the original data without transformation? 
 
@@ -17,7 +17,8 @@ GLM involves three components:
    - This connects the `meaning of the response`(from the **exponential family distribution**) to the **linear predictor**.
 
 ## Ok, start with basics. 
-__A. Linear Regression:__ In this setting, we have data(Response variable) that comes from **Gaussian** distribution. 
+## A. Linear Regression: 
+In this setting, we have data(Response variable) that comes from **Gaussian** distribution. 
  - Regression is sometimes called a **many-sample technique**. This may arise from observing several variables together and investigating which variables correlate with the response variable. Or it could arise from conducting an experiment, where we carefully assign values of explanatory variables to randomly selected subjects and try to establish a cause and effect relationship. 
 <img src="https://user-images.githubusercontent.com/31917400/48806376-042c3380-ed12-11e8-8f37-67ef2e4e9ce7.jpg" />
 
@@ -54,10 +55,11 @@ __A. Linear Regression:__ In this setting, we have data(Response variable) that 
      - In summary... `Y=Xβ+ϵ`; where `Y∼N(Xβ, σ2)` and `ϵ∼N(0, σ2)`.. E[Y] wish to be the model(wish MSE=MST), and E[error] wish to be zero.. 
    - If they are not met, **`Hierachical model`** can address it.    
 
-__B. LogisticRegression:__ In this setting, we have data(Response variable) that are `0/1` so binary, so it comes from **Bernoulli** distribution.  
+## B. LogisticRegression:
+In this setting, we have data(Response variable) that are `0/1` so binary, so it comes from **Bernoulli** distribution.  
 <img src="https://user-images.githubusercontent.com/31917400/53630440-fe46c800-3c07-11e9-9009-b4ad1f1218f8.jpg" /> So here, we're transforming the `mean of the distribution`. We're not transforming the Response variables themselves. That's a big distinction and that's the neat part of generalization in our models.
 
-[note]
+[Background]
 > Do you know **likelihood**? **log odd-ratio** ?
 <img src="https://user-images.githubusercontent.com/31917400/53687390-0566f680-3d2c-11e9-81c2-a76eb822c462.jpg" />
 
@@ -74,10 +76,10 @@ __B. LogisticRegression:__ In this setting, we have data(Response variable) that
  - It takes advantage of the fact that `log(odd_ratio)`, just like `log(odd)`, follows Gaussian.   
 <img src="https://user-images.githubusercontent.com/31917400/53688530-5206fd80-3d3d-11e9-8ce0-336fca1e8746.jpg" />
 
-> Background I. Model_Coefficients
+### I. Model_Coefficients for LogisticRegression
 <img src="https://user-images.githubusercontent.com/31917400/53681511-84374180-3ce2-11e9-80c1-0c8c4c4eb767.jpg" />
 
-> Background II. Maximum Likelihood
+### II. Maximum Likelihood for LogisticRegression
  - Now, to obtain parameter estimates (**p**) or **fitting a line**, we maximize this likelihood function.
  - In OLS regression, we use **Least squares Method** to fit the line(to find slope and intercept).  
  - In logistic regression, we use **Maximum Likelihood Method** to fit the line
@@ -87,12 +89,14 @@ __B. LogisticRegression:__ In this setting, we have data(Response variable) that
 
 
 
-__C. PoissonRegression:__ is 
+## C. PoissonRegression:
 
 
 
 
-__D. ANOVA with LinearRegression__ is used when we have **categorical explanatory variables** so that the observations`Y` belong to groups. In ANOVA, we compare the variability of responses(Y) `within groups` to the variability of responses(Y) `between groups`. If the variability **between groups** is large, relative to the variability within the groups, we conclude that there is a `grouping effect`. One Factor can have `2 levels` and the other can have `many levels`. For example, low and high or true and false. Or they can have many levels. 
+
+## D. ANOVA with LinearRegression:
+It is used when we have **categorical explanatory variables** so that the observations`Y` belong to groups. In ANOVA, we compare the variability of responses(Y) `within groups` to the variability of responses(Y) `between groups`. If the variability **between groups** is large, relative to the variability within the groups, we conclude that there is a `grouping effect`. One Factor can have `2 levels` and the other can have `many levels`. For example, low and high or true and false. Or they can have many levels. 
  - Let's say we are going to conduct an online marketing experiment.
    - we might experiment with two factors of website design - sound / font_size
      - factor01:__sound__
@@ -112,7 +116,7 @@ __D. ANOVA with LinearRegression__ is used when we have **categorical explanator
    - If the effect of factor A on the response changes between levels of factor B, then we would need more parameters to describe how that mean changes. This phenomenon is called **interaction** between the factors.
 
 
-### 2> Hierarchical Model
+# 2> Hierarchical Model
 We have assumed that all the observations were independent so far, but there is often a natural grouping to our data points which leads us to believe that some observation pairs should be more similar to each other than to others. For example, let's say a company plan to sample 150 test products for quality check, but they do 30 from your location and then 30 from 4 other factory locations(30 from each of 5 locations). We might expect a product from your location to be more similar to another product from your batch than to a product from another locations' batch. And we might be able to account for the likely differences between products in our Poisson model by making it a hierarchical model. That is, your lambda is not only estimated directly from your 30 products, but also indirectly from the other 120 products leveraging this hierarchical structure. Being able to account for relationships in the data while estimating everything with the single model is a primary advantage of using hierarchical models. And most Bayesian Models are hierarchical. 
 <img src="https://user-images.githubusercontent.com/31917400/48874302-7ff9af00-edea-11e8-835e-ff0b7ff2f098.jpg" />
 
@@ -134,7 +138,7 @@ How we might use hierarchical modeling to extend a linear model?
 
 
 
-### 3> Latent Variable Models
+# 3> Latent Variable Models
 Latent variable is just a random variable which is unobservable to you nor in training nor in test phase. This is the variable you can't just measure with some quantitative scale. 
 <img src="https://user-images.githubusercontent.com/31917400/48974117-ebd85380-f046-11e8-913b-f788ec6bf63f.jpg" />
 
