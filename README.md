@@ -93,19 +93,27 @@ How do we know the **fitted line of the highest log-likelihood value we used** i
    - Deviance Test
    - HosmerLemeshow-C / H
    - McFadden's psuedo R-Squared & P_value
-     - For R-Squared, instead of using `SSR/SSE`, we use `[LL_worst - LL(fit)] / LL_worst`. **LL(fit)** refering the value of the **fitted line of the highest log-likelihood**. 
-     - For P-value, `2*[LL(fit) - LL_worst]` = **Chi-Sqr value** with `df = the difference in the NO.of parameters in the two models`.
-       - In the worst case, `LL(fit) = LL_worst`, then Chi-Sqr value is 0, so P-value = 1 (area under the curve). 
-       - In other cases, `LL(fit) > LL_worst`, then Chi-Sqr is greater than 0, so P-value becomes smaller. 
+     - For R-Squared, instead of using `SSR/SSE`, we use `[LL(Null) - LL(fit)] / LL(Null)`. **LL(fit)** refering the **fitted line's highest log-likelihood value**. 
+     - For P-value, `2*[LL(Null) - LL(fit)]` = **Chi-Sqr value** with `df = the difference in the NO.of parameters in the two models`.
+       - In the worst case, `LL(fit) = LL(Null)`, then Chi-Sqr value is 0, so P-value = 1 (area under the curve). 
+       - In other cases, `LL(fit) > LL(Null)`, then Chi-Sqr is greater than 0, so P-value becomes smaller. 
        <img src="https://user-images.githubusercontent.com/31917400/53698300-be800c00-3dd2-11e9-8a8a-5b3144b2adca.jpg" />
 
- - Saturated Model & Deviance Statistics
+### IV. Saturated Model & Deviance Statistics
+What's Saturated Model used for? 
+<img src="https://user-images.githubusercontent.com/31917400/53702415-90b0bc80-3dfe-11e9-8f75-908c7e6bb11b.jpg" />
+
+What's Deviance Statistics used for?
+ - Residual Deviance
+ - Null Deviance
+<img src="https://user-images.githubusercontent.com/31917400/53702415-90b0bc80-3dfe-11e9-8f75-908c7e6bb11b.jpg" />
 
 
-### IV. Performance Assessment for LogisticRegression
+
+### V. Performance Assessment for LogisticRegression
 
 
-### V. Gradient Descent Method & Cost function
+### VI. Gradient Descent Method & Cost function
 Whenever you train a model with your data, you are actually producing some new values (predicted) for a specific feature. However, that specific feature already has some values which are real values in the dataset. We know the closer the predicted values to their corresponding real values, the better the model.
 
 Now, we are using cost function to measure how close the predicted values are to their corresponding real values.
