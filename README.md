@@ -97,10 +97,30 @@ How do we know the **fitted line of the highest log-likelihood value we used** i
      - For P-value, `2*[LL(fit) - LL_worst]` = **Chi-Sqr value** with `df = the difference in the NO.of parameters in the two models`.
        - In the worst case, `LL(fit) = LL_worst`, then Chi-Sqr value is 0, so P-value = 1 (area under the curve). 
        - In other cases, `LL(fit) > LL_worst`, then Chi-Sqr is greater than 0, so P-value becomes smaller. 
- <img src="https://user-images.githubusercontent.com/31917400/53698300-be800c00-3dd2-11e9-8a8a-5b3144b2adca.jpg" />
-  
+       <img src="https://user-images.githubusercontent.com/31917400/53698300-be800c00-3dd2-11e9-8a8a-5b3144b2adca.jpg" />
+
+ - Saturated Model & Deviance Statistics
+
 
 ### IV. Performance Assessment for LogisticRegression
+
+
+### V. Gradient Descent Method & Cost function
+Whenever you train a model with your data, you are actually producing some new values (predicted) for a specific feature. However, that specific feature already has some values which are real values in the dataset. We know the closer the predicted values to their corresponding real values, the better the model.
+
+Now, we are using cost function to measure how close the predicted values are to their corresponding real values.
+
+We also should consider that the weights of the trained model are responsible for accurately predicting the new values. Imagine that our model is y = 0.9*X + 0.1, the predicted value is nothing but (0.9*X+0.1) for different Xs. (0.9 and 0.1 in the equation are just random values to understand).
+
+So, by considering Y as real value corresponding to this x, the cost formula is coming to measure how close (0.9*X+0.1) is to Y.
+
+We are responsible for finding the better weight (0.9 and 0.1) for our model to come up with a lowest cost (or closer predicted values to real ones).
+
+Gradient descent is an optimization algorithm (we have some other optimization algorithms) and its responsibility is to find the minimum cost value in the process of trying the model with different weights or indeed, updating the weights.
+
+We first run our model with some initial weights and gradient descent updates our weights and find the cost of our model with those weights in thousands of iterations to find the minimum cost.
+
+One point is that gradient descent is not minimizing the weights, it is just updating them. This algorithm is looking for minimum cost.
 
 
 
