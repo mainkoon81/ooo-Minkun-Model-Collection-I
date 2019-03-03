@@ -74,7 +74,7 @@ __[Background]__
  - It takes advantage of the fact that `log(odd_ratio)`, just like `log(odd)`, follows Gaussian.   
 <img src="https://user-images.githubusercontent.com/31917400/53688530-5206fd80-3d3d-11e9-8ce0-336fca1e8746.jpg" />
 
-
+## Back to the main topic,
 ### I. Model_Coefficients for LogisticRegression
 <img src="https://user-images.githubusercontent.com/31917400/53681511-84374180-3ce2-11e9-80c1-0c8c4c4eb767.jpg" />
 
