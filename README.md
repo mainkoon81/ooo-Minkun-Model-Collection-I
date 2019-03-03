@@ -104,7 +104,7 @@ What's Saturated Model used for?
 <img src="https://user-images.githubusercontent.com/31917400/53702415-90b0bc80-3dfe-11e9-8f75-908c7e6bb11b.jpg" />
 
 What's Deviance Statistics used for?
- - we can get **P-value for the log likelihood R-Squares** 
+ - we can get **P-value** and compute the **log-likelihood based R-Squares**. 
    - From the statistics:`Null Deviance - Residual Deviance` 
    - by comparing to **Chi-Sqr** (df = No.of parameters in Proposed model - No.of parameter in Null model) 
  - **Residual Deviance**  
