@@ -97,7 +97,7 @@ How do we know the **fitted line of the highest log-likelihood value we used** i
      - For P-value, `2*[LL(Null) - LL(fit)]` = **Chi-Sqr value** with `df = the difference in the NO.of parameters in the two models`.
        - In the worst case, `LL(fit) = LL(Null)`, then Chi-Sqr value is 0, so P-value = 1 (area under the curve). 
        - In other cases, `LL(fit) > LL(Null)`, then Chi-Sqr is greater than 0, so P-value becomes smaller. 
-       <img src="https://user-images.githubusercontent.com/31917400/53698300-be800c00-3dd2-11e9-8a8a-5b3144b2adca.jpg" />
+       <img src="https://user-images.githubusercontent.com/31917400/53702648-1d5c7a00-3e01-11e9-9596-ea6d96d2e05d.jpg" />
 
 ### IV. Saturated Model & Deviance Statistics
 What's Saturated Model used for? 
