@@ -1,8 +1,7 @@
 # Study-V004-Statistical-Model-Collection
 
 
-# 1> Basic Regression
-## WHY GLM ?
+# 1> GLM
 > Transformations in LM are often **hard to interpret**( our model codefficient). Although there are some interpretable transformations, natural logarithms in specific, but they aren't applicable for negative or zero values(`ln(x) is defined only for x > 0`). Plus what if we encounter some moment where we are required to respect the original data without transformation? 
 
 > What if, in the LM, the normal distribution is putting a lot positive probability on **negative values** even though you know your response has to be **positive** ? 
@@ -59,7 +58,7 @@ In this setting, we have data(Response variable) that comes from **Gaussian** di
 In this setting, we have data(Response variable) that are `0/1` so binary, so it comes from **Bernoulli** distribution.  
 <img src="https://user-images.githubusercontent.com/31917400/53630440-fe46c800-3c07-11e9-9009-b4ad1f1218f8.jpg" /> So here, we're transforming the `mean of the distribution`. We're not transforming the Response variables themselves. That's a big distinction and that's the neat part of generalization in our models.
 
-[Background]
+__[Background]__
 > Do you know **likelihood**? **log odd-ratio** ?
 <img src="https://user-images.githubusercontent.com/31917400/53687390-0566f680-3d2c-11e9-81c2-a76eb822c462.jpg" />
 
@@ -71,10 +70,10 @@ In this setting, we have data(Response variable) that are `0/1` so binary, so it
    - Fisher's **Exact Test**
    - Chi-Sqr Test(to find P-value) 
    - Wald Test(to find P-value and Confidence Interval)
-
 > Wald test: 
  - It takes advantage of the fact that `log(odd_ratio)`, just like `log(odd)`, follows Gaussian.   
 <img src="https://user-images.githubusercontent.com/31917400/53688530-5206fd80-3d3d-11e9-8ce0-336fca1e8746.jpg" />
+
 
 ### I. Model_Coefficients for LogisticRegression
 <img src="https://user-images.githubusercontent.com/31917400/53681511-84374180-3ce2-11e9-80c1-0c8c4c4eb767.jpg" />
@@ -85,6 +84,13 @@ In this setting, we have data(Response variable) that are `0/1` so binary, so it
  - In logistic regression, we use **Maximum Likelihood Method** to fit the line
 <img src="https://user-images.githubusercontent.com/31917400/53694769-6255c180-3dab-11e9-9b54-f0a1fe9e41bd.jpg" />
 
+ - R_Squared & P_value for that relationship: 
+   - In OLS regression, R_Squared & P_value are calculated using the residuals. 
+   <img src="https://user-images.githubusercontent.com/31917400/53695305-a946b580-3db1-11e9-9c7d-4a73832a32e6.jpg" />
+
+   - In Logistic regression, 
+
+### III. Performance Assessment
 
 
 
