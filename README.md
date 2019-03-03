@@ -83,8 +83,8 @@ __[Background]__
  - In logistic regression, we use **Maximum Likelihood Method** to fit the line or to obtain the best **p = sigmoid function**. We project all data pt onto the best fitting line, using `log(odd)`, and then translate these `log(odd)`s back to probabilities using `sigmoid`.  
 <img src="https://user-images.githubusercontent.com/31917400/53696183-82da4780-3dbc-11e9-9753-7d53bc134333.jpg" />
 
-### III. Goodness of Fit for LogisticRegression
-How do we know the **fitting line with the highest log-likelihood value we used** is truley the best?  
+### III. Measuring Goodness of Fit for LogisticRegression
+How do we know the **fitted line of the highest log-likelihood value we used** is truley the best?  
  - In OLS regression, R_Squared & P_value are calculated using the residuals. 
  <img src="https://user-images.githubusercontent.com/31917400/53695305-a946b580-3db1-11e9-9c7d-4a73832a32e6.jpg" />
 
@@ -93,7 +93,8 @@ How do we know the **fitting line with the highest log-likelihood value we used*
    - Deviance Test
    - HosmerLemeshow-C / H
    - McFadden's psuedo R-Squared & P_value
-   
+ <img src="https://user-images.githubusercontent.com/31917400/53695305-a946b580-3db1-11e9-9c7d-4a73832a32e6.jpg" />
+  
 
 ### IV. Performance Assessment for LogisticRegression
 
