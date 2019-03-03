@@ -81,7 +81,7 @@ __B. LogisticRegression:__ In this setting, we have data(Response variable) that
  - Now, to obtain parameter estimates (**p**) or **fitting a line**, we maximize this likelihood function.
  - In OLS regression, we use **Least squares Method** to fit the line(to find slope and intercept).  
  - In logistic regression, we use **Maximum Likelihood Method** to fit the line
-<img src="https://user-images.githubusercontent.com/31917400/53694692-633a2380-3daa-11e9-883f-31c4d9fd50fe.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/53694769-6255c180-3dab-11e9-9b54-f0a1fe9e41bd.jpg" />
 
 
 
