@@ -81,12 +81,12 @@ __[Background]__
 ### II. Maximum Likelihood for LogisticRegression
  - In OLS regression, we use **Least squares Method** to fit the line(to find slope and intercept).  
  - In logistic regression, we use **Maximum Likelihood Method** to fit the line or to obtain the best **p = sigmoid function**. We project all data pt onto the best fitting line, using `log(odd)`, and then translate these `log(odd)`s back to probabilities using `sigmoid`.  
-<img src="https://user-images.githubusercontent.com/31917400/53696183-82da4780-3dbc-11e9-9753-7d53bc134333.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/53696183-82da4780-3dbc-11e9-9753-7d53bc134333.jpg" />
 
 ### III. Measuring Goodness of Fit for LogisticRegression
 How do we know the **fitted line of the highest log-likelihood value we used** is truley the best?  
  - In OLS regression, R_Squared & P_value are calculated using the residuals. 
- <img src="https://user-images.githubusercontent.com/31917400/53695305-a946b580-3db1-11e9-9c7d-4a73832a32e6.jpg" />
+   <img src="https://user-images.githubusercontent.com/31917400/53695305-a946b580-3db1-11e9-9c7d-4a73832a32e6.jpg" />
 
  - In Logistic regression,
    - Pearson Test
