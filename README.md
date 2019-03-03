@@ -104,6 +104,9 @@ What's Saturated Model used for?
 <img src="https://user-images.githubusercontent.com/31917400/53702415-90b0bc80-3dfe-11e9-8f75-908c7e6bb11b.jpg" />
 
 What's Deviance Statistics used for?
+ - we can get **P-value for the log likelihood R-Squares** 
+   - From the statistics:`Null Deviance - Residual Deviance` 
+   - by comparing to **Chi-Sqr** (df = No.of parameters in Proposed model - No.of parameter in Null model) 
  - **Residual Deviance**  
    - **Is our `Proposed model` is significantly different from `Saturated model`?** 
    - Statistics:`2*[LL(Saturated model) - LL(Proposed model)]` and this gives us **P-value**.
@@ -112,9 +115,7 @@ What's Deviance Statistics used for?
    - **Is `Null model` is significantly different from `Saturated model`?** 
    - Statistics:`2*[LL(Saturated model) - LL(Null model)]` and this gives us **P-value**.
    - by comparing to **Chi-Sqr** (df = No.of parameters in Saturated model - No.of parameter in Null model)
-## > Finally, we can get **P-value for the log likelihood R-Squares** 
- - From the statistics:`Null Deviance - Residual Deviance` 
- - by comparing to **Chi-Sqr** (df = No.of parameters in Proposed model - No.of parameter in Null model) 
+
 
 ### V. Performance Assessment for LogisticRegression
 
