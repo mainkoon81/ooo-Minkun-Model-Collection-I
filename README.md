@@ -1,6 +1,5 @@
 # Study-V004-Statistical-Model-Collection
 
-
 # 1> GLM
 > Transformations in LM are often **hard to interpret**( our model codefficient). Although there are some interpretable transformations, natural logarithms in specific, but they aren't applicable for negative or zero values(`ln(x) is defined only for x > 0`). Plus what if we encounter some moment where we are required to respect the original data without transformation? 
 
@@ -116,15 +115,7 @@ What's Deviance Statistics used for?
    - Statistics:`2*[LL(Saturated model) - LL(Null model)]` and this gives us **P-value**.
    - by comparing to **Chi-Sqr** (df = No.of parameters in Saturated model - No.of parameter in Null model)
 
-
-### V. Performance Assessment for LogisticRegression
-
-
-
-
-
-
-### VI. Gradient Descent Method & Cost function
+### V. Gradient Descent Method & Cost function
 Whenever you train a model with your data, you are actually producing some new values (predicted) for a specific feature. However, that specific feature already has some values which are real values in the dataset. We know the closer the predicted values to their corresponding real values, the better the model.
 
 Now, we are using cost function to measure how close the predicted values are to their corresponding real values.
@@ -144,11 +135,16 @@ One point is that gradient descent is not minimizing the weights, it is just upd
 
 
 
+
+
+
+
+
+
+
+
+
 ## C. PoissonRegression:
-
-
-
-
 
 ## D. ANOVA with LinearRegression:
 It is used when we have **categorical explanatory variables** so that the observations`Y` belong to groups. In ANOVA, we compare the variability of responses(Y) `within groups` to the variability of responses(Y) `between groups`. If the variability **between groups** is large, relative to the variability within the groups, we conclude that there is a `grouping effect`. One Factor can have `2 levels` and the other can have `many levels`. For example, low and high or true and false. Or they can have many levels. 
