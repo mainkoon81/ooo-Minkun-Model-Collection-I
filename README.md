@@ -91,7 +91,7 @@ __[Background]__
 
 ## Back to the main topic,
 ### I. Model_Coefficients for LogisticRegression
-<img src="https://user-images.githubusercontent.com/31917400/53681511-84374180-3ce2-11e9-80c1-0c8c4c4eb767.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/53828506-c5934f80-3f75-11e9-80e1-20ade17da543.jpg" />
 
 ### II. Maximum Likelihood for LogisticRegression
  - In OLS regression, we use **Least squares Method** to fit the line(to find slope and intercept).  
