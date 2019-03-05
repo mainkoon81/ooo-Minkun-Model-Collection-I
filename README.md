@@ -1,5 +1,21 @@
 # Study-V004-Statistical-Model-Collection
 
+# 0> Gradient Descent Method & Cost function
+> Whenever you train a model with your data, you are actually producing some new values (predicted) for a specific feature. However, that specific feature already has some values which are real values in the dataset. We know the closer the predicted values to their corresponding real values, the better the model. 
+ - **`Cost function`** that is needed to be minimized.
+   - To measure how close the **predicted values** are to their **corresponding real values**. We also should consider that the **weights of the trained model** are responsible for accurately predicting the new values. 
+   - Imagine that our model is y = 0.9*X + 0.1, the predicted value is nothing but (0.9*X+0.1) for different Xs. So, by considering Y as real value corresponding to this x, the cost formula is coming to measure how close (0.9*X+0.1) is to Y. We are responsible for finding the better weight (0.9 and 0.1..so **PARAMETERS**) for our model to come up with a lowest cost (or closer predicted values to real ones). 
+ - **`Gradient descent` to update PARAMETERS**.
+   - As an optimization algorithm, its responsibility is to find the minimum cost value in the process of trying the model with different weights or indeed, **updating the weights**. 
+   - It is made out of **`derivitives of Cost function`**.  
+   - We first run our model with some initial weights and gradient descent updates our weights and find the cost of our model with those weights in thousands of iterations to find the minimum cost. One point is that gradient descent is not minimizing the weights, it is just updating them.
+
+> (`NO.of parameter = 1`)
+<img src="https://user-images.githubusercontent.com/31917400/53805999-a54a9d00-3f43-11e9-88c9-ae300355ef8a.jpg" />
+
+> (`NO.of parameter > 1`) with Multiple features 
+<img src="https://user-images.githubusercontent.com/31917400/53817587-b56f7600-3f5d-11e9-9e04-e9b1b21bbfe9.jpg" />
+
 # 1> GLM
 > Transformations in LM are often **hard to interpret**( our model codefficient). Although there are some interpretable transformations, natural logarithms in specific, but they aren't applicable for negative or zero values(`ln(x) is defined only for x > 0`). Plus what if we encounter some moment where we are required to respect the original data without transformation? 
 
@@ -115,21 +131,7 @@ What's Deviance Statistics used for?
    - Statistics:`2*[LL(Saturated model) - LL(Null model)]` and this gives us **P-value**.
    - by comparing to **Chi-Sqr** (df = No.of parameters in Saturated model - No.of parameter in Null model)
 
-### V. Gradient Descent Method & Cost function
-> Whenever you train a model with your data, you are actually producing some new values (predicted) for a specific feature. However, that specific feature already has some values which are real values in the dataset. We know the closer the predicted values to their corresponding real values, the better the model. 
- - **`Cost function`** that is needed to be minimized.
-   - To measure how close the **predicted values** are to their **corresponding real values**. We also should consider that the **weights of the trained model** are responsible for accurately predicting the new values. 
-   - Imagine that our model is y = 0.9*X + 0.1, the predicted value is nothing but (0.9*X+0.1) for different Xs. So, by considering Y as real value corresponding to this x, the cost formula is coming to measure how close (0.9*X+0.1) is to Y. We are responsible for finding the better weight (0.9 and 0.1..so **PARAMETERS**) for our model to come up with a lowest cost (or closer predicted values to real ones). 
- - **`Gradient descent` to update PARAMETERS**.
-   - It is an optimization algorithm (we have some other optimization algorithms) and its responsibility is to find the minimum cost value in the process of trying the model with different weights or indeed, **updating the weights**. 
-   - It is made out of **`derivitives of Cost function`**.  
-   - We first run our model with some initial weights and gradient descent updates our weights and find the cost of our model with those weights in thousands of iterations to find the minimum cost. One point is that gradient descent is not minimizing the weights, it is just updating them.
-
-> (`NO.of parameter = 1`)
-<img src="https://user-images.githubusercontent.com/31917400/53805999-a54a9d00-3f43-11e9-88c9-ae300355ef8a.jpg" />
-
-> (`NO.of parameter > 1`) with Multiple features 
-<img src="https://user-images.githubusercontent.com/31917400/53805999-a54a9d00-3f43-11e9-88c9-ae300355ef8a.jpg" />
+### V. Cost Function
 
 
 
