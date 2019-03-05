@@ -94,7 +94,7 @@ __[Background]__
 To attempt classification, one method is to use **linear regression** by mapping all **Y** greater than 0.5 as `1` and all less than 0.5 as `0`. However, this method doesn't work well because **classification is not actually a linear function**. It's a squiggle line. 
  - [Decision Surface]
    -  The decision surf is a **`property`** of the **hypothesis model** that is made out of parameters, but it is **NOT** a property of the dataset. Once we have particular values for the parameters, then that completely defines the decision surf!  
-   <img src="https://user-images.githubusercontent.com/31917400/53839878-90e0c180-3f90-11e9-9ca7-85a0e0ef63d9.jpg" />
+   <img src="https://user-images.githubusercontent.com/31917400/53840151-4ad82d80-3f91-11e9-95eb-9782707c0810.jpg" />
 
 ### I. Model_Coefficients for LogisticRegression
 <img src="https://user-images.githubusercontent.com/31917400/53828506-c5934f80-3f75-11e9-80e1-20ade17da543.jpg" />
