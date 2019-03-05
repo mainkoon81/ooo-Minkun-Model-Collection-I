@@ -90,12 +90,18 @@ __[Background]__
 <img src="https://user-images.githubusercontent.com/31917400/53688530-5206fd80-3d3d-11e9-8ce0-336fca1e8746.jpg" />
 
 ## Back to the main topic,
+### 0. Classification and LogisticRegression
+To attempt classification, one method is to use **linear regression** by mapping all **Y** greater than 0.5 as `1` and all less than 0.5 as `0`. However, this method doesn't work well because **classification is not actually a linear function**. It's a squiggle line. 
+ - [Decision Surface]
+   -  The decision surf is a **`property`** of the **hypothesis model** that is made out of parameters, but it is **NOT** a property of the dataset. Once we have particular values for the parameters, then that completely defines the decision surf!  
+   <img src="https://user-images.githubusercontent.com/31917400/53839878-90e0c180-3f90-11e9-9ca7-85a0e0ef63d9.jpg" />
+
 ### I. Model_Coefficients for LogisticRegression
 <img src="https://user-images.githubusercontent.com/31917400/53828506-c5934f80-3f75-11e9-80e1-20ade17da543.jpg" />
 
 ### II. Maximum Likelihood for LogisticRegression
  - In OLS regression, we use **Least squares Method** to fit the line(to find slope and intercept).  
- - In logistic regression, we use **Maximum Likelihood Method** to fit the line or to obtain the best **p = sigmoid function**. We project all data pt onto the best fitting line, using `log(odd)`, and then translate these `log(odd)`s back to probabilities using `sigmoid`.  
+ - In logistic regression, we use **Maximum Likelihood Method** to fit the line or to obtain the best **p = sigmoid function** = Logistic Function. We project all data pt onto the best fitting line, using `log(odd)`, and then translate these `log(odd)`s back to probabilities using `sigmoid`.  
  <img src="https://user-images.githubusercontent.com/31917400/53696183-82da4780-3dbc-11e9-9753-7d53bc134333.jpg" />
 
 ### III. Measuring Goodness of Fit for LogisticRegression
