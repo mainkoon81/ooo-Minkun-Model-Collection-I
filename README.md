@@ -117,8 +117,11 @@ What's Deviance Statistics used for?
 
 ### V. Gradient Descent Method & Cost function
 > Whenever you train a model with your data, you are actually producing some new values (predicted) for a specific feature. However, that specific feature already has some values which are real values in the dataset. We know the closer the predicted values to their corresponding real values, the better the model. Now, we are using **`cost function`** to measure how close the **predicted values** are to their **corresponding real values**. We also should consider that the **weights of the trained model** are responsible for accurately predicting the new values. Imagine that our model is y = 0.9*X + 0.1, the predicted value is nothing but (0.9*X+0.1) for different Xs. So, by considering Y as real value corresponding to this x, the cost formula is coming to measure how close (0.9*X+0.1) is to Y. We are responsible for finding the better weight (0.9 and 0.1..so **PARAMETERS**) for our model to come up with a lowest cost (or closer predicted values to real ones). **`Gradient descent`** is an optimization algorithm (we have some other optimization algorithms) and its responsibility is to find the minimum cost value in the process of trying the model with different weights or indeed, **updating the weights**. We first run our model with some initial weights and gradient descent updates our weights and find the cost of our model with those weights in thousands of iterations to find the minimum cost. One point is that gradient descent is not minimizing the weights, it is just updating them.
+> (`n = 1`)
 <img src="https://user-images.githubusercontent.com/31917400/53805999-a54a9d00-3f43-11e9-88c9-ae300355ef8a.jpg" />
 
+> (`n > 1`) with Multiple features 
+<img src="https://user-images.githubusercontent.com/31917400/53805999-a54a9d00-3f43-11e9-88c9-ae300355ef8a.jpg" />
 
 
 
