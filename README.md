@@ -71,7 +71,7 @@ In this setting, we have data(Response variable) that comes from **Gaussian** di
 
 ## B. LogisticRegression:
 In this setting, we have data(Response variable) that are `0/1` so binary, so it comes from **Bernoulli** distribution.  
-<img src="https://user-images.githubusercontent.com/31917400/53844458-b0cab200-3f9d-11e9-94b2-facabfb75a66.jpg" /> So here, we're transforming the `mean of the distribution`. We're not transforming the Response variables themselves. That's a big distinction and that's the neat part of generalization in our models.
+<img src="https://user-images.githubusercontent.com/31917400/53844735-a5c45180-3f9e-11e9-9d49-fd64e9355904.jpg" /> So here, we're transforming the `mean of the distribution`. We're not transforming the Response variables themselves. That's a big distinction and that's the neat part of generalization in our models.
 
 __[Background]__
 > Do you know **likelihood**? **log odd-ratio** ?
