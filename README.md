@@ -179,6 +179,7 @@ It is used when we have **categorical explanatory variables** so that the observ
 
 ## [E]. Other Issues
  - Regularization
+ - bias VS variance
  - Diagnostics: Assessing model performance
  - Validation
 ### Overfitting and `Regularization` 
