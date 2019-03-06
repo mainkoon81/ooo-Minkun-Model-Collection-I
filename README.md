@@ -94,12 +94,11 @@ __[Background]__
 To attempt classification, one method is to use **linear regression** by mapping all **Y** greater than 0.5 as `1` and all less than 0.5 as `0`. However, this method doesn't work well because **classification is not actually a linear function**. It's a squiggle line. 
  - [Decision Surface]
    -  The decision surf is a **`property`** of the **hypothesis model** that is made out of parameters, but it is **NOT** a property of the dataset. Once we have particular values for the parameters, then that completely defines the decision surf! 
-   - When we actually describe or plot the decision surf, we come down to the orginal features' dimension. (In logistic regression, it's the dimension in `Y = log(odd) = Xβ`).
+   - When we actually describe or plot the decision surf, we come down to the orginal features' dimension. (In logistic regression, it's the dimension of `X` and `Y = log(odd) = Xβ`).
    <img src="https://user-images.githubusercontent.com/31917400/53842158-9b9e5500-3f96-11e9-9abe-31030c46342e.jpg" />
 
  - Multiclass Classification
- 
-
+   <img src="https://user-images.githubusercontent.com/31917400/53878654-5ca6e880-4004-11e9-8d29-3ff2c2b29823.jpg" />
 
 ### I. Model_Coefficients for LogisticRegression
 <img src="https://user-images.githubusercontent.com/31917400/53828506-c5934f80-3f75-11e9-80e1-20ade17da543.jpg" />
