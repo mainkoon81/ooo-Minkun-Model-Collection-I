@@ -16,6 +16,7 @@
 > (`NO.of parameter > 1`) with Multiple features 
 <img src="https://user-images.githubusercontent.com/31917400/53817587-b56f7600-3f5d-11e9-9e04-e9b1b21bbfe9.jpg" />
 
+--------------------------------------------------------------------------------------------
 # 1> GLM
 > Transformations in LM are often **hard to interpret**( our model codefficient). Although there are some interpretable transformations, natural logarithms in specific, but they aren't applicable for negative or zero values(`ln(x) is defined only for x > 0`). Plus what if we encounter some moment where we are required to respect the original data without transformation? 
 
@@ -31,7 +32,7 @@ GLM involves three components:
    - This connects the `meaning of the response`(from the **exponential family distribution**) to the **linear predictor**.
 
 ## Ok, start with basics. 
-## A. Linear Regression: 
+## A. Linear Regression (NORMAL response): 
 In this setting, we have data(Response variable) that comes from **Gaussian** distribution. 
  - Regression is sometimes called a **many-sample technique**. This may arise from observing several variables together and investigating which variables correlate with the response variable. Or it could arise from conducting an experiment, where we carefully assign values of explanatory variables to randomly selected subjects and try to establish a cause and effect relationship. 
 <img src="https://user-images.githubusercontent.com/31917400/48806376-042c3380-ed12-11e8-8f37-67ef2e4e9ce7.jpg" />
@@ -69,7 +70,7 @@ In this setting, we have data(Response variable) that comes from **Gaussian** di
      - In summary... `Y=Xβ+ϵ`; where `Y∼N(Xβ, σ2)` and `ϵ∼N(0, σ2)`.. E[Y] wish to be the model(wish MSE=MST), and E[error] wish to be zero.. 
    - If they are not met, **`Hierachical model`** can address it.    
 
-## B. LogisticRegression:
+## [B]. Logistic Regression (BINARY response):
 In this setting, we have data(Response variable) that are `0/1` so binary, so it comes from **Bernoulli** distribution.  
 <img src="https://user-images.githubusercontent.com/31917400/53844949-4286ef00-3f9f-11e9-9ddc-ea0dfcb819c5.jpg" /> So here, we're transforming the `mean(or probability) value of the distribution`. We're not transforming the Response variables themselves. That's a big distinction and that's the neat part of generalization in our models.
 
@@ -152,23 +153,11 @@ To fit the model(to find the parameter),
    - BFGS, L-BFGS
 <img src="https://user-images.githubusercontent.com/31917400/53877718-d8ebfc80-4001-11e9-8204-fc861dba512b.jpg" />
 
+## [C]. Poisson Regression (COUNT response):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-## C. PoissonRegression:
-
-## D. ANOVA with LinearRegression:
+## [D]. ANOVA with LinearRegression:
 It is used when we have **categorical explanatory variables** so that the observations`Y` belong to groups. In ANOVA, we compare the variability of responses(Y) `within groups` to the variability of responses(Y) `between groups`. If the variability **between groups** is large, relative to the variability within the groups, we conclude that there is a `grouping effect`. One Factor can have `2 levels` and the other can have `many levels`. For example, low and high or true and false. Or they can have many levels. 
  - Let's say we are going to conduct an online marketing experiment.
    - we might experiment with two factors of website design - sound / font_size
@@ -188,6 +177,22 @@ It is used when we have **categorical explanatory variables** so that the observ
 
    - If the effect of factor A on the response changes between levels of factor B, then we would need more parameters to describe how that mean changes. This phenomenon is called **interaction** between the factors.
 
+## [E]. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 2> Hierarchical Model
 We have assumed that all the observations were independent so far, but there is often a natural grouping to our data points which leads us to believe that some observation pairs should be more similar to each other than to others. For example, let's say a company plan to sample 150 test products for quality check, but they do 30 from your location and then 30 from 4 other factory locations(30 from each of 5 locations). We might expect a product from your location to be more similar to another product from your batch than to a product from another locations' batch. And we might be able to account for the likely differences between products in our Poisson model by making it a hierarchical model. That is, your lambda is not only estimated directly from your 30 products, but also indirectly from the other 120 products leveraging this hierarchical structure. Being able to account for relationships in the data while estimating everything with the single model is a primary advantage of using hierarchical models. And most Bayesian Models are hierarchical. 
@@ -202,7 +207,6 @@ How we might use hierarchical modeling to extend a linear model?
  - Observations from distinct **spatial locations** can exhibit dependence(just as observations collected across time are often correlated) For example, we might expect a measurement at location x to be more similar to `measurement y` 5 meters away than to `measurement z` 100 meters away. `State-space models` and `Non-parametric models` for response surfaces are common for spatial data. 
  - **DeepLearning models** involve layers of “neurons” that separate inputs from outputs, allowing nonlinear relationships. These **intermediate nodes** can be thought of as `latent variables` in a **hierarchical probabilistic model**, although Bayesian inference of neural networks is uncommon. 
  - **Bayesian Non-parametric models** move beyond inference for `parameters` to inference for `functions and distributions`. Finite-dimensional representations of the necessary priors often appear as **hierarchical models**. 2 of the most popular non-parametric priors are the `Gaussian process prior`(typically used as a prior on continuous functions), and `Dirichlet process prior`(as a prior on probability distributions). 
-
 
 
 
