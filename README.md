@@ -72,12 +72,12 @@ In this setting, we have data(Response variable) that comes from **Gaussian** di
 
 ## [B]. Logistic Regression (BINARY response):
 In this setting, we have data(Response variable) that are `0/1` so binary, so it comes from **Bernoulli** distribution.  
-<img src="https://user-images.githubusercontent.com/31917400/53844949-4286ef00-3f9f-11e9-9ddc-ea0dfcb819c5.jpg" /> So here, we're transforming the `mean(or probability) value of the distribution`. We're not transforming the Response variables themselves. That's a big distinction and that's the neat part of generalization in our models.
+<img src="https://user-images.githubusercontent.com/31917400/53844949-4286ef00-3f9f-11e9-9ddc-ea0dfcb819c5.jpg" /> So here, we're transforming the `mean(or probability) value of the distribution`. We're not transforming the Response variables themselves. That's the neat part of generalization in our models.
 
 __[Background]__
 > Do you know **likelihood**? **log odd-ratio** ?
- - Prabability: Fit data to certain **distribution** we know.
- - Likelihood: Fit distribution to **certain data** we know.
+ - Prabability: Fit data to the certain **distribution** we know.
+ - Likelihood: Fit distribution to the certain **data** we know.
 <img src="https://user-images.githubusercontent.com/31917400/53687390-0566f680-3d2c-11e9-81c2-a76eb822c462.jpg" />
 
 > What can we do with `log(odd_ratio)` ?
@@ -156,6 +156,17 @@ To fit the model(to find the parameter),
 <img src="https://user-images.githubusercontent.com/31917400/53877718-d8ebfc80-4001-11e9-8204-fc861dba512b.jpg" />
 
 ## [C]. Poisson Regression (COUNT response):
+In this setting, we have data(Response variable) that are unbounded counts(web traffic hits) or rates(1-star, 2-star...), so they come from **Poisson** distribution. Of course we can approximate **Bin(p,n) with small p and large n** with this model or we can analyse a **contingency table data** as well. Poisson Regression is also known as **`Log-Linear Model`**. So here, we're transforming the `mean(or probability) value of the distribution`. We're not transforming the Response variables themselves. That's the neat part of generalization in our models.
+<img src="https://user-images.githubusercontent.com/31917400/53890974-3b082a00-4021-11e9-956c-305c901fc010.jpg" />
+
+ - 1.Model for **Count**: Response is a count `E[Y]`.  
+ <img src="https://user-images.githubusercontent.com/31917400/53890962-33488580-4021-11e9-8314-de1f752e8566.jpg" />
+
+ 
+ - 2.Model for **Rate**: Reponse is `E[Y/t]` where `t` is an **interval** representing time, space, etc.  
+ <img src="https://user-images.githubusercontent.com/31917400/53891890-304e9480-4023-11e9-88cc-42a9328aa21d.jpg" />
+
+
 
 
 
