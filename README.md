@@ -177,7 +177,11 @@ It is used when we have **categorical explanatory variables** so that the observ
 
    - If the effect of factor A on the response changes between levels of factor B, then we would need more parameters to describe how that mean changes. This phenomenon is called **interaction** between the factors.
 
-## [E]. 
+## [E]. Other Issues
+ - Regularization
+ - Diagnostics: Assessing model performance
+ - Validation
+### Overfitting and `Regularization` 
 
 
 
