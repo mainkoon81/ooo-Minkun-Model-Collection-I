@@ -76,6 +76,8 @@ In this setting, we have data(Response variable) that are `0/1` so binary, so it
 
 __[Background]__
 > Do you know **likelihood**? **log odd-ratio** ?
+ - Prabability: Fit data to certain **distribution** we know.
+ - Likelihood: Fit distribution to **certain data** we know.
 <img src="https://user-images.githubusercontent.com/31917400/53687390-0566f680-3d2c-11e9-81c2-a76eb822c462.jpg" />
 
 > What can we do with `log(odd_ratio)` ?
@@ -182,7 +184,9 @@ It is used when we have **categorical explanatory variables** so that the observ
  - bias VS variance
  - Diagnostics: Assessing model performance
  - Validation
-### Overfitting and `Regularization` 
+ - Feature Selection
+ - 
+### a) Overfitting and `Regularization` 
 
 
 
