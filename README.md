@@ -97,7 +97,8 @@ To attempt classification, one method is to use **linear regression** by mapping
    - When we actually describe or plot the decision surf, we come down to the orginal features' dimension. (In logistic regression, it's the dimension of `X` and `Y = log(odd) = Xβ`).
    <img src="https://user-images.githubusercontent.com/31917400/53842158-9b9e5500-3f96-11e9-9abe-31030c46342e.jpg" />
 
- - Multiclass Classification
+ - [Multiclass Classification]
+   - To make a prediction on a new x, pick the class ￼that maximizes the hypothesis model: hθ(x). 
    <img src="https://user-images.githubusercontent.com/31917400/53878654-5ca6e880-4004-11e9-8d29-3ff2c2b29823.jpg" />
 
 ### I. Model_Coefficients for LogisticRegression
