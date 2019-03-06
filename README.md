@@ -97,6 +97,10 @@ To attempt classification, one method is to use **linear regression** by mapping
    - When we actually describe or plot the decision surf, we come down to the orginal features' dimension. (In logistic regression, it's the dimension in `Y = log(odd) = Xβ`).
    <img src="https://user-images.githubusercontent.com/31917400/53842158-9b9e5500-3f96-11e9-9abe-31030c46342e.jpg" />
 
+ - Multiclass Classification
+ 
+
+
 ### I. Model_Coefficients for LogisticRegression
 <img src="https://user-images.githubusercontent.com/31917400/53828506-c5934f80-3f75-11e9-80e1-20ade17da543.jpg" />
 
@@ -139,7 +143,14 @@ What's Deviance Statistics used for?
    - by comparing to **Chi-Sqr** (df = No.of parameters in Saturated model - No.of parameter in Null model)
 
 ### V. Cost Function and Gradient Descent for LogisticRegression
-<img src="https://user-images.githubusercontent.com/31917400/53702415-90b0bc80-3dfe-11e9-8f75-908c7e6bb11b.jpg" />
+To fit the model(to find the parameter), 
+ - We use Maximum likelihood Estimation?
+ - We know that in order to fit the model, we can Minimize the Cost Function, using Gradient Descent. 
+   - the cost function can be derived from the principle of maximum likelihood estimation as well. 
+ - There are many other complicate **Optimization algorithms** available to fit the model other than MaximumLikelihood, Gradient Descent...
+   - Conjugate	gradient
+   - BFGS, L-BFGS
+<img src="https://user-images.githubusercontent.com/31917400/53877718-d8ebfc80-4001-11e9-8204-fc861dba512b.jpg" />
 
 
 
