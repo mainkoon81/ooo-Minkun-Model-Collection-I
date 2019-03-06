@@ -138,7 +138,9 @@ What's Deviance Statistics used for?
    - Statistics:`2*[LL(Saturated model) - LL(Null model)]` and this gives us **P-value**.
    - by comparing to **Chi-Sqr** (df = No.of parameters in Saturated model - No.of parameter in Null model)
 
-### V. Cost Function
+### V. Cost Function and Gradient Descent for LogisticRegression
+<img src="https://user-images.githubusercontent.com/31917400/53702415-90b0bc80-3dfe-11e9-8f75-908c7e6bb11b.jpg" />
+
 
 
 
