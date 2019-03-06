@@ -70,7 +70,7 @@ In this setting, we have data(Response variable) that comes from **Gaussian** di
      - In summary... `Y=Xβ+ϵ`; where `Y∼N(Xβ, σ2)` and `ϵ∼N(0, σ2)`.. E[Y] wish to be the model(wish MSE=MST), and E[error] wish to be zero.. 
    - If they are not met, **`Hierachical model`** can address it.    
 
-## [B]. Logistic Regression (BINARY response):
+## [B]. Logistic Regression (Y/N response):
 In this setting, we have data(Response variable) that are `0/1` so binary, so it comes from **Bernoulli** distribution.  
 <img src="https://user-images.githubusercontent.com/31917400/53844949-4286ef00-3f9f-11e9-9ddc-ea0dfcb819c5.jpg" /> So here, we're transforming the `mean(or probability) value of the distribution`. We're not transforming the Response variables themselves. That's the neat part of generalization in our models.
 
@@ -104,15 +104,27 @@ To attempt classification, one method is to use **linear regression** by mapping
    - To make a prediction on a new x, pick the class ￼that maximizes the hypothesis model: hθ(x). 
    <img src="https://user-images.githubusercontent.com/31917400/53878654-5ca6e880-4004-11e9-8d29-3ff2c2b29823.jpg" />
 
-### I. Model_Coefficients for LogisticRegression
+### I. Model_Fitting for LogisticRegression (Parameter Estimation_1)
+ - Maximum Likelihood
+ - Cost Function & Gradient Descent
 <img src="https://user-images.githubusercontent.com/31917400/53828506-c5934f80-3f75-11e9-80e1-20ade17da543.jpg" />
 
-### II. Maximum Likelihood for LogisticRegression
+### II. Maximum Likelihood for LogisticRegression (Parameter Estimation_2)
  - In OLS regression, we use **Least squares Method** to fit the line(to find slope and intercept).  
  - In logistic regression, we use **Maximum Likelihood Method** to fit the line or to obtain the best **p = sigmoid function** = Logistic Function. We project all data pt onto the best fitting line, using `log(odd)`, and then translate these `log(odd)`s back to probabilities using `sigmoid`.  
  <img src="https://user-images.githubusercontent.com/31917400/53696183-82da4780-3dbc-11e9-9753-7d53bc134333.jpg" />
 
-### III. Measuring Goodness of Fit for LogisticRegression
+### III. Cost Function and Gradient Descent for LogisticRegression (Parameter Estimation_3)
+To fit the model(to find the parameter), 
+ - We use Maximum likelihood Estimation?
+ - We know that in order to fit the model, we can Minimize the Cost Function, using Gradient Descent. 
+   - the cost function can be derived from the principle of maximum likelihood estimation as well. 
+ - There are many other complicate **Optimization algorithms** available to fit the model other than MaximumLikelihood, Gradient Descent...
+   - Conjugate	gradient
+   - BFGS, L-BFGS
+<img src="https://user-images.githubusercontent.com/31917400/53877718-d8ebfc80-4001-11e9-8204-fc861dba512b.jpg" />
+
+### IV. Goodness of Fit test for LogisticRegression
 How do we know the **fitted line of the highest log-likelihood value we used** is truley the best?  
  - In OLS regression, R_Squared & P_value are calculated using the residuals. 
    <img src="https://user-images.githubusercontent.com/31917400/53695305-a946b580-3db1-11e9-9c7d-4a73832a32e6.jpg" />
@@ -128,7 +140,7 @@ How do we know the **fitted line of the highest log-likelihood value we used** i
        - In other cases, `LL(fit) > LL(Null)`, then Chi-Sqr is greater than 0, so P-value becomes smaller. 
        <img src="https://user-images.githubusercontent.com/31917400/53702648-1d5c7a00-3e01-11e9-9596-ea6d96d2e05d.jpg" />
 
-### IV. Saturated Model & Deviance Statistics
+### V. Goodness of Fit test with Deviance Statistics
 What's Saturated Model used for? 
 <img src="https://user-images.githubusercontent.com/31917400/53702415-90b0bc80-3dfe-11e9-8f75-908c7e6bb11b.jpg" />
 
@@ -145,30 +157,34 @@ What's Deviance Statistics used for?
    - Statistics:`2*[LL(Saturated model) - LL(Null model)]` and this gives us **P-value**.
    - by comparing to **Chi-Sqr** (df = No.of parameters in Saturated model - No.of parameter in Null model)
 
-### V. Cost Function and Gradient Descent for LogisticRegression
-To fit the model(to find the parameter), 
- - We use Maximum likelihood Estimation?
- - We know that in order to fit the model, we can Minimize the Cost Function, using Gradient Descent. 
-   - the cost function can be derived from the principle of maximum likelihood estimation as well. 
- - There are many other complicate **Optimization algorithms** available to fit the model other than MaximumLikelihood, Gradient Descent...
-   - Conjugate	gradient
-   - BFGS, L-BFGS
-<img src="https://user-images.githubusercontent.com/31917400/53877718-d8ebfc80-4001-11e9-8204-fc861dba512b.jpg" />
-
 ## [C]. Poisson Regression (COUNT response):
-In this setting, we have data(Response variable) that are unbounded counts(web traffic hits) or rates(1-star, 2-star...), so they come from **Poisson** distribution. Of course we can approximate **Bin(p,n) with small p and large n** with this model or we can analyse a **contingency table data** as well. Poisson Regression is also known as **`Log-Linear Model`**. So here, we're transforming the `mean(or probability) value of the distribution`. We're not transforming the Response variables themselves. That's the neat part of generalization in our models.
-<img src="https://user-images.githubusercontent.com/31917400/53890974-3b082a00-4021-11e9-956c-305c901fc010.jpg" />
+In this setting, we have data(Response variable) that are unbounded counts(web traffic hits) or rates(1-star, 2-star...), so they come from **Poisson** distribution. Of course we can approximate **Bin(p,n) with small p and large n** with this model or we can analyse a **contingency table data** as well. Poisson Regression is also known as **`Log-Linear Model`**. So here, we're transforming the `mean(or probability) value of the distribution`. Again, We're not transforming the Response variables themselves. That's the neat part of generalization in our models.
+ - Linear regression methods (assume constant variance and normal errors) are not appropriate for count data.
+   - Variance of response variable increases with the mean
+   - Errors will not be normally distributed
+   - Zeros are a headache in transformations
+ <img src="https://user-images.githubusercontent.com/31917400/53890974-3b082a00-4021-11e9-956c-305c901fc010.jpg" />
 
  - 1.Model for **Count**: Response is a count `E[Y]`.  
  <img src="https://user-images.githubusercontent.com/31917400/53890962-33488580-4021-11e9-8314-de1f752e8566.jpg" />
-
  
  - 2.Model for **Rate**: Reponse is `E[Y/t]` where `t` is an **interval** representing time, space, etc.  
  <img src="https://user-images.githubusercontent.com/31917400/53891890-304e9480-4023-11e9-88cc-42a9328aa21d.jpg" />
 
-
-
-
+### 0. Classification and PoissonRegression
+### I. Model_Fitting for PoissonRegression
+### II. Maximum Likelihood for PoissonRegression
+### III. Goodness of Fit test for PoissonRegression
+Confidence Intervals and Hypothesis tests for parameters: 
+ - Wald statistics
+ - Likelihood ratio tests
+ - Score tests
+### IV. Goodness of Fit test with Deviance Statistics
+ - Pearson chi-square statistic
+ - Deviance statistics
+ - Likelihood ratio statistic
+ - Residual analysis: Pearson, deviance, adjusted residuals
+ - Overdispersion(the observed variance is larger than the assumed variance)
 
 ## [D]. ANOVA with LinearRegression:
 It is used when we have **categorical explanatory variables** so that the observations`Y` belong to groups. In ANOVA, we compare the variability of responses(Y) `within groups` to the variability of responses(Y) `between groups`. If the variability **between groups** is large, relative to the variability within the groups, we conclude that there is a `grouping effect`. One Factor can have `2 levels` and the other can have `many levels`. For example, low and high or true and false. Or they can have many levels. 
