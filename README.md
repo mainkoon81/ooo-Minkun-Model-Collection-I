@@ -209,7 +209,7 @@ It is used when we have **categorical explanatory variables** so that the observ
    - If the effect of factor A on the response changes between levels of factor B, then we would need more parameters to describe how that mean changes. This phenomenon is called **interaction** between the factors.
 
 ## [E]. Other Issues
- - Overfitting
+ - Overfitting..How to solve?
    - **Regularization** (when we have to keep all features)
      - Keep all features, but reduce magnitude/values of parameters.    
    - **Feature Selection**
