@@ -216,8 +216,12 @@ It is used when we have **categorical explanatory variables** so that the observ
  - Feature Selection
  - 
 ### a) Overfitting and `Regularization` 
+<img src="https://user-images.githubusercontent.com/31917400/53956695-36e91480-40d4-11e9-9183-a73e4c78e9e5.jpg" />
 
-
+**How to solve ?:**
+ - > Feature Selection: 
+   
+ - > Regularization
 
 
 
