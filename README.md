@@ -209,22 +209,25 @@ It is used when we have **categorical explanatory variables** so that the observ
    - If the effect of factor A on the response changes between levels of factor B, then we would need more parameters to describe how that mean changes. This phenomenon is called **interaction** between the factors.
 
 ## [E]. Other Issues
- - Regularization
+ - Overfitting
+   - **Regularization** (when we have to keep all features)
+     - Keep all features, but reduce magnitude/values of parameters.    
+   - **Feature Selection**
  - bias VS variance
  - Diagnostics: Assessing model performance
  - Validation
- - Feature Selection
- - 
-### a) Overfitting and `Regularization` 
+
+## a) Overfitting 
 <img src="https://user-images.githubusercontent.com/31917400/53956695-36e91480-40d4-11e9-9183-a73e4c78e9e5.jpg" />
 
-**How to solve ?:**
- - > Feature Selection: 
-   
- - > Regularization
+### `Regularization` in Cost Function
+<img src="https://user-images.githubusercontent.com/31917400/53965694-969dea80-40e9-11e9-908a-44afe2a488e1.jpg" />
 
-
-
+**`λ`**, a regularization parameter controls a **trade off** between two different goals
+ - __Goal 01:__ Fit the training set well to avoid **underfitting**
+   - But if λ is too `small`...the Algorithm results in overfitting (fails to fit even the training set).
+ - __Goal 02:__ Keep the parameters small to avoid **overfitting** (keeping the hypothesis model relatively simple)
+   - But if λ is too `large`(penalizing the parameters too high), then we will end up with all of these parameters `close to zero`, so the algorithm results in underfitting (fails to fit even the training set).
 
 
 
