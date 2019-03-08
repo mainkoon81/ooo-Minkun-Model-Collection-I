@@ -215,7 +215,7 @@ It is used when we have **categorical explanatory variables** so that the observ
    - **Feature Selection**
    - **Boosting & Bagging**
  - bias VS variance
- - Diagnostics: Assessing model performance
+ - Assessing model performance
  - Validation
 
 ## a) Overfitting 
@@ -235,9 +235,15 @@ It is used when we have **categorical explanatory variables** so that the observ
 ## b) Bias & Variance in ML
  - Bias: the inability for a model to capture the true relationship in the dataset
  - Variance: the difference in model fits between dataset(training vs test) 
- - The ideal: low bias(in training) & low variance(after testing)
+ - The ideal: **low bias** & **low variance**
 > Straight line and Squiggly line:
-
+ - Straight line has:
+   - medium(relatively high) **Bias**
+   - **low variance** (b/w training and testing)
+ - Squiggly line has:
+   - low Bias
+   - high variance (b/w training and testing)
+<img src="https://user-images.githubusercontent.com/31917400/54045989-f6b88d80-41ca-11e9-9854-9b75a4b198cb.jpg" />
 
 
 
