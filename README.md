@@ -213,6 +213,7 @@ It is used when we have **categorical explanatory variables** so that the observ
    - **Regularization** (when we have to keep all features)
      - Keep all features, but reduce magnitude/values of parameters.    
    - **Feature Selection**
+   - **Boosting & Bagging**
  - bias VS variance
  - Diagnostics: Assessing model performance
  - Validation
@@ -230,6 +231,12 @@ It is used when we have **categorical explanatory variables** so that the observ
    - But if λ is too `large`(penalizing the parameters too high), then we will end up with all of these parameters `close to zero`, so the algorithm results in underfitting (fails to fit even the training set).
 
 
+
+## b) Bias & Variance in ML
+ - Bias: the inability for a model to capture the true relationship in the dataset
+ - Variance: the difference in model fits between dataset(training vs test) 
+ - The ideal: low bias(in training) & low variance(after testing)
+> Straight line and Squiggly line:
 
 
 
