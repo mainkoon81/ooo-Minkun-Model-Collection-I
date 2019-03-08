@@ -253,7 +253,7 @@ It is used when we have **categorical explanatory variables** so that the observ
    - high variance (b/w training and testing)
 <img src="https://user-images.githubusercontent.com/31917400/54045989-f6b88d80-41ca-11e9-9854-9b75a4b198cb.jpg" />
 
-
+## Regularization can balance bias and variance.  
 
 
 
