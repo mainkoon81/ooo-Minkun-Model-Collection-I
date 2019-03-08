@@ -235,15 +235,50 @@ It is used when we have **categorical explanatory variables** so that the observ
 ## b) Bias & Variance in ML
  - Bias: the inability for a model to capture the true relationship in the dataset
  - Variance: the difference in model fits between dataset(training vs test) 
- - The ideal: **low bias** & **low variance**
+ - The ideal: **low bias** & **`low variance`**
 > Straight line and Squiggly line:
  - Straight line has:
-   - medium(relatively high) **Bias**
-   - **low variance** (b/w training and testing)
+   - medium(relatively high) **bias** (in training)
+   - **`low variance`** (b/w training and testing) means...**consistency**! 
  - Squiggly line has:
-   - low Bias
+   - low bias (in training)
    - high variance (b/w training and testing)
 <img src="https://user-images.githubusercontent.com/31917400/54045989-f6b88d80-41ca-11e9-9854-9b75a4b198cb.jpg" />
+
+
+## c) Assessing model performance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
