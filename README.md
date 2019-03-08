@@ -218,11 +218,21 @@ It is used when we have **categorical explanatory variables** so that the observ
  - Assessing model performance
  - Validation
 
-## a) Overfitting 
+## Overfitting 
 <img src="https://user-images.githubusercontent.com/31917400/53956695-36e91480-40d4-11e9-9183-a73e4c78e9e5.jpg" />
 
 ### `Regularization` in Cost Function
 <img src="https://user-images.githubusercontent.com/31917400/53965694-969dea80-40e9-11e9-908a-44afe2a488e1.jpg" />
+
+ - Idea: Take the complexity of the model into account when we calculate the error. If we find a way to increment the error by some function of the `coefficients`, it would be great because in some way the complexity of our model will be added into the error so a complex model will have a larger error than a simple model. We respect that the simpler model have a tendency to generalize better.
+ - **L1 regularization** is useful for feature selection, as it tends to turn the less relevant weights into zero.
+ - Question is...What if we punish the complicated model too little or punish it too much ? 
+   - a model to send the rocket to the moon or a medical model have very **little room for error** so we're ok with some complexity.
+   - a model to recommend potential friends have **more room for experimenting** and need to be simpler and faster to run on big data.
+   - For every case, we have to tune how much we want to punish complexity in each model. This can be fixed with a parameter called 'lambda'. 
+     - If having a small lambda: multiply the complexity error by a small lambda (it won't swing the balance - "complex model wins".)
+     - If having a large lambda: multiply the complexity error by a large lambda (it punishes the complex model more - "simple model wins".)
+<img src="https://user-images.githubusercontent.com/31917400/39946131-e7c5a1da-5564-11e8-83f5-3f2e8e7c021d.jpg" />
 
 **`λ`**, a regularization parameter controls a **trade off** between two different goals
  - __Goal 01:__ Fit the training set well to avoid **underfitting**
@@ -230,9 +240,7 @@ It is used when we have **categorical explanatory variables** so that the observ
  - __Goal 02:__ Keep the parameters small to avoid **overfitting** (keeping the hypothesis model relatively simple)
    - But if λ is too `large`(penalizing the parameters too high), then we will end up with all of these parameters `close to zero`, so the algorithm results in underfitting (fails to fit even the training set).
 
-
-
-## b) Bias & Variance in ML
+> Bias & Variance in ML
  - Bias: the inability for a model to capture the true relationship in the dataset
  - Variance: the difference in model fits between dataset(training vs test) 
  - The ideal: **low bias** & **`low variance`**
@@ -244,10 +252,6 @@ It is used when we have **categorical explanatory variables** so that the observ
    - low bias (in training)
    - high variance (b/w training and testing)
 <img src="https://user-images.githubusercontent.com/31917400/54045989-f6b88d80-41ca-11e9-9854-9b75a4b198cb.jpg" />
-
-
-## c) Assessing model performance
-
 
 
 
