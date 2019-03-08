@@ -247,10 +247,10 @@ It is used when we have **categorical explanatory variables** so that the observ
 > Straight line and Squiggly line:
  - Straight line has:
    - medium(relatively high) **bias** (in training)
-   - **`low variance`** (b/w training and testing) means...**consistency**! 
+   - **`low variance`** (b/w training and testing) means...**consistency** in model performance! 
  - Squiggly line has:
    - low bias (in training)
-   - high variance (b/w training and testing)
+   - high variance (b/w training and testing) means...**inconsistency** in model performance!
 <img src="https://user-images.githubusercontent.com/31917400/54045989-f6b88d80-41ca-11e9-9854-9b75a4b198cb.jpg" />
 
 ## Regularization can balance bias and variance.  
