@@ -268,20 +268,17 @@ Find a new model that doesn't fit the **training data** that much by introducing
    - `λ` means **severity** of the penalty...`λ` is always equal to or greater than 0 
 
  - 1>Fitting and penalty(for numeric Response, numeric Predictors)
-   - If `λ`= 0, OLS cost_func = Ridge cost_func
-   - If `λ`= 100, OLS cost_func < Ridge cost_func
-   - The larger `λ` get, ..slope get smaller, thus..the response becomes less, less sensitive to predictors. 
-   - Then How to find `λ`? Try a bunch of `λ` and use **Cross Validation** to determine which one (b/w many models produced from: "cost function on training set--> coeff-estimation--> fit on testing set") results in the **lowest variance**.
+   - The larger `λ` get, ..slope get smaller, thus..the response becomes less, less sensitive to X-axis:P **predictors**. 
  <img src="https://user-images.githubusercontent.com/31917400/54071365-90cc1480-4263-11e9-975e-9d4337c02df1.jpg" />
 
  - 2>Fitting and penalty(for numeric Response, categorical Predictors)
-   - The larger `λ` get,..shrink slope(β1) down, thus..the response becomes less, less sensitive to the disparity b/w classes A/B.   
+   - The larger `λ` get,..shrink slope(β1) down, thus..the response becomes less, less sensitive to X-axis: **disparity b/w classes**.   
  <img src="https://user-images.githubusercontent.com/31917400/54073959-e95fd980-4284-11e9-89ca-280b26c22dec.jpg" />
 
    - Ridge can also be applied to Logistic regression of course..but its cost function is like: `SUM(likelihood) + λ*slope^2`
    - Ridge can also be applied to Multiple regression of course..but its cost function is like: `SSE + λ*Σ(slope^2)`
    - In penalty term, we ignore the intercept coefficient by convention because every coefficient except the intercept is supposed to be scaled by measurements.  
-
+   - Then How to find `λ`? Try a bunch of `λ` and use **Cross Validation** to determine which one (b/w many models produced from: "cost function on training set--> coeff-estimation--> fit on testing set") results in the **lowest variance**.
 
 
 
