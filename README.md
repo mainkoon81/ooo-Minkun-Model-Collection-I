@@ -262,9 +262,9 @@ So eventually we will find the model's coefficient from minimizing the cost func
 ## so increase bias and reduce variance ? 
 ### 1. RidgeRegression
 Find a new model that doesn't fit the **training data** that much by introducing a **small `bias`** into the line-fitting, but in return, we get a significant drop in variance. By starting with slightly worse fit, the model can offer better long term prediction! 
- - OLS regression's cost function is about minimizing the **SS of residuals**
- - Ridge regression's cost function is about minimizing the **SS of residuals** + `λ*slope^2`.
-   - `slope^2` means **penalty**
+ - OLS regression's cost function is about minimizing the **SSE**
+ - Ridge regression's cost function is about minimizing the **SSE** + `λ*slope^2`.
+   - `slope^2` in the cost function means **penalty**
    - `λ` means **severity** of the penalty...`λ` is always equal to or greater than 0 
 
  - 1>Fitting and penalty(for numeric Response, numeric Predictors)
@@ -275,7 +275,7 @@ Find a new model that doesn't fit the **training data** that much by introducing
  <img src="https://user-images.githubusercontent.com/31917400/54071365-90cc1480-4263-11e9-975e-9d4337c02df1.jpg" />
 
  - 2>Fitting and penalty(for numeric Response, categorical Predictors)
-   - The larger `λ` get, ..shrink slope(β1) down, thus..the response becomes less, less sensitive to the disparity b/w classes A/B.   
+   - The larger `λ` get,..shrink slope(β1) down, thus..the response becomes less, less sensitive to the disparity b/w classes A/B.   
  <img src="https://user-images.githubusercontent.com/31917400/54073959-e95fd980-4284-11e9-89ca-280b26c22dec.jpg" />
 
    - Ridge can also be applied to Logistic regression of course..but its cost function is like: `SUM(likelihood) + λ*slope^2`
