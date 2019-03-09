@@ -278,9 +278,10 @@ Find a new model that doesn't fit the **training data** that much by introducing
 
    - Ridge can also be applied to **Logistic regression** of course..but its cost function is like: `SUM(likelihood) + λ*slope^2`
    - Ridge can also be applied to **Multiple regression** of course..but its cost function is like: `SSE + λ*Σ(slope^2)`
-   - In penalty term, we **ignore the intercept coefficient** by convention because every coefficient except the intercept is supposed to be scaled by measurements.  
+   - In penalty term, we **ignore the intercept coefficient** by convention because every coefficient except the intercept is supposed to be scaled by measurements.
    - Then How to find `λ`? Try a bunch of `λ` and use **Cross Validation** to determine which one (b/w many models produced from: "cost function on training set--> coeff-estimation--> fit on testing set") results in the **lowest variance**.
-
+   - **#** Let's say we have a **high dimensional** dataset(such as 1000 features) but **don't have enough samples**(such as 100 records). Our model have 1000 predictors, so we need more than 1000 datapoints to find the model_coefficients(each point per each dimension). so what should we do? **Do Ridge**!!!
+     - It turns out that by adding the **penalty**, we can solve for all parameters with fewer samples! 
 
 
 
