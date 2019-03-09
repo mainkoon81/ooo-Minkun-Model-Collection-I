@@ -276,6 +276,7 @@ Find a new model that doesn't fit the **training data** that much by introducing
    - The larger `λ` get,..shrink slope(β1) down, thus..the response becomes less, less sensitive to X-axis: **disparity b/w classes**.   
  <img src="https://user-images.githubusercontent.com/31917400/54073959-e95fd980-4284-11e9-89ca-280b26c22dec.jpg" />
 
+ - 3>Discussion
    - Ridge can also be applied to **Logistic regression** of course..but its cost function is like: `SUM(likelihood) + λ*slope^2`
    - Ridge can also be applied to **Multiple regression** of course..but its cost function is like: `SSE + λ*Σ(slope^2)`
    - In penalty term, we **ignore the intercept coefficient** by convention because every coefficient except the intercept is supposed to be scaled by measurements.
