@@ -209,14 +209,26 @@ It is used when we have **categorical explanatory variables** so that the observ
    - If the effect of factor A on the response changes between levels of factor B, then we would need more parameters to describe how that mean changes. This phenomenon is called **interaction** between the factors.
 
 ## [E]. Other Issues
+ - bias VS variance
  - Overfitting..How to solve?
    - **Regularization** (when we have to keep all features)
      - Keep all features, but reduce magnitude/values of parameters.    
    - **Feature Selection**
    - **Boosting & Bagging**
- - bias VS variance
- - Assessing model performance
- - Validation
+ - Validation and Assessing model performance
+ 
+> Bias & Variance in ML
+ - Bias: the inability for a model to capture the true relationship in the dataset
+ - Variance: the difference in model fits between dataset(training vs test) 
+ - The ideal: **low bias** & **`low variance`**
+> Straight line and Squiggly line:
+ - Straight line has:
+   - medium(relatively high) **bias** (in training)
+   - **`low variance`** (b/w training and testing) means...**consistency** in model performance! 
+ - Squiggly line has:
+   - low bias (in training)
+   - high variance (b/w training and testing) means...**inconsistency** in model performance!
+<img src="https://user-images.githubusercontent.com/31917400/54045989-f6b88d80-41ca-11e9-9854-9b75a4b198cb.jpg" />
 
 ## Overfitting 
 <img src="https://user-images.githubusercontent.com/31917400/53956695-36e91480-40d4-11e9-9183-a73e4c78e9e5.jpg" />
@@ -241,25 +253,12 @@ It is used when we have **categorical explanatory variables** so that the observ
  - __Goal 02:__ Keep these parameters small to avoid **overfitting** (keeping the hypothesis model relatively simple)
    - But if λ is too `large`, then kill and make these parameters `close to zero`, and results in underfitting a.k.a **simple model** (fails to fit even the training set).
 
-> Bias & Variance in ML
- - Bias: the inability for a model to capture the true relationship in the dataset
- - Variance: the difference in model fits between dataset(training vs test) 
- - The ideal: **low bias** & **`low variance`**
-> Straight line and Squiggly line:
- - Straight line has:
-   - medium(relatively high) **bias** (in training)
-   - **`low variance`** (b/w training and testing) means...**consistency** in model performance! 
- - Squiggly line has:
-   - low bias (in training)
-   - high variance (b/w training and testing) means...**inconsistency** in model performance!
-<img src="https://user-images.githubusercontent.com/31917400/54045989-f6b88d80-41ca-11e9-9854-9b75a4b198cb.jpg" />
-
 ## Regularizing model's Coefficients can balance bias and variance.
 So eventually we will find the model's coefficient from minimizing the cost function with the penalty term. 
  - Ridge
  - Lasso
  - ElasticNet
-## so increase bias and reduce variance ? 
+## so..Do you want to increase bias to reduce variance ? 
 ### 1. RidgeRegression
 Find a new model that doesn't fit the **training data** that much by introducing a **small `bias`** into the line-fitting, but in return, we get a significant drop in variance. By starting with slightly worse fit, the model can offer better long term prediction! 
  - OLS regression's cost function is about minimizing the **SSE**
