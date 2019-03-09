@@ -210,7 +210,7 @@ It is used when we have **categorical explanatory variables** so that the observ
 
 ## [E]. Other Issues
  - bias VS variance
- - Overfitting..How to solve?
+ - Overfitting..high variance..How to solve?
    - **Regularization** (when we have to keep all features)
      - Keep all features, but reduce magnitude/values of parameters.    
    - **Feature Selection**
