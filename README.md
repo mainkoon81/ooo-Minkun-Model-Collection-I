@@ -227,7 +227,7 @@ It is used when we have **categorical explanatory variables** so that the observ
    - **`low variance`** (b/w training and testing) means...**consistency** in model performance! 
  - Squiggly line has:
    - low bias (in training)
-   - high variance (b/w training and testing) means...**inconsistency** in model performance!
+   - high variance (b/w training and testing) means...**inconsistency** in model performance!..so we can say "Overfitting!".
 <img src="https://user-images.githubusercontent.com/31917400/54045989-f6b88d80-41ca-11e9-9854-9b75a4b198cb.jpg" />
 
 ## Overfitting 
@@ -236,15 +236,17 @@ It is used when we have **categorical explanatory variables** so that the observ
 ### `Regularization` in Cost Function
 <img src="https://user-images.githubusercontent.com/31917400/53965694-969dea80-40e9-11e9-908a-44afe2a488e1.jpg" />
 
- - Idea: Take the complexity of the model into account when we calculate the error. If we find a way to increment the error by some function of the `coefficients`, it would be great because in some way the complexity of our model will be added into the error so a complex model will have a larger error than a simple model. We respect that the simpler model have a tendency to generalize better.
+ - __Idea:__ Take the complexity of the model into account when we calculate the error. If we find a way to increment the error by some function of the `coefficients`, it would be great because in some way the complexity of our model will be added into the error so a complex model will have a larger error than a simple model. We respect that the simpler model have a tendency to generalize better.
  - **L1 regularization** is useful for `feature selection`, as it tends to turn the less relevant weights into zero.
  
-## Q. What happens if we punish the complicated model too little or too much ? 
- - a model to send the rocket to the moon or a medical model have very **little room for error** so we're ok with some complexity.
- - a model to recommend potential friends have **more room for experimenting** and need to be simpler and faster to run on big data.
- - For every case, we have to tune how much we want to punish complexity in each model. This can be fixed with a parameter called 'lambda'. 
+## Q. so why do we punish our coefficient(slope)?
+ - When our model looks so complex, the model sometimes suffer from **high variance**, so...we punish.
+ - In the presence of multicollinearity b/w our coefficients, the model will suffer from **high variance**, so...we punish.  
+ - For every case, we have to tune how much we want to punish complexity in each model. This is fixed with a parameter `λ`. 
    - If having a small `λ`: multiply the complexity error by a small `λ` (won't swing the balance - "complex model is fine".)
+     - A model to send the rocket to the moon or a medical model have very **little room for error** so we're ok with some complexity.
    - If having a large `λ`: multiply the complexity error by a large `λ` (punishes the complex model more - "simple model".)
+     - A model to recommend potential friends have **more room for experimenting** and need to be simpler and faster to run on big data.
 <img src="https://user-images.githubusercontent.com/31917400/39946131-e7c5a1da-5564-11e8-83f5-3f2e8e7c021d.jpg" />
 
 **`λ`**, a regularization parameter controls a **trade off** between two different goals
@@ -255,8 +257,8 @@ It is used when we have **categorical explanatory variables** so that the observ
 
 ## Regularizing model's Coefficients can balance bias and variance.
 So eventually we will find the model's coefficient from minimizing the cost function with the penalty term. 
- - Ridge
- - Lasso
+ - Ridge (in case that all coefficients need to survive)
+ - Lasso (in case that you can kill some coefficients)
  - ElasticNet
 ## so..Do you want to increase bias to reduce variance ? 
 ### 1. RidgeRegression
