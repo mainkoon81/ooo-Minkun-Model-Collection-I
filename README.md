@@ -260,8 +260,8 @@ So eventually we will find the model's coefficient from minimizing the cost func
  - Ridge (in case that all coefficients need to survive)
  - Lasso (in case that you can kill some coefficients)
  - ElasticNet
-## so..Do you want to increase bias to reduce variance ? 
-### 1. RidgeRegression(L2 Rgularization)
+## so..Do you want to `increase bias` to reduce variance ? 
+### 1. RidgeRegression(L2 Regularization:`SUM(β^2)`)
 Find a new model that doesn't fit the **training data** that much by introducing a **small `bias`** into the line-fitting, but in return, we get a significant drop in variance. By starting with slightly worse fit, the model can offer better long term prediction! 
  - OLS regression's cost function is about minimizing the **SSE**
  - Ridge regression's cost function is about minimizing the **SSE** + `λ*slope^2`.
@@ -284,7 +284,7 @@ Find a new model that doesn't fit the **training data** that much by introducing
    - **#** Let's say we have a **high dimensional** dataset(such as 1000 features) but **don't have enough samples**(such as 100 records). Our model have 1000 predictors, so we need more than 1000 datapoints to find the model_coefficients(each point per each dimension). so what should we do? **Do Ridge**!!!
      - It turns out that by adding the **penalty**, we can solve for all parameters with fewer samples. but how? 
 
-### 2. LassoRegression(L1 regularization)
+### 2. LassoRegression(L1 regularization:`SUM(|β|)`)
 Ridge cannot set coefficients to '0' while Lasso can shrink coefficients to '0', thus can be useful for **feature selection**. 
 
 
