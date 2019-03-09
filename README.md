@@ -225,21 +225,21 @@ It is used when we have **categorical explanatory variables** so that the observ
 <img src="https://user-images.githubusercontent.com/31917400/53965694-969dea80-40e9-11e9-908a-44afe2a488e1.jpg" />
 
  - Idea: Take the complexity of the model into account when we calculate the error. If we find a way to increment the error by some function of the `coefficients`, it would be great because in some way the complexity of our model will be added into the error so a complex model will have a larger error than a simple model. We respect that the simpler model have a tendency to generalize better.
- - **L1 regularization** is useful for feature selection, as it tends to turn the less relevant weights into zero.
+ - **L1 regularization** is useful for `feature selection`, as it tends to turn the less relevant weights into zero.
  
-## Q. What if we punish the complicated model too little or punish it too much ? 
+## Q. What happens if we punish the complicated model too little or too much ? 
  - a model to send the rocket to the moon or a medical model have very **little room for error** so we're ok with some complexity.
  - a model to recommend potential friends have **more room for experimenting** and need to be simpler and faster to run on big data.
  - For every case, we have to tune how much we want to punish complexity in each model. This can be fixed with a parameter called 'lambda'. 
-   - If having a small `λ`: multiply the complexity error by a small `λ` (it won't swing the balance - "complex model wins".)
-   - If having a large `λ`: multiply the complexity error by a large `λ` (it punishes the complex model more - "simple model wins".)
+   - If having a small `λ`: multiply the complexity error by a small `λ` (won't swing the balance - "complex model is fine".)
+   - If having a large `λ`: multiply the complexity error by a large `λ` (punishes the complex model more - "simple model".)
 <img src="https://user-images.githubusercontent.com/31917400/39946131-e7c5a1da-5564-11e8-83f5-3f2e8e7c021d.jpg" />
 
 **`λ`**, a regularization parameter controls a **trade off** between two different goals
  - __Goal 01:__ Fit the training set well to avoid **underfitting**
-   - But if λ is too `small`...the Algorithm results in overfitting (fails to fit even the training set).
- - __Goal 02:__ Keep the parameters small to avoid **overfitting** (keeping the hypothesis model relatively simple)
-   - But if λ is too `large`(penalizing the parameters too high), then we will end up with all of these parameters `close to zero`, so the algorithm results in underfitting (fails to fit even the training set).
+   - But if λ is too `small`, then Model coefficients are still huge, and results in overfitting a.k.a **complex model** (fails to fit even the training set).
+ - __Goal 02:__ Keep these parameters small to avoid **overfitting** (keeping the hypothesis model relatively simple)
+   - But if λ is too `large`, then kill and make these parameters `close to zero`, and results in underfitting a.k.a **simple model** (fails to fit even the training set).
 
 > Bias & Variance in ML
  - Bias: the inability for a model to capture the true relationship in the dataset
@@ -254,7 +254,8 @@ It is used when we have **categorical explanatory variables** so that the observ
    - high variance (b/w training and testing) means...**inconsistency** in model performance!
 <img src="https://user-images.githubusercontent.com/31917400/54045989-f6b88d80-41ca-11e9-9854-9b75a4b198cb.jpg" />
 
-## Regularization can balance bias and variance.
+## Regularizing model's Coefficients can balance bias and variance.
+So eventually we will find the model's coefficient from minimizing the cost function with the penalty term. 
  - Ridge
  - Lasso
  - ElasticNet
