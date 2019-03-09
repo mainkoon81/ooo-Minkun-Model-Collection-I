@@ -240,8 +240,8 @@ It is used when we have **categorical explanatory variables** so that the observ
  - **L1 regularization** is useful for `feature selection`, as it tends to turn the less relevant weights into zero.
  
 ## Q. so why do we punish our coefficient(slope)?
- - When our model looks so complex, the model sometimes suffer from **high variance**, so...we punish.
- - In the presence of multicollinearity b/w our coefficients, the model will suffer from **high variance**, so...we punish.  
+ - When our model looks so complex, the model sometimes suffer from **high variance**, so...we punish it by increasing bias(diminishing slopes). 
+ - In the presence of multicollinearity b/w our coefficients, the model will suffer from **high variance**, so...we punish it by increasing bias(diminishing slopes).   
  - For every case, we have to tune how much we want to punish complexity in each model. This is fixed with a parameter `λ`. 
    - If having a small `λ`: multiply the complexity error by a small `λ` (won't swing the balance - "complex model is fine".)
      - A model to send the rocket to the moon or a medical model have very **little room for error** so we're ok with some complexity.
@@ -253,7 +253,7 @@ It is used when we have **categorical explanatory variables** so that the observ
  - __Goal 01:__ Fit the training set well to avoid **underfitting**
    - But if λ is too `small`, then Model coefficients are still huge, and results in overfitting a.k.a **complex model** (fails to fit even the training set).
  - __Goal 02:__ Keep these parameters small to avoid **overfitting** (keeping the hypothesis model relatively simple)
-   - But if λ is too `large`, then kill and make these parameters `close to zero`, and results in underfitting a.k.a **simple model** (fails to fit even the training set).
+   - But if λ is too `large`, then diminishes and makes these parameters `close to zero`, and results in underfitting a.k.a **simple model** (fails to fit even the training set).
 
 ## Regularizing model's Coefficients can balance bias and variance.
 So eventually we will find the model's coefficient from minimizing the cost function with the penalty term. 
@@ -269,16 +269,16 @@ Find a new model that doesn't fit the **training data** that much by introducing
    - `λ` means **severity** of the penalty...`λ` is always equal to or greater than 0 
 
  - 1>Fitting and penalty(for numeric Response, numeric Predictors)
-   - The larger `λ` get, ..slope get smaller, thus..the response becomes less, less sensitive to X-axis:P **predictors**. 
+   - The larger `λ` get, ..slope get smaller, thus..the response becomes less, less sensitive to X-axis: **predictors**. 
  <img src="https://user-images.githubusercontent.com/31917400/54071365-90cc1480-4263-11e9-975e-9d4337c02df1.jpg" />
 
  - 2>Fitting and penalty(for numeric Response, categorical Predictors)
    - The larger `λ` get,..shrink slope(β1) down, thus..the response becomes less, less sensitive to X-axis: **disparity b/w classes**.   
  <img src="https://user-images.githubusercontent.com/31917400/54073959-e95fd980-4284-11e9-89ca-280b26c22dec.jpg" />
 
-   - Ridge can also be applied to Logistic regression of course..but its cost function is like: `SUM(likelihood) + λ*slope^2`
-   - Ridge can also be applied to Multiple regression of course..but its cost function is like: `SSE + λ*Σ(slope^2)`
-   - In penalty term, we ignore the intercept coefficient by convention because every coefficient except the intercept is supposed to be scaled by measurements.  
+   - Ridge can also be applied to **Logistic regression** of course..but its cost function is like: `SUM(likelihood) + λ*slope^2`
+   - Ridge can also be applied to **Multiple regression** of course..but its cost function is like: `SSE + λ*Σ(slope^2)`
+   - In penalty term, we **ignore the intercept coefficient** by convention because every coefficient except the intercept is supposed to be scaled by measurements.  
    - Then How to find `λ`? Try a bunch of `λ` and use **Cross Validation** to determine which one (b/w many models produced from: "cost function on training set--> coeff-estimation--> fit on testing set") results in the **lowest variance**.
 
 
