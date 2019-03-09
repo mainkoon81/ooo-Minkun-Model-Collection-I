@@ -254,22 +254,29 @@ It is used when we have **categorical explanatory variables** so that the observ
    - high variance (b/w training and testing) means...**inconsistency** in model performance!
 <img src="https://user-images.githubusercontent.com/31917400/54045989-f6b88d80-41ca-11e9-9854-9b75a4b198cb.jpg" />
 
-## Regularization can balance bias and variance.  
+## Regularization can balance bias and variance.
+ - Ridge
+ - Lasso
+ - ElasticNet
 ### 1. RidgeRegression
 Find a new model that doesn't fit the **training data** that much by introducing a **small `bias`** into the line-fitting, but in return, we get a significant drop in variance. By starting with slightly worse fit, the model can offer better long term prediction! 
  - OLS regression's cost function is about minimizing the **SS of residuals**
  - Ridge regression's cost function is about minimizing the **SS of residuals** + `λ*slope^2`.
    - `slope^2` means **penalty**
    - `λ` means **severity** of the penalty...`λ` is always equal to or greater than 0 
- - Fitting and penalty (for numeric Response, numeric Predictors)
+
+ - 1>Fitting and penalty(for numeric Response, numeric Predictors)
    - If `λ`= 0, OLS cost_func = Ridge cost_func
    - If `λ`= 100, OLS cost_func < Ridge cost_func
    - The larger `λ` get, the response becomes less and less sensitive to predictors 
    - Then How to find `λ`? Try a bunch of `λ` and use **CrossValidation** to determine which one results in the **lowest variance**.
  <img src="https://user-images.githubusercontent.com/31917400/54071365-90cc1480-4263-11e9-975e-9d4337c02df1.jpg" />
 
- - Fitting and penalty (for numeric Response, categorical Predictors)
+ - 2>Fitting and penalty(for numeric Response, categorical Predictors)
    - 
+ 
+ 
+ - 3>Fitting and penalty
 
 
 
