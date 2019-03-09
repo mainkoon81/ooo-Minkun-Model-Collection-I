@@ -286,6 +286,8 @@ Find a new model that doesn't fit the **training data** that much by introducing
 
 ### 2. LassoRegression(L1 regularization:`SUM(|β|)`)
 Ridge cannot set coefficients to '0' while Lasso can shrink coefficients to '0', thus can be useful for **feature selection**. 
+ - If `λ`= ∞, stupid? feature's slope = 0
+ <img src="https://user-images.githubusercontent.com/31917400/54078491-d66afa80-42c0-11e9-9659-d76f900967dc.jpg" />
 
 
 
