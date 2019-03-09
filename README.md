@@ -270,7 +270,7 @@ Find a new model that doesn't fit the **training data** that much by introducing
    - If `λ`= 0, OLS cost_func = Ridge cost_func
    - If `λ`= 100, OLS cost_func < Ridge cost_func
    - The larger `λ` get, the response becomes less and less sensitive to predictors 
-   - Then How to find `λ`? Try a bunch of `λ` and use **CrossValidation** to determine which one results in the **lowest variance**.
+   - Then How to find `λ`? Try a bunch of `λ` and use **Cross Validation** to determine which one(many models produced from: "cost function on training set--> coeff-estimation--> fit on testing set") results in the **lowest variance**.
  <img src="https://user-images.githubusercontent.com/31917400/54071365-90cc1480-4263-11e9-975e-9d4337c02df1.jpg" />
 
  - 2>Fitting and penalty(for numeric Response, categorical Predictors)
