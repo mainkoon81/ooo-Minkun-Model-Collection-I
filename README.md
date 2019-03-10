@@ -1,4 +1,7 @@
 # Study-V004-Statistical-Model-Collection
+• **Regression:** the target feature takes continuous values (real numbers, integers) 
+
+• **Classification:** the target feature takes discrete values (labels, levels)
 
 # 0> Gradient Descent Method & Cost function
 > Whenever you train a model with your data, you are actually producing some new values (predicted) for a specific feature. However, that specific feature already has some values which are real values in the dataset. We know the closer the predicted values to their corresponding real values, the better the model. 
