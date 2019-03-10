@@ -212,8 +212,8 @@ It is used when we have **categorical explanatory variables** so that the observ
  - bias VS variance
  - Overfitting..high variance..How to solve?
    - **Regularization** (when we have to keep all features)
-     - Keep all features, but reduce magnitude/values of parameters.    
-   - **Feature Selection**
+     - **L2:** Keep all features, but reduce magnitude/values of parameters.    
+     - **L1:** Feature Selection
    - **Boosting & Bagging**
  - Validation and Assessing model performance
  
