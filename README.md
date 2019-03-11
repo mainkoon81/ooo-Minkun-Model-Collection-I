@@ -81,8 +81,8 @@ In this setting, we have data(Response variable) that are `0/1` so binary, so it
 
 __[Background]__
 > Do you know **likelihood**? **log odd-ratio** ?
- - Prabability: Fit data to the certain **distribution** we know.
- - Likelihood: Fit distribution to the certain **data** we know.
+ - Prabability: Fit data to the certain **distribution** we know: `P(θ|x,x,x,x)`
+ - Likelihood: Fit distribution to the certain **data** we know: `P(x,x,x,x|θ)`
 <img src="https://user-images.githubusercontent.com/31917400/53687390-0566f680-3d2c-11e9-81c2-a76eb822c462.jpg" />
 
 > What can we do with `log(odd_ratio)` ?
