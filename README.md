@@ -1,4 +1,4 @@
-# Study-V004-Statistical-Model-Collection (basic)
+# Basic
 • **Regression:** the target feature takes continuous values (real numbers, integers) 
 
 • **Classification:** the target feature takes discrete values (labels, levels)
