@@ -34,7 +34,8 @@ GLM involves three components:
  - 2> systematic component(**linear predictor**)
    - This is what we want to model. The systematic component is the Linear Component with the coefficients and predictors.    
  - 3> **link function** 
-   - This connects the `meaning of the response`(from the **exponential family distribution**) to the **linear predictor**.
+   - This connects the `E[Y]`(from the **exponential family distribution**) to the **linear predictor** component.
+     - It allows us to analyze the linear relationship b/w predictors and the **mean** of the response variable(because CLM says any mean follows Gaussian?) 
 
 ## Ok, start with basics. 
 ## A. Linear Regression (NORMAL response): 
@@ -96,13 +97,13 @@ In this setting, we have data(Response variable) that are `0/1` so binary, so it
 > What can we do with `log(odd_ratio)` ?
 <img src="https://user-images.githubusercontent.com/31917400/53687104-3cd3a400-3d28-11e9-95ae-a59e075e5b31.jpg" />
 
-`log(odd_ratio)` tells us if there is a strong/weak **relationship** between **two binary variables**.  
+## `log(odd_ratio)` tells us if there is a strong/weak **relationship** between **two binary variables**.  
  - There are 3 ways to determine if the `log(odd_ratio)` is statistically significant..i.e determine the `p-value` for the significance of that relationship.    
    - Fisher's **Exact Test**
    - Chi-Sqr Test(to find P-value) 
    - Wald Test(to find P-value and Confidence Interval)
 > Wald test: 
- - It takes advantage of the fact that `log(odd_ratio)`, just like `log(odd)`, follows Gaussian.   
+ - It takes advantage of the fact that `log(odd_ratio)`, just like `log(odd)`, follows **`Gaussian`**.   
 <img src="https://user-images.githubusercontent.com/31917400/53688530-5206fd80-3d3d-11e9-8ce0-336fca1e8746.jpg" />
 
 
