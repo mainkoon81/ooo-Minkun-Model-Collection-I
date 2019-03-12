@@ -139,7 +139,7 @@ How do we know the **fitted line of the highest log-likelihood value we used** i
    - Deviance Test
    - HosmerLemeshow-C / H
    - McFadden's psuedo R-Squared & P_value
-     - For R-Squared, instead of using `SSR/SSE`, we use `[LL(Null) - LL(fit)] / LL(Null)`. **LL(fit)** refering the **fitted line's highest log-likelihood value**. 
+     - For R-Squared, instead of using `SSR/SST`, we use `[LL(Null) - LL(fit)] / LL(Null)`. **LL(fit)** refering the **fitted line's highest log-likelihood value**. 
      - For P-value, `2*[LL(Null) - LL(fit)]` = **Chi-Sqr value** with `df = the difference in the NO.of parameters in the two models`.
        - In the worst case, `LL(fit) = LL(Null)`, then Chi-Sqr value is 0, so P-value = 1 (area under the curve). 
        - In other cases, `LL(fit) > LL(Null)`, then Chi-Sqr is greater than 0, so P-value becomes smaller. 
