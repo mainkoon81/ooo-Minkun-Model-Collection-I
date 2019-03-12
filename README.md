@@ -132,7 +132,7 @@ To attempt classification, one method is to use **linear regression** by mapping
 ### II. Maximum Likelihood for LogisticRegression (Parameter Estimation_2)
  - In OLS regression, we use **Least squares Method** to fit the line(to find slope and intercept).  
  - In logistic regression, we use **Maximum Likelihood Method** to fit the line or to obtain the best **p = sigmoid function** = Logistic Function. We project all data pt onto the best fitting line, using `log(odd)`, and then translate these `log(odd)`s back to probabilities using `sigmoid`.  
- <img src="https://user-images.githubusercontent.com/31917400/54193470-11805000-44b2-11e9-8b72-acd703b0cc75.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/54194105-62dd0f00-44b3-11e9-8fd3-b47f62067121.jpg" />
 
 ### III. Cost Function and Gradient Descent for LogisticRegression (Parameter Estimation_3)
 To fit the model(to find the parameter), 
