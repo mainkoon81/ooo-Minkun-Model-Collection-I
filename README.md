@@ -77,7 +77,22 @@ In this setting, we have data(Response variable) that comes from **Gaussian** di
 
 ## [B]. Logistic Regression (Y/N response):
 In this setting, we have data(Response variable) that are `0/1` so binary, so it comes from **Bernoulli** distribution.  
-<img src="https://user-images.githubusercontent.com/31917400/53844949-4286ef00-3f9f-11e9-9ddc-ea0dfcb819c5.jpg" /> So here, we're transforming the `mean(or probability) value of the distribution`. We're not transforming the Response variables themselves. That's the neat part of generalization in our models.
+<img src="https://user-images.githubusercontent.com/31917400/53844949-4286ef00-3f9f-11e9-9ddc-ea0dfcb819c5.jpg" /> So here, we're transforming the `mean(or probability) value of the distribution`. We're not transforming the Response variables themselves.
+ - For categoric data
+ - For **binary** classification
+ - The dependent variable must be **categorical**, and the **explanatory variables can take any form**.
+ - But before fitting on the data, we need to convert the categorical predictors into the numeric(using `pd.get_dummies(series)[which level is '1'?]`). This is called:
+   - `One-Hot Encoding` when there is no ordinal levels (red, blue,..=> check(1), uncheck(0),..)
+   - `Integer Encoding` when there is ordinal levels (first, second,..=> 1,2..) 
+   - http://pbpython.com/categorical-encoding.html
+
+> PREDICTION: based on the line best cut the data, we can guess 'pass/fail' of new student.
+ - The number of errors is not what we want to minimize.
+ - Instead we want to minimize sth that captures the number of errors called 'Log-loss function'.
+   - The 'error function' will assign a large/small **penalty** to the incorrectly/correctly classified points.  
+   - then we juggle the line around to minimize the sum of penalities(minimizing the error function)
+   - Here, 'p' is the probability or proportion.
+<img src="https://user-images.githubusercontent.com/31917400/39021406-93efa878-4428-11e8-8bac-04d841fbbf16.jpg" />
 
 __[Background]__
 > Do you know **likelihood**? **log odd-ratio** ?
