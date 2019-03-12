@@ -175,11 +175,16 @@ Q. How do we know the **fitted line of the highest log-likelihood value we used*
    - Deviance Test
    - HosmerLemeshow-C / H
    - McFadden's psuedo R-Squared & P_value
-     - For R-Squared, instead of using `SSR/SST`, we use `[LL(Null) - LL(fit)] / LL(Null)`. **LL(fit)** refering the **fitted line's highest log-likelihood value**. 
-     - For P-value, `2*[LL(Null) - LL(fit)]` = **Chi-Sqr value** with `df = the difference in the NO.of parameters in the two models`.
+     - For R-Squared, instead of using `SSR/SST`, we use `[LL(fit) - LL(Null)] / [LL(Saturated) - LL(Null)]`. 
+       - **LL(fit)** referring the **fitted line's highest log-likelihood value**. 
+     - For P-value, `-2*[LL(Null) - LL(fit)]` = **Chi-Sqr value** with `df = the difference in the NO.of parameters in the two models`.
        - In the worst case, `LL(fit) = LL(Null)`, then Chi-Sqr value is 0, so P-value = 1 (area under the curve). 
        - In other cases, `LL(fit) > LL(Null)`, then Chi-Sqr is greater than 0, so P-value becomes smaller. 
        <img src="https://user-images.githubusercontent.com/31917400/53702648-1d5c7a00-3e01-11e9-9596-ea6d96d2e05d.jpg" />
+
+
+
+
 
 ### V. Goodness of Fit test with Deviance Statistics
 What's Saturated Model used for? 
