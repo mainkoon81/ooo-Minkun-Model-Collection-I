@@ -34,8 +34,10 @@ GLM involves three components:
  - 2> systematic component(**linear predictor**)
    - This is what we want to model. The systematic component is the Linear Component with the coefficients and predictors.    
  - 3> **link function** 
+   <img src="https://user-images.githubusercontent.com/31917400/54211242-e3facd00-44d8-11e9-8975-0654c30fbc9a.jpg" />
+
    - This connects the `E[Y]`(from the **exponential family distribution**) to the **linear predictor** component.
-     - It allows us to analyze the linear relationship b/w predictors and the **mean** of the response variable(because CLM says any mean follows Gaussian?) 
+     - It allows us to analyze the linear relationship b/w predictors and the **mean** of the response variable(because CLT says any mean follows Gaussian?) 
 
 ## Ok, start with basics. 
 ## A. Linear Regression (NORMAL response): 
