@@ -86,7 +86,8 @@ In this setting, we have data(Response variable) that are `0/1` so binary, so it
    - `Integer Encoding` when there is ordinal levels (first, second,..=> 1,2..) 
    - http://pbpython.com/categorical-encoding.html
 
-__[Background]__
+-----------------------------------------------------------------------------------------------
+## [Background Study]
 > Do you know **likelihood**? **log odd-ratio** ?
  - Prabability: To find probabilities, Fit data to the certain **distribution** we know: `P(θ|x,x,x,x)`
  - Likelihood: To find popultion parmeters, Fit distribution to the certain **data** we know: `P(x,x,x,x|θ)`
@@ -103,6 +104,22 @@ __[Background]__
 > Wald test: 
  - It takes advantage of the fact that `log(odd_ratio)`, just like `log(odd)`, follows Gaussian.   
 <img src="https://user-images.githubusercontent.com/31917400/53688530-5206fd80-3d3d-11e9-8ce0-336fca1e8746.jpg" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
 
 ## Back to the main topic,
 ### 0. Classification and LogisticRegression
