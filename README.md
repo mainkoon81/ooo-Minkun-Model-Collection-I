@@ -197,7 +197,13 @@ What's log(likelihood(odd_Ratio)) Statistics used for?
    - ..so the fitted model is a rubbish..and not significant. This is a deviance statistics. 
 
 Interpretation?
- - 
+ - The odds ratio is a statistic that measures the odds of an event compared to the odds of another event.
+ - The odds_ratio b/w two events is
+ <img src="https://user-images.githubusercontent.com/31917400/54269194-d09d3f80-4574-11e9-8137-18cb3efbea30.jpg" />
+
+   - Odds_Ratio ranges from 0 to ∞
+   - `0 < Odds_Ratio < 1` indicate the **odds(p-value) of Event 2** are greater.
+   - `1 < Odds_Ratio < ∞` indicate the **odds(p-value) of Event 1** are greater. 
 
 
 What's Deviance Statistics used for?
