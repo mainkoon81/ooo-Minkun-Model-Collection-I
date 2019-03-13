@@ -199,16 +199,11 @@ When "likelihood" is mentioned..it's about overall model?..
      - Odd_Ratio ranges from 0 to ∞
      - `0 < Odd_Ratio < 1` indicate the **odds of Event 2** are greater.
      - `1 < Odd_Ratio < ∞` indicate the **odds of Event 1** are greater. 
-   - w/o using likelihood, `log(odd_ratio)` means literally the log of difference b/w two odds produced by the fitted_logit model equations.
+   - w/o using likelihood, `log(odd_ratio)` means literally the log of difference b/w two odds produced by the same fitted_logit model equation.
      <img src="https://user-images.githubusercontent.com/31917400/54269194-d09d3f80-4574-11e9-8137-18cb3efbea30.jpg" />
    
-   - 
-
-   
-   
-   
-   
-   
+   - This directly helps us understand the model coefficients. 
+     <img src="https://user-images.githubusercontent.com/31917400/54277392-a6a14880-4587-11e9-9bf1-c93a4a43422f.jpg" />
 
 ### V. Goodness of Fit test with Deviance Statistics
  - Pearson Test
