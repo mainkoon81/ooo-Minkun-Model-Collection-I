@@ -111,9 +111,19 @@ In this setting, we have data(Response variable) that are `0/1` so binary, so it
 ## 2. Maximum Likelihood Estimation is...
 <img src="https://user-images.githubusercontent.com/31917400/54281684-29c79c00-4592-11e9-9c90-b4293a278078.jpg" />
 
+To find the “most likely” parameter value that corresponds to the desired probability distribution of the sample data.
+ - Properties(BLUEness)
+   - sufficiency(complete information about the parameterof interest contained in its MLE estimator); 
+   - consistency(true parametervalue that generatedthe data recovered asymptotically, i.e.for data of sufficientlylarge samples);
+   - efficiency(lowest-possible variance of parameterestimatesachieved asymptotically); 
+   - parameterization invariance(same MLE solutionobtainedindependent of the parametrization used).  
+
 > ex_1. Normal
 <img src="https://user-images.githubusercontent.com/31917400/54283654-61d0de00-4596-11e9-9e98-ac38777b5e66.jpg" />
 
+> ex_2. OLS Regression
+ - Let's say we apply the maximum likelihood principle to regression to find model coefficients.  
+ <img src="https://user-images.githubusercontent.com/31917400/54288191-f2132100-459e-11e9-89b3-8045ec5c84c4.jpg" />
 
 
 
