@@ -112,7 +112,7 @@ In this setting, we have data(Response variable) that are `0/1` so binary, so it
 <img src="https://user-images.githubusercontent.com/31917400/54281684-29c79c00-4592-11e9-9c90-b4293a278078.jpg" />
 
 > ex_1. Normal
-<img src="https://user-images.githubusercontent.com/31917400/54281684-29c79c00-4592-11e9-9c90-b4293a278078.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/54283654-61d0de00-4596-11e9-9e98-ac38777b5e66.jpg" />
 
 
 
