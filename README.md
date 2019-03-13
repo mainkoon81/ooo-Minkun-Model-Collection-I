@@ -197,8 +197,8 @@ To fit the model(to find the parameter),
      - Odd_Ratio ranges from 0 to ∞
      - `0 < Odd_Ratio < 1` indicate the **odds(p-value) of Event 2** are greater.
      - `1 < Odd_Ratio < ∞` indicate the **odds(p-value) of Event 1** are greater. 
-   - w/o using likelihood, `log(odd_ratio)` b/w two events is literally the difference b/w two model equations.
-   <img src="https://user-images.githubusercontent.com/31917400/54269194-d09d3f80-4574-11e9-8137-18cb3efbea30.jpg" />
+   - w/o using likelihood, `log(odd_ratio)` b/w two events means literally the difference b/w two logit model equations.
+     <img src="https://user-images.githubusercontent.com/31917400/54269194-d09d3f80-4574-11e9-8137-18cb3efbea30.jpg" />
 
 
    
