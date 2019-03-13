@@ -175,32 +175,70 @@ Q. How do we know the **fitted line of the highest log-likelihood value we disco
 
    - For independent observations, the likelihood is the product of the probability distribution functions of the observations. `-2` is a convention. 
    - McFadden's psuedo R-Squared & P_value
-     - For R-Squared, instead of using `SSR/SST`, we use `[LL(fit) - LL(Null)] / [LL(Saturated) - LL(Null)]`. 
+   # R^2
+     - For R-Squared, instead of using `SSR/SST`, we use `[LL(fit) - LL(Null)] / [LL(Saturated) - LL(Null)]`. **This is not Chi-Sqr**. 
        - **LL(fit)** referring the **fitted line's highest log-likelihood value**. 
+       - **LL(Saturated)** is not useful here since there is no data reduction (NO.of parameters = NO.of observations). It's considered as Maximum achievable log(likelihood). But it's a baseline for comparison to other model fits. 
+   # P-value    
      - For P-value, `-2*[LL(Null) - LL(fit)]` = **Chi-Sqr value** with `df = the difference in the NO.of parameters in the two models`.
        - In the worst case, `LL(fit) = LL(Null)`, then Chi-Sqr value is 0, so P-value = 1 (area under the curve). 
        - In other cases, `LL(fit) > LL(Null)`, then Chi-Sqr is greater than 0, so P-value becomes smaller. 
        <img src="https://user-images.githubusercontent.com/31917400/53702648-1d5c7a00-3e01-11e9-9596-ea6d96d2e05d.jpg" />
-    
-   - Go back to the P-value, `-2*[LL(Null) - LL(fit)]`,     
-
-
-
 
 ### V. Goodness of Fit test with Deviance Statistics
  - Pearson Test
  - **Deviance Test**
  - HosmerLemeshow-C / H
- 
-What's Saturated Model used for? Deviance statistics!
-<img src="https://user-images.githubusercontent.com/31917400/53702415-90b0bc80-3dfe-11e9-8f75-908c7e6bb11b.jpg" />
+
+What's log(likelihood(odd_Ratio)) Statistics used for?
+ - Ho: Nested_Model = Full_Model
+   - ..so the full model is a rubbish..and not significant.  
+ - Ho: Null_Model = Fitted_Model
+   - ..so the fitted model is a rubbish..and not significant. This is a deviance statistics. 
+
+Interpretation?
+ - 
+
 
 What's Deviance Statistics used for?
- - we can get **P-value** and compute the **log-likelihood based R-Squares**. 
+ - To select model and coefficients
+ - To study the effect of each predictor on the response variable. 
+ - To distinguish Unbalance Data (Few responses of one type) 
+ - we can get **P-value** and compute the **log-likelihood based R-Squares**.
+ 
+What else?
+ - Akaike Information Criterion (AIC) 
+   - Penalizes model for having many parameters 
+   - AIC = `Deviance + 2*p` (where p = number of parameters in model)
+ - Bayesian Information Criterion (BIC) 
+   - BIC = `-2*LL(Null/fit) + ln(n)*p` (where p = number of parameters in model, and n = number of observations 
+   - AKA the Schwartz Information Criterion (SIC)
+ - Find the best subset (Tests all combinations of predictors)
+ - Algorithmic Method
+   - Stepwise Selection (Combination of forward and backward selection) 
+     - 1. Fit each predictor variable as a single predictor variable and determine fit
+     - 2. Select variable that produces best fit and add to model
+     - 3. Add each predictor variable one at a time to the model and determine fit
+     - 4. Select variable that produces best fit and add to the model
+     - 5. Delete each variable in the model one at a time and determine fit
+     - 6. Remove variable that produces best fit when deleted
+     - 7. Return to Step Two
+     - Loop until no variables added or deleted improve the fit
+ - Outlier detection
+   - Studentized Residual Plot (against predicted values)
+   - Deviance Residual Plot (against predicted values)
+     - Looking for “sore thumbs”, values much larger than those for other observations
+
+ 
+
+
+ 
+What's Saturated Model used for? For Deviance statistics!
+<img src="https://user-images.githubusercontent.com/31917400/53702415-90b0bc80-3dfe-11e9-8f75-908c7e6bb11b.jpg" />
 
 ## statistics:`Null Deviance - Residual Deviance` 
  - Comparing to **Chi-Sqr** (df = No.of parameters in `Proposed model` - No.of parameters in `Null model`) 
- 
+   - `-2*[LL(Null) - LL(Saturated)]` - `-2*[LL(fit) - LL(Saturated)]` = `-2*LL(Null/fit)`
  - **Null Deviance**  
    - **Is `Null model` is significantly different from Saturated model?** 
    - Statistics:`-2*[LL(Null) - LL(Saturated)]` and this gives us **P-value**.
@@ -209,7 +247,6 @@ What's Deviance Statistics used for?
    - **Is our `Proposed model` is significantly different from Saturated model?** 
    - Statistics:`-2*[LL(fit) - LL(Saturated)]` and this gives us **P-value**.
    - by comparing to **Chi-Sqr** (df = No.of parameters in Saturated model - No.of parameter in Proposed model)
-
 
 ## [C]. Poisson Regression (COUNT response):
 In this setting, we have data(Response variable) that are unbounded counts(web traffic hits) or rates(1-star, 2-star...), so they come from **Poisson** distribution. Of course we can approximate **Bin(p,n) with small p and large n** with this model or we can analyse a **contingency table data** as well. Poisson Regression is also known as **`Log-Linear Model`**. So here, we're transforming the `mean(or probability) value of the distribution`. Again, We're not transforming the Response variables themselves. That's the neat part of generalization in our models.
