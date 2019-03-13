@@ -101,10 +101,10 @@ In this setting, we have data(Response variable) that are `0/1` so binary, so it
 
 ## 1. `log(odd_ratio)` tells us if there is a strong/weak **relationship** between **two binary variables**.  
  - There are 3 ways to determine if the `log(odd_ratio)` is statistically significant..i.e determine the `p-value` for the significance of that relationship.    
-   - Fisher's **Exact Test**
+   - Fisher's Exact Test
    - Chi-Sqr Test(to find P-value) 
    - Wald Test(to find P-value and Confidence Interval)
- - Wald test: 
+ - **Wald test:** 
    - It takes advantage of the fact that `log(odd_ratio)`, just like `log(odd)`, follows **`Gaussian`**.   
    <img src="https://user-images.githubusercontent.com/31917400/53688530-5206fd80-3d3d-11e9-8ce0-336fca1e8746.jpg" />
 
@@ -164,8 +164,7 @@ To fit the model(to find the parameter),
 <img src="https://user-images.githubusercontent.com/31917400/53877718-d8ebfc80-4001-11e9-8204-fc861dba512b.jpg" />
 
 ### IV. Model Evaluation for LogisticRegression
-
-Q. How do we know the **fitted line of the highest log-likelihood value we discovered** is truley the best?  
+## Q. How do we know the **fitted line of the highest log-likelihood value we discovered** is truley the best?  
 
  - In OLS regression, R_Squared & P_value are calculated using the **residuals**. 
    <img src="https://user-images.githubusercontent.com/31917400/53695305-a946b580-3db1-11e9-9c7d-4a73832a32e6.jpg" />
@@ -185,26 +184,50 @@ Q. How do we know the **fitted line of the highest log-likelihood value we disco
        - In other cases, `LL(fit) > LL(Null)`, then Chi-Sqr is greater than 0, so P-value becomes smaller. 
        <img src="https://user-images.githubusercontent.com/31917400/53702648-1d5c7a00-3e01-11e9-9596-ea6d96d2e05d.jpg" />
 
+## Q. What about each Coefficient?
+ - Let's say `log(likelihood)` is used to calculate **overall** model-fit significance. 
+ - Let's say `log(odd_ratio)` tells us if there is a strong/weak **relationship** between **two binary variables**.
+ - Let's say `log(likelihood(odd_Ratio))` is a deviance statistics that used for Model Comparison(determine model fit). 
+     - Ho: Nested_Model = Full_Model
+       - ..so the full model is a rubbish..and not significant.  
+     - Ho: Null_Model = Fitted_Model
+       - ..so the fitted model is a rubbish..and not significant. 
+       
+   - Interestingly, `log(odd_Ratio)` is useful to understand our fitted_model-coefficients !!! It itself is a model coefficient. 
+     - The odd_ratio is a statistics that measures the odds of an event compared to the odds of another event. 
+     - The odd_ratio b/w two events is
+     <img src="https://user-images.githubusercontent.com/31917400/54269194-d09d3f80-4574-11e9-8137-18cb3efbea30.jpg" />
+
+     - Odd_Ratio ranges from 0 to ∞
+     - `0 < Odd_Ratio < 1` indicate the **odds(p-value) of Event 2** are greater.
+     - `1 < Odd_Ratio < ∞` indicate the **odds(p-value) of Event 1** are greater. 
+   - Next, 
+   
+   
+   
+   
+   
+
 ### V. Goodness of Fit test with Deviance Statistics
  - Pearson Test
  - **Deviance Test**
  - HosmerLemeshow-C / H
 
-What's log(likelihood(odd_Ratio)) Statistics used for?
- - Ho: Nested_Model = Full_Model
-   - ..so the full model is a rubbish..and not significant.  
- - Ho: Null_Model = Fitted_Model
-   - ..so the fitted model is a rubbish..and not significant. This is a deviance statistics. 
+What's Saturated Model used for? 
+ - For Deviance statistics!
+<img src="https://user-images.githubusercontent.com/31917400/53702415-90b0bc80-3dfe-11e9-8f75-908c7e6bb11b.jpg" />
 
-Interpretation?
- - The odds ratio is a statistic that measures the odds of an event compared to the odds of another event.
- - The odds_ratio b/w two events is
- <img src="https://user-images.githubusercontent.com/31917400/54269194-d09d3f80-4574-11e9-8137-18cb3efbea30.jpg" />
-
-   - Odds_Ratio ranges from 0 to ∞
-   - `0 < Odds_Ratio < 1` indicate the **odds(p-value) of Event 2** are greater.
-   - `1 < Odds_Ratio < ∞` indicate the **odds(p-value) of Event 1** are greater. 
-
+## statistics:`Null Deviance - Residual Deviance` 
+ - Comparing to **Chi-Sqr** (df = No.of parameters in `Proposed model` - No.of parameters in `Null model`) 
+   - `-2*[LL(Null) - LL(Saturated)]` - `-2*[LL(fit) - LL(Saturated)]` = `-2*LL(Null/fit)`
+ - **Null Deviance**  
+   - **Is `Null model` is significantly different from Saturated model?** 
+   - Statistics:`-2*[LL(Null) - LL(Saturated)]` and this gives us **P-value**.
+   - by comparing to **Chi-Sqr** (df = No.of parameters in Saturated model - No.of parameter in Null model) 
+ - **Residual Deviance**  
+   - **Is our `Proposed model` is significantly different from Saturated model?** 
+   - Statistics:`-2*[LL(fit) - LL(Saturated)]` and this gives us **P-value**.
+   - by comparing to **Chi-Sqr** (df = No.of parameters in Saturated model - No.of parameter in Proposed model)
 
 What's Deviance Statistics used for?
  - To select model and coefficients
@@ -235,24 +258,7 @@ What else?
    - Deviance Residual Plot (against predicted values)
      - Looking for “sore thumbs”, values much larger than those for other observations
 
- 
 
-
- 
-What's Saturated Model used for? For Deviance statistics!
-<img src="https://user-images.githubusercontent.com/31917400/53702415-90b0bc80-3dfe-11e9-8f75-908c7e6bb11b.jpg" />
-
-## statistics:`Null Deviance - Residual Deviance` 
- - Comparing to **Chi-Sqr** (df = No.of parameters in `Proposed model` - No.of parameters in `Null model`) 
-   - `-2*[LL(Null) - LL(Saturated)]` - `-2*[LL(fit) - LL(Saturated)]` = `-2*LL(Null/fit)`
- - **Null Deviance**  
-   - **Is `Null model` is significantly different from Saturated model?** 
-   - Statistics:`-2*[LL(Null) - LL(Saturated)]` and this gives us **P-value**.
-   - by comparing to **Chi-Sqr** (df = No.of parameters in Saturated model - No.of parameter in Null model) 
- - **Residual Deviance**  
-   - **Is our `Proposed model` is significantly different from Saturated model?** 
-   - Statistics:`-2*[LL(fit) - LL(Saturated)]` and this gives us **P-value**.
-   - by comparing to **Chi-Sqr** (df = No.of parameters in Saturated model - No.of parameter in Proposed model)
 
 ## [C]. Poisson Regression (COUNT response):
 In this setting, we have data(Response variable) that are unbounded counts(web traffic hits) or rates(1-star, 2-star...), so they come from **Poisson** distribution. Of course we can approximate **Bin(p,n) with small p and large n** with this model or we can analyse a **contingency table data** as well. Poisson Regression is also known as **`Log-Linear Model`**. So here, we're transforming the `mean(or probability) value of the distribution`. Again, We're not transforming the Response variables themselves. That's the neat part of generalization in our models.
