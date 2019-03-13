@@ -176,7 +176,7 @@ Q. How do we know the **fitted line of the highest log-likelihood value we disco
    - For independent observations, the likelihood is the product of the probability distribution functions of the observations. `-2` is a convention. 
    - McFadden's psuedo R-Squared & P_value
    # R^2
-     - For R-Squared, instead of using `SSR/SST`, we use `[LL(fit) - LL(Null)] / [LL(Saturated) - LL(Null)]`. **This is not Chi-Sqr**. 
+     - For R-Squared, instead of using `SSR/SST`, we use `[LL(Null) - LL(fit)] / [LL(Null) - LL(Saturated)]`. **This is not Chi-Sqr**. 
        - **LL(fit)** referring the **fitted line's highest log-likelihood value**. 
        - **LL(Saturated)** is not useful here since there is no data reduction (NO.of parameters = NO.of observations). It's considered as Maximum achievable log(likelihood). But it's a baseline for comparison to other model fits. 
    # P-value    
