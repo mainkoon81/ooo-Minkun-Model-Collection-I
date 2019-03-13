@@ -163,17 +163,14 @@ To fit the model(to find the parameter),
    - BFGS, L-BFGS
 <img src="https://user-images.githubusercontent.com/31917400/53877718-d8ebfc80-4001-11e9-8204-fc861dba512b.jpg" />
 
-### IV. Goodness of Fit test for LogisticRegression
+### IV. Model Evaluation for LogisticRegression
 
-Q. How do we know the **fitted line of the highest log-likelihood value we used** is truley the best?  
+Q. How do we know the **fitted line of the highest log-likelihood value we discovered** is truley the best?  
 
  - In OLS regression, R_Squared & P_value are calculated using the residuals. 
    <img src="https://user-images.githubusercontent.com/31917400/53695305-a946b580-3db1-11e9-9c7d-4a73832a32e6.jpg" />
 
  - In Logistic regression,
-   - Pearson Test
-   - Deviance Test
-   - HosmerLemeshow-C / H
    - McFadden's psuedo R-Squared & P_value
      - For R-Squared, instead of using `SSR/SST`, we use `[LL(fit) - LL(Null)] / [LL(Saturated) - LL(Null)]`. 
        - **LL(fit)** referring the **fitted line's highest log-likelihood value**. 
@@ -181,27 +178,35 @@ Q. How do we know the **fitted line of the highest log-likelihood value we used*
        - In the worst case, `LL(fit) = LL(Null)`, then Chi-Sqr value is 0, so P-value = 1 (area under the curve). 
        - In other cases, `LL(fit) > LL(Null)`, then Chi-Sqr is greater than 0, so P-value becomes smaller. 
        <img src="https://user-images.githubusercontent.com/31917400/53702648-1d5c7a00-3e01-11e9-9596-ea6d96d2e05d.jpg" />
-
+    
+   - Go back to the P-value, `-2*[LL(Null) - LL(fit)]` = **value in Chi-Sqr**,    
 
 
 
 
 ### V. Goodness of Fit test with Deviance Statistics
-What's Saturated Model used for? 
+ - Pearson Test
+ - **Deviance Test**
+ - HosmerLemeshow-C / H
+ 
+What's Saturated Model used for? Deviance statistics!
 <img src="https://user-images.githubusercontent.com/31917400/53702415-90b0bc80-3dfe-11e9-8f75-908c7e6bb11b.jpg" />
 
 What's Deviance Statistics used for?
  - we can get **P-value** and compute the **log-likelihood based R-Squares**. 
-   - From the statistics:`Null Deviance - Residual Deviance` 
-   - by comparing to **Chi-Sqr** (df = No.of parameters in Proposed model - No.of parameter in Null model) 
- - **Residual Deviance**  
-   - **Is our `Proposed model` is significantly different from `Saturated model`?** 
-   - Statistics:`2*[LL(Saturated model) - LL(Proposed model)]` and this gives us **P-value**.
-   - by comparing to **Chi-Sqr** (df = No.of parameters in Saturated model - No.of parameter in Proposed model)
+
+## statistics:`Null Deviance - Residual Deviance` 
+ - Comparing to **Chi-Sqr** (df = No.of parameters in `Proposed model` - No.of parameters in `Null model`) 
+ 
  - **Null Deviance**  
-   - **Is `Null model` is significantly different from `Saturated model`?** 
-   - Statistics:`2*[LL(Saturated model) - LL(Null model)]` and this gives us **P-value**.
-   - by comparing to **Chi-Sqr** (df = No.of parameters in Saturated model - No.of parameter in Null model)
+   - **Is `Null model` is significantly different from Saturated model?** 
+   - Statistics:`-2*[LL(Null) - LL(Saturated)]` and this gives us **P-value**.
+   - by comparing to **Chi-Sqr** (df = No.of parameters in Saturated model - No.of parameter in Null model) 
+ - **Residual Deviance**  
+   - **Is our `Proposed model` is significantly different from Saturated model?** 
+   - Statistics:`-2*[LL(fit) - LL(Saturated)]` and this gives us **P-value**.
+   - by comparing to **Chi-Sqr** (df = No.of parameters in Saturated model - No.of parameter in Proposed model)
+
 
 ## [C]. Poisson Regression (COUNT response):
 In this setting, we have data(Response variable) that are unbounded counts(web traffic hits) or rates(1-star, 2-star...), so they come from **Poisson** distribution. Of course we can approximate **Bin(p,n) with small p and large n** with this model or we can analyse a **contingency table data** as well. Poisson Regression is also known as **`Log-Linear Model`**. So here, we're transforming the `mean(or probability) value of the distribution`. Again, We're not transforming the Response variables themselves. That's the neat part of generalization in our models.
