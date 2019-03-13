@@ -184,23 +184,22 @@ To fit the model(to find the parameter),
        - In other cases, `LL(fit) > LL(Null)`, then Chi-Sqr is greater than 0, so P-value becomes smaller. 
        <img src="https://user-images.githubusercontent.com/31917400/53702648-1d5c7a00-3e01-11e9-9596-ea6d96d2e05d.jpg" />
 
-## Q. What about each Coefficient?
- - Let's say `log(likelihood(odd))` is used to calculate **overall** model-fit significance. 
+## Q. What about each Coefficient significance?
+ - Let's say `log(likelihood(odd))` is used to calculate **overall model-fit** significance (R^2) 
  - Let's say `log(odd_ratio)/SD` is a **Wald statistics** to tell if there is a strong/weak **relationship** between **two binary variables**.
- - Let's say `-2*log(likelihood_Ratio)` is a **Deviance statistics** that used for Model Comparison(determine model fit). 
-     - Ho: Nested_Model = Full_Model
-       - ..so the full model is a rubbish..and not significant.  
-     - Ho: Null_Model = Fitted_Model
-       - ..so the fitted model is a rubbish..and not significant. 
-       
-   - Interestingly, `log(odd_Ratio)` is useful to understand our fitted_model-coefficients !!! It itself is a model coefficient. 
-     - The odd_ratio is a statistics that measures the odds of an event compared to the odds of another event. 
-     - The odd_ratio b/w two events is
-     <img src="https://user-images.githubusercontent.com/31917400/54269194-d09d3f80-4574-11e9-8137-18cb3efbea30.jpg" />
+ - Let's say `-2*log(likelihood_Ratio)` is a **Deviance statistics** that used for **Model Comparison**. 
+   - Ho: Nested_Model = Full_Model
+     - ..see if the full model is a rubbish..and not significant.  
+   - Ho: Null_Model = Fitted_Model
+     - ..see if the fitted model is a rubbish..and not significant. 
+ - Interestingly, `log(odd_Ratio)` is useful to understand our fitted_model-coefficients !!! It itself is a model coefficient. 
+   - The odd_ratio is a statistics that measures the odds of an event compared to the odds of another event. 
+   - The odd_ratio b/w two events is:
+   <img src="https://user-images.githubusercontent.com/31917400/54269194-d09d3f80-4574-11e9-8137-18cb3efbea30.jpg" />
 
-     - Odd_Ratio ranges from 0 to ∞
-     - `0 < Odd_Ratio < 1` indicate the **odds(p-value) of Event 2** are greater.
-     - `1 < Odd_Ratio < ∞` indicate the **odds(p-value) of Event 1** are greater. 
+   - Odd_Ratio ranges from 0 to ∞
+   - `0 < Odd_Ratio < 1` indicate the **odds(p-value) of Event 2** are greater.
+   - `1 < Odd_Ratio < ∞` indicate the **odds(p-value) of Event 1** are greater. 
    - Next, 
    
    
