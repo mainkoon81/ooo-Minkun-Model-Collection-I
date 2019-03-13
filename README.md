@@ -185,6 +185,7 @@ To fit the model(to find the parameter),
        <img src="https://user-images.githubusercontent.com/31917400/53702648-1d5c7a00-3e01-11e9-9596-ea6d96d2e05d.jpg" />
 
 #### Q. What about each Coefficient significance?
+When "likelihood" is mentioned..it's about overall model?..
  - Let's say `log(likelihood(odd))` is used to calculate **overall model-fit** significance (R^2) 
  - Let's say `log(odd_ratio)/SD` is a **Wald statistics** to tell if there is a strong/weak **relationship** between **two binary variables**.
  - Let's say `-2*log(likelihood_Ratio)` is a **Deviance statistics** that used for **Model Comparison**. 
@@ -192,14 +193,16 @@ To fit the model(to find the parameter),
      - ..see if the full model is a rubbish..and not significant.  
    - Ho: Null_Model = Fitted_Model
      - ..see if the fitted model is a rubbish..and not significant. 
- - Interestingly, `log(odd_Ratio)` is useful to understand our fitted_model-coefficients !!! It itself becomes a model coefficient. 
+ - Interestingly, `log(odd_Ratio)` is useful to understand our fitted_model-coefficients !!!
+   - Let's say we have a single fitted_model.
    - The **odd_ratio** measures the odds of an event compared to the odds of another event. 
      - Odd_Ratio ranges from 0 to ∞
-     - `0 < Odd_Ratio < 1` indicate the **odds(p-value) of Event 2** are greater.
-     - `1 < Odd_Ratio < ∞` indicate the **odds(p-value) of Event 1** are greater. 
-   - w/o using likelihood, `log(odd_ratio)` b/w two events means literally the difference b/w two logit model equations.
+     - `0 < Odd_Ratio < 1` indicate the **odds of Event 2** are greater.
+     - `1 < Odd_Ratio < ∞` indicate the **odds of Event 1** are greater. 
+   - w/o using likelihood, `log(odd_ratio)` means literally the log of difference b/w two odds produced by the fitted_logit model equations.
      <img src="https://user-images.githubusercontent.com/31917400/54269194-d09d3f80-4574-11e9-8137-18cb3efbea30.jpg" />
-
+   
+   - 
 
    
    
