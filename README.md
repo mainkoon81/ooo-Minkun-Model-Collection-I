@@ -108,7 +108,8 @@ In this setting, we have data(Response variable) that are `0/1` so binary, so it
    - It takes advantage of the fact that `log(odd_ratio)`, just like `log(odd)`, follows **`Normal`**.   
    <img src="https://user-images.githubusercontent.com/31917400/53688530-5206fd80-3d3d-11e9-8ce0-336fca1e8746.jpg" />
 
-## 2. Maximum Likelihood is...
+## 2. Maximum Likelihood Estimation is...
+<img src="https://user-images.githubusercontent.com/31917400/54281168-0b14d580-4591-11e9-8cd3-203732307907.jpg" />
 
 
 
@@ -184,7 +185,7 @@ To fit the model(to find the parameter),
        - In other cases, `LL(fit) > LL(Null)`, then Chi-Sqr is greater than 0, so P-value becomes smaller. 
        <img src="https://user-images.githubusercontent.com/31917400/53702648-1d5c7a00-3e01-11e9-9596-ea6d96d2e05d.jpg" />
 
-#### Q. What about each Coefficient significance?
+#### Q. What about each Coefficient ?
 When "likelihood" is mentioned..it's about overall model?..
  - Let's say `log(likelihood(odd))` is used to calculate **overall model-fit** significance (R^2) 
  - Let's say `log(odd_ratio)/SD` is a **Wald statistics** to tell if there is a strong/weak **relationship** between **two binary variables**.
@@ -232,10 +233,10 @@ What's Deviance Statistics used for?
  - To distinguish Unbalance Data (Few responses of one type) ?
  
 What else?
- - Akaike Information Criterion (AIC) 
+ - Akaike Information Criterion (**AIC**) 
    - Penalizes model for having many parameters 
    - AIC = `Deviance + 2*p` (where p = number of parameters in model)
- - Bayesian Information Criterion (BIC) 
+ - Bayesian Information Criterion (**BIC**) 
    - BIC = `-2*LL(Null/fit) + ln(n)*p` (where p = number of parameters in model, and n = number of observations 
    - AKA the Schwartz Information Criterion (SIC)
  - Find the best subset (Tests all combinations of predictors)
