@@ -127,17 +127,8 @@ To find the “most likely” parameter value that corresponds to the desired pr
 
  - For this regression model, the maximum likelihood estimators are identical to the least squares estimators. The estimator of **σ** will, however, be slightly different.
 
-
-
-
-
-
-
-
-
-
-
-
+> [Nagative Truth]
+ - MLE does not eliminate sampling noise, or give us the truth. It’s just a decent estimator .
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
