@@ -167,10 +167,13 @@ To fit the model(to find the parameter),
 
 Q. How do we know the **fitted line of the highest log-likelihood value we discovered** is truley the best?  
 
- - In OLS regression, R_Squared & P_value are calculated using the residuals. 
+ - In OLS regression, R_Squared & P_value are calculated using the **residuals**. 
    <img src="https://user-images.githubusercontent.com/31917400/53695305-a946b580-3db1-11e9-9c7d-4a73832a32e6.jpg" />
 
- - In Logistic regression,
+ - In Logistic regression, R_Squared & P_value are calculated using **log(likelihood)** 
+   <img src="https://user-images.githubusercontent.com/31917400/54246226-00742500-452c-11e9-81f3-f8542094de9a.jpg" />
+
+   - For independent observations, the likelihood is the product of the probability distribution functions of the observations. `-2` is a convention. 
    - McFadden's psuedo R-Squared & P_value
      - For R-Squared, instead of using `SSR/SST`, we use `[LL(fit) - LL(Null)] / [LL(Saturated) - LL(Null)]`. 
        - **LL(fit)** referring the **fitted line's highest log-likelihood value**. 
@@ -179,7 +182,7 @@ Q. How do we know the **fitted line of the highest log-likelihood value we disco
        - In other cases, `LL(fit) > LL(Null)`, then Chi-Sqr is greater than 0, so P-value becomes smaller. 
        <img src="https://user-images.githubusercontent.com/31917400/53702648-1d5c7a00-3e01-11e9-9596-ea6d96d2e05d.jpg" />
     
-   - Go back to the P-value, `-2*[LL(Null) - LL(fit)]` = **value in Chi-Sqr**,    
+   - Go back to the P-value, `-2*[LL(Null) - LL(fit)]`,     
 
 
 
