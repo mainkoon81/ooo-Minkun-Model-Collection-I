@@ -109,8 +109,10 @@ In this setting, we have data(Response variable) that are `0/1` so binary, so it
    <img src="https://user-images.githubusercontent.com/31917400/53688530-5206fd80-3d3d-11e9-8ce0-336fca1e8746.jpg" />
 
 ## 2. Maximum Likelihood Estimation is...
-<img src="https://user-images.githubusercontent.com/31917400/54281168-0b14d580-4591-11e9-8cd3-203732307907.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/54281684-29c79c00-4592-11e9-9c90-b4293a278078.jpg" />
 
+> ex_1. Normal
+<img src="https://user-images.githubusercontent.com/31917400/54281684-29c79c00-4592-11e9-9c90-b4293a278078.jpg" />
 
 
 
