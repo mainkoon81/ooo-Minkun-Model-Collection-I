@@ -193,7 +193,7 @@ When "likelihood" is mentioned..it's about overall model?..
      - ..see if the full model is a rubbish..and not significant.  
    - Ho: Null_Model = Fitted_Model
      - ..see if the fitted model is a rubbish..and not significant. 
- - Interestingly, `log(odd_Ratio)` is useful to understand our fitted_model-coefficients !!!
+ - Interestingly, `log(odd_Ratio)` is useful to understand our **fitted_model-coefficients** !!!
    - Let's say we have a single fitted_model.
    - The **odd_ratio** measures the odds of an event compared to the odds of another event. 
      - Odd_Ratio ranges from 0 to ∞
@@ -214,7 +214,7 @@ What's Saturated Model used for?
  - For Deviance statistics!
 <img src="https://user-images.githubusercontent.com/31917400/53702415-90b0bc80-3dfe-11e9-8f75-908c7e6bb11b.jpg" />
 
-## statistics:`Null Deviance - Residual Deviance` 
+## Deviance statistics:`Null Deviance - Residual Deviance` 
  - Comparing to **Chi-Sqr** (df = No.of parameters in `Proposed model` - No.of parameters in `Null model`) 
    - `-2*[LL(Null) - LL(Saturated)]` - `-2*[LL(fit) - LL(Saturated)]` = `-2*log(likelihood_Ratio)`
  - **Null Deviance**  
