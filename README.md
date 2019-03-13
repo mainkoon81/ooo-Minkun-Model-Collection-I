@@ -229,8 +229,7 @@ What's Saturated Model used for?
 What's Deviance Statistics used for?
  - To select model and coefficients
  - To study the effect of each predictor on the response variable. 
- - To distinguish Unbalance Data (Few responses of one type) 
- - we can get **P-value** and compute the **log-likelihood based R-Squares**.
+ - To distinguish Unbalance Data (Few responses of one type) ?
  
 What else?
  - Akaike Information Criterion (AIC) 
