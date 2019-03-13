@@ -194,7 +194,7 @@ To fit the model(to find the parameter),
      - ..see if the fitted model is a rubbish..and not significant. 
  - Interestingly, `log(odd_Ratio)` is useful to understand our fitted_model-coefficients !!! It itself becomes a model coefficient. 
    - The odd_ratio is a statistics that measures the odds of an event compared to the odds of another event. 
-   - The odd_ratio b/w two events is:
+   - w/o using likelihood, `log(odd_ratio)` b/w two events is literally the difference b/w two model equations.
    <img src="https://user-images.githubusercontent.com/31917400/54269194-d09d3f80-4574-11e9-8137-18cb3efbea30.jpg" />
 
    - Odd_Ratio ranges from 0 to ∞
