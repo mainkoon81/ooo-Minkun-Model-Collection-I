@@ -103,9 +103,9 @@ In this setting, we have data(Response variable) that are `0/1` so binary, so it
  - There are 3 ways to determine if the `log(odd_ratio)` is statistically significant..i.e determine the `p-value` for the significance of that relationship.    
    - Fisher's Exact Test
    - Chi-Sqr Test(to find P-value) 
-   - Wald Test(to find P-value and Confidence Interval)
+   - Wald Test(to find P-value and Confidence Interval in Normal)
  - **Wald test:** 
-   - It takes advantage of the fact that `log(odd_ratio)`, just like `log(odd)`, follows **`Gaussian`**.   
+   - It takes advantage of the fact that `log(odd_ratio)`, just like `log(odd)`, follows **`Normal`**.   
    <img src="https://user-images.githubusercontent.com/31917400/53688530-5206fd80-3d3d-11e9-8ce0-336fca1e8746.jpg" />
 
 ## 2. Maximum Likelihood is...
@@ -186,7 +186,7 @@ To fit the model(to find the parameter),
 
 ## Q. What about each Coefficient?
  - Let's say `log(likelihood)` is used to calculate **overall** model-fit significance. 
- - Let's say `log(odd_ratio)/SD` tells us if there is a strong/weak **relationship** between **two binary variables**.
+ - Let's say `log(odd_ratio)` tells us if there is a strong/weak **relationship** between **two binary variables**.
  - Let's say `log(likelihood(odd_Ratio))` is a deviance statistics that used for Model Comparison(determine model fit). 
      - Ho: Nested_Model = Full_Model
        - ..so the full model is a rubbish..and not significant.  
