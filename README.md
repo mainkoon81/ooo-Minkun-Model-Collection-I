@@ -164,7 +164,7 @@ To fit the model(to find the parameter),
 <img src="https://user-images.githubusercontent.com/31917400/53877718-d8ebfc80-4001-11e9-8204-fc861dba512b.jpg" />
 
 ### IV. Model Evaluation for LogisticRegression
-## Q. How do we know the **fitted line of the highest log-likelihood value we discovered** is truley the best?  
+#### Q. How do we know the **fitted line of the highest log-likelihood value we discovered** is truley the best?  
 
  - In OLS regression, R_Squared & P_value are calculated using the **residuals**. 
    <img src="https://user-images.githubusercontent.com/31917400/53695305-a946b580-3db1-11e9-9c7d-4a73832a32e6.jpg" />
@@ -184,7 +184,7 @@ To fit the model(to find the parameter),
        - In other cases, `LL(fit) > LL(Null)`, then Chi-Sqr is greater than 0, so P-value becomes smaller. 
        <img src="https://user-images.githubusercontent.com/31917400/53702648-1d5c7a00-3e01-11e9-9596-ea6d96d2e05d.jpg" />
 
-## Q. What about each Coefficient significance?
+#### Q. What about each Coefficient significance?
  - Let's say `log(likelihood(odd))` is used to calculate **overall model-fit** significance (R^2) 
  - Let's say `log(odd_ratio)/SD` is a **Wald statistics** to tell if there is a strong/weak **relationship** between **two binary variables**.
  - Let's say `-2*log(likelihood_Ratio)` is a **Deviance statistics** that used for **Model Comparison**. 
@@ -192,7 +192,7 @@ To fit the model(to find the parameter),
      - ..see if the full model is a rubbish..and not significant.  
    - Ho: Null_Model = Fitted_Model
      - ..see if the fitted model is a rubbish..and not significant. 
- - Interestingly, `log(odd_Ratio)` is useful to understand our fitted_model-coefficients !!! It itself is a model coefficient. 
+ - Interestingly, `log(odd_Ratio)` is useful to understand our fitted_model-coefficients !!! It itself becomes a model coefficient. 
    - The odd_ratio is a statistics that measures the odds of an event compared to the odds of another event. 
    - The odd_ratio b/w two events is:
    <img src="https://user-images.githubusercontent.com/31917400/54269194-d09d3f80-4574-11e9-8137-18cb3efbea30.jpg" />
@@ -218,7 +218,7 @@ What's Saturated Model used for?
 
 ## statistics:`Null Deviance - Residual Deviance` 
  - Comparing to **Chi-Sqr** (df = No.of parameters in `Proposed model` - No.of parameters in `Null model`) 
-   - `-2*[LL(Null) - LL(Saturated)]` - `-2*[LL(fit) - LL(Saturated)]` = `-2*LL(Null/fit)`
+   - `-2*[LL(Null) - LL(Saturated)]` - `-2*[LL(fit) - LL(Saturated)]` = `-2*log(likelihood_Ratio)`
  - **Null Deviance**  
    - **Is `Null model` is significantly different from Saturated model?** 
    - Statistics:`-2*[LL(Null) - LL(Saturated)]` and this gives us **P-value**.
