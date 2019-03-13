@@ -185,9 +185,9 @@ To fit the model(to find the parameter),
        <img src="https://user-images.githubusercontent.com/31917400/53702648-1d5c7a00-3e01-11e9-9596-ea6d96d2e05d.jpg" />
 
 ## Q. What about each Coefficient?
- - Let's say `log(likelihood)` is used to calculate **overall** model-fit significance. 
- - Let's say `log(odd_ratio)` tells us if there is a strong/weak **relationship** between **two binary variables**.
- - Let's say `-2*log(likelihood(odd_Ratio))` is a deviance statistics that used for Model Comparison(determine model fit). 
+ - Let's say `log(likelihood(odd))` is used to calculate **overall** model-fit significance. 
+ - Let's say `log(odd_ratio)/SD` is a **Wald statistics** to tell if there is a strong/weak **relationship** between **two binary variables**.
+ - Let's say `-2*log(likelihood(odd_Ratio))` is a **Deviance statistics** that used for Model Comparison(determine model fit). 
      - Ho: Nested_Model = Full_Model
        - ..so the full model is a rubbish..and not significant.  
      - Ho: Null_Model = Fitted_Model
