@@ -123,8 +123,9 @@ To find the “most likely” parameter value that corresponds to the desired pr
 
 > ex_2. OLS Regression
  - Let's say we apply the maximum likelihood principle to regression to find model coefficients.  
- <img src="https://user-images.githubusercontent.com/31917400/54288191-f2132100-459e-11e9-89b3-8045ec5c84c4.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/54300607-1e399c80-45b5-11e9-8346-566848cb8fd6.jpg" />
 
+ - For this regression model, the maximum likelihood estimators are identical to the least squares estimators. The estimator of **σ** will, however, be slightly different.
 
 
 
