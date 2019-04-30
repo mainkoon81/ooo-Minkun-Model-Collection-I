@@ -259,6 +259,16 @@ What else?
    - Deviance Residual Plot (against predicted values)
      - Looking for “sore thumbs”, values much larger than those for other observations
 
+### VI. Logistic Regression Assumption
+> Logistic regression does not make many of the key assumptions of general linear models that are based on OLS algorithms: (1) logistic regression does not require a linear relationship between the dependent and independent variables, (2) the error terms (residuals) do not need to be normally distributed, (3) homoscedasticity is not required, and (4) the dependent variable in logistic regression is not measured on an interval or ratio scale. However, logistic regression still shares some assumptions with linear regression, with some additions of its own. 
+ - __ASSUMPTION OF APPROPRIATE OUTCOME STRUCTURE:__ To begin, one of the main assumptions of logistic regression is the appropriate structure of the outcome variable. 
+   - Binary logistic regression requires the dependent variable to be binary. 
+   - Ordinal logistic regression requires the dependent variable to be ordinal. 
+ - __ASSUMPTION OF OBSERVATION INDEPENDENCE:__ Logistic regression requires the observations to be independent of each other.  In other words, the observations should not come from repeated measurements or matched data. 
+ - __ASSUMPTION OF THE ABSENCE OF MULTICOLLINEARITY:__ Logistic regression requires there to be little or no multicollinearity among the independent variables.  This means that the independent variables should not be too highly correlated with each other. 
+ - __ASSUMPTION OF LINEARITY OF INDEPENDENT VARIABLES AND LOG ODDS:__ Logistic regression assumes linearity of independent variables and log odds. Although this analysis does not require the dependent and independent variables to be related linearly, it requires that the independent variables are linearly related to the log odds. 
+ - __ASSUMPTION OF A LARGE SAMPLE SIZE:__ Finally, logistic regression typically requires a large sample size.  A general guideline is that you need at minimum of 10 cases with the least frequent outcome for each independent variable in your model. 
+   - For example, if you have 5 independent variables and the expected probability of your least frequent outcome is 0.1, then you would need a minimum sample size of 500 (10*5 / 0.1). 
 
 
 ## [C]. Poisson Regression (COUNT response):
