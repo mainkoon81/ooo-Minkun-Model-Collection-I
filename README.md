@@ -235,6 +235,11 @@ What's Deviance Statistics used for?
  - To select model and coefficients
  - To study the effect of each predictor on the response variable. 
  - To distinguish Unbalance Data (Few responses of one type) ?
+
+What's Deviance **Residual** in logistic regression used for?
+ - To evaluate model fitting
+ - Try to find large residual !! 
+   - to detect outliers!! obv as pain in the ass.(not modeled well)
  
 What else?
  - Akaike Information Criterion (**AIC**) 
