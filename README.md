@@ -28,7 +28,7 @@
 > What if, in the LM, the normal distribution is putting a lot positive probability on **negative values** even though you know your response has to be **positive** ? 
 
 GLM involves three components:
- - 1> Random Component(**distribution**): `exp()` 
+ - 1> Random Component(**distribution of the Response**): `exp()` 
    - The random component copes with the errors.
    - For the response variable, for example, the distribution that describes the **randomness** has to come from a particular family of distributions called an exponential family. Normal is a member of the exponential family of course.
  - 2> systematic component(**linear predictor**)
