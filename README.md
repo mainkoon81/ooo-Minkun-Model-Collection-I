@@ -83,6 +83,7 @@ In this setting, we have data(Response variable) that are `0/1` so binary, so it
 <img src="https://user-images.githubusercontent.com/31917400/53844949-4286ef00-3f9f-11e9-9ddc-ea0dfcb819c5.jpg" /> So here, we're transforming the `mean(or probability) value of the distribution`. We're not transforming the Response variables themselves.
  - For categoric data
  - For **binary** classification
+ - The decision boundary will always be linear so, logistic regression will work for classification problems where classes are approximately linearly separable. 
  - The dependent variable must be **categorical**, and the **explanatory variables can take any form**.
  - But before fitting on the data, we need to convert the categorical predictors into the numeric(using `pd.get_dummies(series)[which level is '1'?]`). This is called:
    - `One-Hot Encoding` when there is no ordinal levels (red, blue,..=> check(1), uncheck(0),..)
