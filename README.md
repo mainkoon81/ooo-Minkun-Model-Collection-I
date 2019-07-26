@@ -70,6 +70,7 @@ In this setting, we have data(Response variable) that comes from **Gaussian** di
          - The `adjusted R^2` is `1 - var(ϵ)/var(Y)` which is the penalized by dividing them by `df`.
        - `R^2` cannot determine whether the coefficient estimates and predictions are biased, which is why we must assess the residual plots.
        - `F-statistic` is for the overall significance of the regression model, testing H0: all slope parameters are zero, claiming that all predictors have no effect on the Y. Then what's the difference with R^2 ?
+         - F-statistics says if there is a relationship. R^2 then indicates how strong that relationship is.
          - In the plot of residual, `var(ϵ)` should be a constant: homoscedasticity..otherwise, you might want a weighted_LS solution...
          - The chart of `fitted value VS residual` should shows a flat line...
          - Our residuals should be Normally distributed..
