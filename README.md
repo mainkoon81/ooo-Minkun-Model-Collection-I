@@ -58,6 +58,7 @@ In this setting, we have data(Response variable) that comes from **Gaussian** di
  - > **Assumptions:** 
    - Given each X:`x1, x2,..` and independent Y:`y1, y2,..`: Multiple LM(many samples or columns)
      - `y1, y2,..` share the same variance `σ2`...and... `var(Y)`=`var(Xβ)+var(ϵ)`=`var(ϵ)`=`σ2` because fitted value..`var(Xβ)=0` ?
+       
        - We know `var(Y)`is`MST`, `var(Xβ)`is`MSR`, and `var(ϵ)`is`MSE`.
          - `MST` is about `Y vs E[Y]`
          - `MSR` is about `fitted value vs E[Y]`
@@ -67,7 +68,8 @@ In this setting, we have data(Response variable) that comes from **Gaussian** di
            - **k+1** is No.of coefficients(`β`). `MSE` is interested in this.        
        - We know `R^2` = `SSR/SST` = `1 - SSE/SST` : the model explains the ? % of variance in observations.
          - The `adjusted R^2` is `1 - var(ϵ)/var(Y)` which is the penalized by dividing them by `df`.
-       - `R^2` cannot determine whether the coefficient estimates and predictions are biased, which is why we must assess the residual plots.          
+       - `R^2` cannot determine whether the coefficient estimates and predictions are biased, which is why we must assess the residual plots.
+       - `F-statistic` is for the overall significance of the regression model, testing H0: all slope parameters are zero, claiming that all predictors have no effect on the Y. Then what's the difference with R^2 ?
          - In the plot of residual, `var(ϵ)` should be a constant: homoscedasticity..otherwise, you might want a weighted_LS solution...
          - The chart of `fitted value VS residual` should shows a flat line...
          - Our residuals should be Normally distributed..
