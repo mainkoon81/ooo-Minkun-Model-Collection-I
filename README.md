@@ -79,7 +79,10 @@ In this setting, we have data(Response variable) that comes from **Gaussian** di
        - Are you sure? MSE = MST = `σ2`?? Yes, we hope `MSR = 0`. We wish our model(fitted_value) is the perfect E[Y]. 
      - cov(**ε**, fitted_value) = 0
      - In summary... `Y=Xβ+ϵ`; where `Y∼N(Xβ, σ2)` and `ϵ∼N(0, σ2)`.. E[Y] wish to be the model(wish MSE=MST), and E[error] wish to be zero.. 
-   - If they are not met, **`Hierachical model`** can address it.    
+   - If they are not met, **`Hierachical model`** can address it.  
+   - Or you can diagnose and try: 
+<img src="https://user-images.githubusercontent.com/31917400/62141571-b32eff00-b2e4-11e9-9e06-68d916b76c4b.jpg" />  
+   
 
 ## [B]. Logistic Regression (Y/N response):
 In this setting, we have data(Response variable) that are `0/1` so binary, so it comes from **Bernoulli** distribution.  
