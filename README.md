@@ -323,7 +323,7 @@ Sometimes the model is expressed differently, relating the relative hazard, whic
 
 In practice, interest lies in the **associations** between each of the `risk factors`(X1, X2, ..., Xp) and the `outcome`(NO.hazared within the time t). The **associations** are quantified by the regression coefficients(β1, β2, ..., βp). The estimated coefficients represent the change in the **expected log of the hazard ratio** relative to a one unit change in X1, holding all other predictors constant. 
 
-**`exp(Xβ)`** of Trt_group and Ctl_group produce a hazard ratio. The HR compares the risk of event for Trt_group and Ctl_group. The hypothesis tests using HR assess whether there are statistically significant associations between `predictors` and `time to event`.  
+**`exp(Xβ)`** of Trt_group and Ctl_group produce a hazard ratio. The HR compares the risk of event for Trt_group and Ctl_group.   
  - HR = 1, then it means **No effect**...the risk factor does not affect survival.
  - HR < 1, then it means **Reduction in the hazard**
  - HR > 1, then it means **Increase in Hazard**
