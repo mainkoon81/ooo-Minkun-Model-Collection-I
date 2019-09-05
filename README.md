@@ -325,8 +325,8 @@ In practice, interest lies in the **associations** between each of the `risk fac
 
 **`exp(Xβ)`** of Trt_group and Ctl_group produce a hazard ratio. The HR compares the risk of event for Trt_group and Ctl_group.   
  - HR = 1, then it means **No effect**...the risk factor does not affect survival.
- - HR < 1, then it means **Reduction in the hazard**
- - HR > 1, then it means **Increase in Hazard**
+ - HR < 1, then it means **Reduction in the hazard**...so the treatment is NICE!
+ - HR > 1, then it means **Increase in Hazard**...so the treatment is fucked up. 
  
 
 
