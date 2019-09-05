@@ -297,7 +297,7 @@ In this setting, we have data(Response variable) that are unbounded counts(web t
  - 2.Model for **Rate**: Reponse is `E[Y/t]` where `t` is an **interval** representing time, space, etc.  
  <img src="https://user-images.githubusercontent.com/31917400/53891890-304e9480-4023-11e9-88cc-42a9328aa21d.jpg" />
 
-### 0. Survival Outcomes and PoissonRegression
+### 0. Survival Outcomes(~NO.hazard given time) and PoissonRegression
 In Cox Hazard Regression, the measure of **effect** is the `hazard rate`, which is the risk(or probability) of suffering the event of interest, given that the subject has survived up to a specific time. Sound like a poisson? Yeah..the NO.events within the given time. Your babies know a probability must lie in the range 0 to 1. However, in this model, the hazard represents the expected number of events per one unit of time, thus he hazard in a group can exceed 1. 
  - Two Interpretations: 
    - For example, if the hazard is 0.2 at time t and the time units are months, 0.2 is the `expected events per person at risk` per month....the NO.events are **Y**. 
