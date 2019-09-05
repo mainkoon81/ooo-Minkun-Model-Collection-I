@@ -321,7 +321,13 @@ The rate of suffering the event of interest in the next instant `h(t)` is the pr
 Sometimes the model is expressed differently, relating the relative hazard, which is the ratio of the hazard at time t to the baseline hazard, to the risk factors. We can take the log of each side of the Cox proportional hazards regression model
 <img src="https://user-images.githubusercontent.com/31917400/64371283-1ca6d980-d018-11e9-8875-f2627f20fc9d.jpg" />
 
-In practice, interest lies in the **associations** between each of the `risk factors`(X1, X2, ..., Xp) and the `outcome`(NO.hazared within the time t). The **associations** are quantified by the regression coefficients(b1, b2, ..., bp). The estimated coefficients represent the change in the **expected log of the hazard ratio** relative to a one unit change in X1, holding all other predictors constant. **`exp(b)`**, produces a hazard ratio. If a predictor is dichotomous, the hazard ratio **`exp(b)`** compare the risk of event for A_group(X1=1) and B_group(X1=0).  
+In practice, interest lies in the **associations** between each of the `risk factors`(X1, X2, ..., Xp) and the `outcome`(NO.hazared within the time t). The **associations** are quantified by the regression coefficients(b1, b2, ..., bp). The estimated coefficients represent the change in the **expected log of the hazard ratio** relative to a one unit change in X1, holding all other predictors constant. 
+
+**`exp(b)`**, produces a hazard ratio. If a predictor is dichotomous, the hazard ratio **`exp(b)`** compare the risk of event for A_group(X1=1) and B_group(X1=0). The hypothesis tests using HR assess whether there are statistically significant associations between predictors and time to event.  
+ - HR = 1, then it means **No effect**...the risk factor does not affect survival.
+ - HR < 1, then it means **Reduction in the hazard**
+ - HR > 1, then it means **Increase in Hazard**
+ 
 
 
 
