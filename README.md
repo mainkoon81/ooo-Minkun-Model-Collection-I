@@ -319,7 +319,7 @@ The rate of suffering the event of interest in the next instant `h(t)` is the pr
 <img src="https://user-images.githubusercontent.com/31917400/64370901-47dcf900-d017-11e9-8e78-291f0ca2edf6.jpg" /> Note! HR is the ratio of these two expected hazards, which does not depend on time, t. Thus we can say each hazard `h(t)` is simply proportional over time. 
 
 Sometimes the model is expressed differently, relating the relative hazard, which is the ratio of the hazard at time t to the baseline hazard, to the risk factors. We can take the log of each side of the Cox proportional hazards regression model
-<img src="https://user-images.githubusercontent.com/31917400/64371283-1ca6d980-d018-11e9-8875-f2627f20fc9d.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/64374937-c25c4780-d01c-11e9-9483-1aacf78f7ada.jpg" />
 
 In practice, interest lies in the **associations** between each of the `risk factors`(X1, X2, ..., Xp) and the `outcome`(NO.hazared within the time t). The **associations** are quantified by the regression coefficients(β1, β2, ..., βp). The estimated coefficients represent the change in the **expected log of the hazard ratio** relative to a one unit change in X1, holding all other predictors constant. 
 
