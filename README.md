@@ -297,7 +297,43 @@ In this setting, we have data(Response variable) that are unbounded counts(web t
  - 2.Model for **Rate**: Reponse is `E[Y/t]` where `t` is an **interval** representing time, space, etc.  
  <img src="https://user-images.githubusercontent.com/31917400/53891890-304e9480-4023-11e9-88cc-42a9328aa21d.jpg" />
 
-### 0. Classification and PoissonRegression
+### 0. Survival Outcomes and PoissonRegression
+In Cox Hazard Regression, the measure of **effect** is the `hazard rate`, which is the risk(or probability) of suffering the event of interest, given that the subject has survived up to a specific time. Sound like a poisson? Yeah..the NO.events within the given time. Your babies know a probability must lie in the range 0 to 1. However, in this model, the hazard represents the expected number of events per one unit of time, thus he hazard in a group can exceed 1. 
+ - Two Interpretations: 
+   - For example, if the hazard is 0.2 at time t and the time units are months, 0.2 is the `expected events per person at risk` per month....the NO.events are **Y**. 
+   - For example, 1/0.2 = 5, which is the `expected event-free time per person at risk`...so 5 months.
+ - In most situations, we are interested in **comparing groups with respect to their hazards**, and we use a **hazard ratio**, which is analogous to an **odds ratio** in the setting of multiple logistic regression analysis. The **hazard ratio** is the ratio of the total number of observed to expected events in two independent comparison groups.
+ <img src="https://user-images.githubusercontent.com/31917400/64361679-f6c40980-d004-11e9-936e-690a328ac21e.jpg" /> it says the risk of event is **`HR` times higher** the Treatment group(after intervention) as compared to the Ctrl group(before intervention). 
+
+ - What if we are interested in several risk factors, considered simultaneously, and survival time? One of the most popular regression techniques for survival outcomes is Cox proportional hazards regression analysis. 
+   - Assumptions
+     - **independence of survival times** between distinct individuals in the sample
+     - **multiplicative relationship between the predictors and the hazard** (as opposed to a linear one as was the case with LM)
+     - **constant hazard ratio** over time.
+   <img src="https://user-images.githubusercontent.com/31917400/64363030-8f5b8900-d007-11e9-92c0-e7358437ebc8.jpg" />
+   
+     - h(t) is the predicted **NO.hazard** within the time t
+     - h0(t) is the baseline **NO.hazard**(when all of the predictors X1, X2,..Xp are equal to zero)
+
+The rate of suffering the event of interest in the next instant `h(t)` is the product of the baseline hazard and the exponential function of the linear combination of the predictors. Thus, the predictors have a multiplicative or proportional effect on the predicted hazard. Suppose we wish to compare two participants in terms of their expected hazards, and the first has `X1= 21` and the second has `X1= 27`
+<img src="https://user-images.githubusercontent.com/31917400/64370901-47dcf900-d017-11e9-8e78-291f0ca2edf6.jpg" /> Note! HR is the ratio of these two expected hazards, which does not depend on time, t. Thus we can say each hazard `h(t)` is simply proportional over time. 
+
+Sometimes the model is expressed differently, relating the relative hazard, which is the ratio of the hazard at time t to the baseline hazard, to the risk factors. We can take the log of each side of the Cox proportional hazards regression model
+<img src="https://user-images.githubusercontent.com/31917400/64371283-1ca6d980-d018-11e9-8875-f2627f20fc9d.jpg" />
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
 ### I. Model_Fitting for PoissonRegression
 ### II. Maximum Likelihood for PoissonRegression
 ### III. Goodness of Fit test for PoissonRegression
