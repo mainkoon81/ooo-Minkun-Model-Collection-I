@@ -305,7 +305,7 @@ In Cox Hazard Regression, the measure of **effect** is the `hazard rate`, which 
  - In most situations, we are interested in **comparing groups with respect to their hazards**, and we use a **hazard ratio**, which is analogous to an **odds ratio** in the setting of multiple logistic regression analysis. The **hazard ratio** is the ratio of the total number of observed to expected events in two independent comparison groups.
  <img src="https://user-images.githubusercontent.com/31917400/64361679-f6c40980-d004-11e9-936e-690a328ac21e.jpg" /> it says the risk of event is **`HR` times higher** the Treatment group(after intervention) as compared to the Ctrl group(before intervention). 
 
- - What if we are interested in several risk factors, considered simultaneously, and survival time? One of the most popular regression techniques for survival outcomes is Cox proportional hazards regression analysis. 
+ - What if we are interested in several risk factors, considered simultaneously, and survival time? One of the most popular regression techniques for survival outcomes is Cox proportional hazards regression analysis. The Cox proportional hazards model is called a **semi-parametric model**, because there are no assumptions about the shape of the baseline hazard function. There are however, other assumptions. 
    - Assumptions
      - **independence of survival times** between distinct individuals in the sample
      - **multiplicative relationship between the predictors and the hazard** (as opposed to a linear one as was the case with LM)
@@ -321,9 +321,9 @@ The rate of suffering the event of interest in the next instant `h(t)` is the pr
 Sometimes the model is expressed differently, relating the relative hazard, which is the ratio of the hazard at time t to the baseline hazard, to the risk factors. We can take the log of each side of the Cox proportional hazards regression model
 <img src="https://user-images.githubusercontent.com/31917400/64371283-1ca6d980-d018-11e9-8875-f2627f20fc9d.jpg" />
 
-In practice, interest lies in the **associations** between each of the `risk factors`(X1, X2, ..., Xp) and the `outcome`(NO.hazared within the time t). The **associations** are quantified by the regression coefficients(b1, b2, ..., bp). The estimated coefficients represent the change in the **expected log of the hazard ratio** relative to a one unit change in X1, holding all other predictors constant. 
+In practice, interest lies in the **associations** between each of the `risk factors`(X1, X2, ..., Xp) and the `outcome`(NO.hazared within the time t). The **associations** are quantified by the regression coefficients(β1, β2, ..., βp). The estimated coefficients represent the change in the **expected log of the hazard ratio** relative to a one unit change in X1, holding all other predictors constant. 
 
-**`exp(b)`**, produces a hazard ratio. If a predictor is dichotomous, the hazard ratio **`exp(b)`** compare the risk of event for A_group(X1=1) and B_group(X1=0). The hypothesis tests using HR assess whether there are statistically significant associations between predictors and time to event.  
+**`exp(Xβ)`** of Trt_group and Ctl_group produce a hazard ratio. The HR compares the risk of event for Trt_group and Ctl_group. The hypothesis tests using HR assess whether there are statistically significant associations between `predictors` and `time to event`.  
  - HR = 1, then it means **No effect**...the risk factor does not affect survival.
  - HR < 1, then it means **Reduction in the hazard**
  - HR > 1, then it means **Increase in Hazard**
