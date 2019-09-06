@@ -328,17 +328,7 @@ In practice, interest lies in the **associations** between each of the `risk fac
  - HR < 1, then it means **Reduction in the hazard**...so the treatment is NICE!
  - HR > 1, then it means **Increase in Hazard**...so the treatment is fucked up. 
  
-
-
-
-
-
-
-
-
-
- 
-
+# What about Cox classification???
 
 ### I. Model_Fitting for PoissonRegression
 ### II. Maximum Likelihood for PoissonRegression
@@ -454,6 +444,39 @@ Find a new model that doesn't fit the **training data** that much by introducing
 Ridge cannot set coefficients to '0' while Lasso can shrink coefficients to '0', thus can be useful for **feature selection**. 
  - If `λ`= ∞, feature's slope = 0
  <img src="https://user-images.githubusercontent.com/31917400/54079029-d9b7b380-42cb-11e9-8b3d-cbe16ee6262d.jpg" />
+
+### 3. feature selection 101.
+Feature selection is different from dimensionality reduction. Both methods seek to reduce the number of attributes in the dataset, but a dimensionality reduction method do so by creating new combinations of attributes, where as feature selection methods include and exclude attributes present in the data without changing them. The objective of variable selection is three-fold: 
+ - **Reduces Overfitting:** Improving the prediction performance of the predictors
+ - **Reduces Training Time:** Providing faster and more cost-effective predictors 
+ - **Improves Accuracy:** Providing a better understanding of the underlying process that generated the data
+
+__[3 Feature Selection Algorithms]__
+ - __Filter Methods:__ `t`, `Chi squared`, `information gain`, `Pearson’s Correlation`, `Spearman’s Correlation`, etc.
+   - Apply a statistical measure to assign a scoring to each feature. The features are ranked by the signigicance score. The methods are often univariate and consider the feature independently. 
+ - __Embedded Methods:__ `L1/L2 regularization`, `Elastic Net`
+   - See which features best contribute to the accuracy of the model **while the model is being created**.
+ - __Wrapper Methods:__ `recursive feature elimination`
+   - See the selection as a search problem where different combinations are prepared, evaluated and compared to other combinations.  Remove attributes and build a model on those attributes that remain. Evaluate a combination of features and assign a score based on model-accuracy. 
+ ```
+ from sklearn.feature_selection import RFE`
+ model = LogisticRegression()
+ rfe = RFE(model, 3)
+ fit = rfe.fit(X, Y)
+ ```
+ - [CHECK LIST]
+   - Do you have domain knowledge? `If yes, construct a better set of ad-hoc? features.`
+   - Are your features commensurate? `If no, consider normalizing them.`
+   - Do you suspect interdependence of features? `If yes, expand your feature set by constructing conjunctive features or products of features, as much as your computer resources allow you.`
+   - Do you need to prune the input variables (e.g. for cost, speed or data understanding reasons)? `If no, construct disjunctive features or weighted sums of feature.`
+   - Do you need to assess features individually (e.g. to understand their influence on the system or because their number is so large that you need to do a first filtering)? `If yes, use a variable ranking method; else, do it anyway to get baseline results.`
+   - Do you suspect your data is “dirty” (has a few meaningless input patterns and/or noisy outputs or wrong class labels)? `If yes, detect the outlier examples using the top ranking variables obtained in step 5 as representation; check and/or discard them.`
+   - Do you know what to try first? `If no, use a linear predictor. Use a forward selection method with the “probe” method as a stopping criterion or use the 0-norm embedded method for comparison, following the ranking of step 5, construct a sequence of predictors of same nature using increasing subsets of features. Can you match or improve performance with a smaller subset? If yes, try a non-linear predictor with that subset.`
+   - Do you have new ideas, time, computational resources, and enough examples? `If yes, compare several feature selection methods, including your new idea, correlation coefficients, backward selection and embedded methods. Use linear and non-linear predictors. Select the best approach with model selection.`
+   - Do you want a stable solution (to improve performance and/or understanding)? `If yes, subsample your data and redo your analysis for several “bootstrap”.`
+
+
+
 
 
 ## [F]. Bayesian Linear Regression
