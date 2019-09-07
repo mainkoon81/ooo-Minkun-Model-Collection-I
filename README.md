@@ -494,8 +494,11 @@ Bayesian and Frequentist's Likelihood-based approaches only differ in that the f
        -  Check the goodness of fit of the estimated model based on the predictive residuals. It is possible to conduct the same type of analysis of Frequentist's LM. 
    
 
-
-
+## [G]. Chaining Model
+Machine learning is about **predicting**, while optimization is about **solving**, searching for the values of variables that lead to the best outcomes. We can combine optimization and machine learning.
+ - Optimization as a means for doing machine learning
+ - Machine learning as a means for doing optimization
+ - Using the results of `machine learning model` as **input data** for an `optimization model`.
 
 
 
