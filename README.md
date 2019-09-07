@@ -503,7 +503,7 @@ Machine learning is about **predicting**, while optimization is about **solving*
 
 
 Uncertainty
- - **Aleatory variability** is the natural(intrinsic) randomness in a process; it is supposed **irreducible** and inherent natural to the process involved.  outcome of a fair coin flip??? 
+ - **Aleatory variability** is the natural(intrinsic) randomness in a process; it is supposed **irreducible** and inherent natural to the process involved. No one can sure the measurements done by your collegues are perfect. 
  - **Epistemic uncertainty** is the scientific uncertainty in the model of the process; it is supposedly **reducible** with better knowledge, since it is not inherent in the real-world process under consideration (due to lack of knowledge and limited data..This can be reduced in time, if more data are collected and new models are developed). 
 
 
