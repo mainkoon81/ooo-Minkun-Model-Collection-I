@@ -493,6 +493,9 @@ Bayesian and Frequentist's Likelihood-based approaches only differ in that the f
          - You can either obtain a point estimator from this distribution (e.g. posterior mean, posterior median, ...) and conduct the same analysis using this estimate. 
        -  Check the goodness of fit of the estimated model based on the predictive residuals. It is possible to conduct the same type of analysis of Frequentist's LM. 
    
+   
+   
+   
 
 ## [G]. Chaining Model
 Machine learning is about **predicting**, while optimization is about **solving**, searching for the values of variables that lead to the best outcomes. We can combine optimization and machine learning.
@@ -502,11 +505,7 @@ Machine learning is about **predicting**, while optimization is about **solving*
 
 
 
-Uncertainty
- - **Aleatory variability** is the natural(intrinsic) randomness in a process; it is supposed **irreducible** and inherent natural to the process involved. 
-   - Heteroscedastic: No one can sure the measurements done by your collegues are perfect..damn noise...(heteroscedastic means a different uncertainty for every input)
-   - Homoscedastic: model variance? you assumes identical observation noise for every input point x? Instead of having a variance being dependent on the input x, we must determine a so-called model precision τ and multiply it by the identity matrix I, such that all outputs y have the same variance and no co-variance among them exists. This model precision τ is the inverse observation standard deviation.
- - **Epistemic uncertainty** is the scientific uncertainty in the model of the process; it is supposedly **reducible** with better knowledge, since it is not inherent in the real-world process under consideration (due to lack of knowledge and limited data..This can be reduced in time, if more data are collected and new models are developed). 
+
 
 
 
