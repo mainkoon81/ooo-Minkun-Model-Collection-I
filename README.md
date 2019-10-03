@@ -479,19 +479,7 @@ __[3 Feature Selection Algorithms]__
 
 
 
-## [F]. Bayesian Linear Regression
-Bayesian and Frequentist's Likelihood-based approaches only differ in that the former requires the specification of a **prior**. If...the predictors in LM display traits of both **multi-colinearity**(so.. inflated coefficients estimation) and **heteroskedasticity**....
- - Frequentist LM
-   - Diagnose: typically go through the process of checking the residuals against a set of assumptions, adjusting/removing variables, rerunning the model, checking the assumptions again, and again. 
-     - Frequentist Model diagnose is based on the fitted model using maximum likelihood estimation of coeff.
-     - Fit distribution to the certain **data** we investigate: `P(x,x,x,x|θ)` to get population parameter
-       - `Likelihood(β;data)` = `f(x,x,x,x|β)` so...multiply them, then **differentiate** to get `β`.
- - Bayesian LM, using MCMC
-   - Diagnose: 
-     - First, specify a prior for θ such as `π(θ)`, then **integrate** θ out with respect to the posterior distribution.
-       - `P(β|x,x,x,x)` = **∫**`L(x,x,x,x|β)*π(β)`**d`β`** to get `β`'s distribution (the posterior) then take advantage of having access to the full posterior distribution. 
-         - You can either obtain a point estimator from this distribution (e.g. posterior mean, posterior median, ...) and conduct the same analysis using this estimate. 
-       -  Check the goodness of fit of the estimated model based on the predictive residuals. It is possible to conduct the same type of analysis of Frequentist's LM. 
+
    
    
    
