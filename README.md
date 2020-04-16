@@ -297,7 +297,8 @@ In this setting, we have data(Response variable) that are unbounded counts(web t
  - 2.Model for **Rate**: Reponse is `E[Y/t]` where `t` is an **interval** representing time, space, etc.  
  <img src="https://user-images.githubusercontent.com/31917400/53891890-304e9480-4023-11e9-88cc-42a9328aa21d.jpg" />
 
-<img src="https://user-images.githubusercontent.com/31917400/79473854-9a46b500-7ffd-11ea-9edc-433c8f9c19c8.jpg" />
+In short...
+<img src="https://user-images.githubusercontent.com/31917400/79474946-f958f980-7ffe-11ea-846c-f22a3d67b968.jpg" />
 
 
 
