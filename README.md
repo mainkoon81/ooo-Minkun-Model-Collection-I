@@ -3,6 +3,8 @@
 
 • **Classification:** the target feature takes discrete values (labels, levels)
 
+`Backpropagation` is an efficient technique to compute this "gradient" that SGD uses. This is actually a simple implementation of chain rule of derivatives, which simply gives you the ability to compute all required partial derivatives in linear time in terms of the "graph size" (while naive gradient computations would scale exponentially with depth). `Stochastic gradient descent` (SGD) is an optimization method used e.g. to minimize a loss function. It is often applied together with backpropagation to make efficient updates. 
+
 # 0> Gradient Descent Method & Cost function
 > Whenever you train a model with your data, you are actually producing some new values (predicted) for a specific feature. However, that specific feature already has some values which are real values in the dataset. We know the closer the predicted values to their corresponding real values, the better the model. 
 # ε ?
