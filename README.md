@@ -178,6 +178,9 @@ To fit the model(to find the parameter),
 <img src="https://user-images.githubusercontent.com/31917400/53877718-d8ebfc80-4001-11e9-8204-fc861dba512b.jpg" />
 
 ### IV. Model Evaluation for LogisticRegression
+ - ``R^2`` is used to quantify the amount of variability in the data that is explained by your model...so useful in comparing the fit of two models.
+ - ``Chi-sqr's Goodness of Fit`` is used to  test if your data follows a particular distribution....more useful for testing model assumptions rather than comparing models.   
+
 #### Q. How do we know the **fitted line of the highest log-likelihood value we discovered** is truley the best?  
 
  - In OLS regression, R_Squared & P_value are calculated using the **residuals**. 
